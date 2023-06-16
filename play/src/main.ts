@@ -5,7 +5,7 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import zhCn from "element-plus/dist/locale/zh-cn.mjs";
 
-import curd from "@ultra-ui/components";
+import curd from "@ul-business/components";
 import router from "./router";
 console.log(curd);
 

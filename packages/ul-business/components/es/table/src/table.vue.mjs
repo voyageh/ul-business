@@ -11,7 +11,7 @@ const re = { class: "ul-table" }, ce = {
   setup(B) {
     const l = B;
     Y((e) => ({
-      "056cbd00": e.pagingAlign
+      "2baa258c": e.pagingAlign
     }));
     const F = y(), L = y(!1), N = y([]), D = y(0), v = K({
       [l.pageKey]: 1,
@@ -39,10 +39,10 @@ const re = { class: "ul-table" }, ce = {
       title: "",
       disabled: !1,
       saveType: ""
-    }), b = y(), I = () => {
+    }), b = y(), x = () => {
       var e, t, a;
       (a = (t = (e = b.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.resetFields) == null || a.call(t);
-    }, R = () => {
+    }, I = () => {
       if (l.onNew) {
         l.onNew();
         return;
@@ -54,15 +54,15 @@ const re = { class: "ul-table" }, ce = {
         var a, s;
         (s = (a = b.value) == null ? void 0 : a.setValue) == null || s.call(a, t);
       });
-    }, W = async (e) => {
+    }, R = async (e) => {
       l.deleteSumbit && l.deleteSumbit(e);
-    }, q = async (e) => {
+    }, W = async (e) => {
       if (l.onEdit) {
         l.onEdit(e);
         return;
       }
       n.title = "编辑", n.visible = !0, n.disabled = !1, n.saveType = "edit", T(e);
-    }, x = async (e) => {
+    }, q = async (e) => {
       if (l.onView) {
         l.onView(e);
         return;
@@ -136,7 +136,7 @@ const re = { class: "ul-table" }, ce = {
           C("div", ue, [
             i(s, {
               type: "primary",
-              onClick: R
+              onClick: I
             }, {
               icon: o(() => [
                 i(a, null, {
@@ -176,14 +176,15 @@ const re = { class: "ul-table" }, ce = {
                 key: 0,
                 label: "操作",
                 align: "center",
-                width: e.opWidth
+                width: e.opWidth,
+                fixed: "right"
               }, {
                 default: o(({ row: r }) => [
                   C("div", pe, [
                     i(s, {
                       link: "",
                       type: "primary",
-                      onClick: (h) => x(r)
+                      onClick: (h) => q(r)
                     }, {
                       default: o(() => [
                         p("查看")
@@ -193,7 +194,7 @@ const re = { class: "ul-table" }, ce = {
                     i(s, {
                       link: "",
                       type: "primary",
-                      onClick: (h) => q(r)
+                      onClick: (h) => W(r)
                     }, {
                       default: o(() => [
                         p("编辑")
@@ -204,7 +205,7 @@ const re = { class: "ul-table" }, ce = {
                       title: "确定要删除该数据吗?",
                       "confirm-button-type": "danger",
                       "confirm-button-text": "删除",
-                      onClick: W
+                      onClick: R
                     }, {
                       reference: o(() => [
                         i(s, {
@@ -247,7 +248,7 @@ const re = { class: "ul-table" }, ce = {
           modelValue: n.visible,
           "onUpdate:modelValue": t[2] || (t[2] = (r) => n.visible = r),
           title: n.title,
-          onClose: I
+          onClose: x
         }, ae({
           default: o(() => [
             i(d, {

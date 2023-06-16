@@ -3,7 +3,7 @@ import {
   formProps,
   menuProps,
   uploadProps
-} from "./chunk-32ZBOWWW.js";
+} from "./chunk-CEOQQZLC.js";
 import {
   Fragment,
   __commonJS,
@@ -378,7 +378,7 @@ var require_lodash = __commonJS({
             return types;
           }
           return freeProcess && freeProcess.binding && freeProcess.binding("util");
-        } catch (e2) {
+        } catch (e3) {
         }
       }();
       var nodeIsArrayBuffer = nodeUtil && nodeUtil.isArrayBuffer, nodeIsDate = nodeUtil && nodeUtil.isDate, nodeIsMap = nodeUtil && nodeUtil.isMap, nodeIsRegExp = nodeUtil && nodeUtil.isRegExp, nodeIsSet = nodeUtil && nodeUtil.isSet, nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -750,7 +750,7 @@ var require_lodash = __commonJS({
             var func = getNative(Object2, "defineProperty");
             func({}, "", {});
             return func;
-          } catch (e2) {
+          } catch (e3) {
           }
         }();
         var ctxClearTimeout = context.clearTimeout !== root.clearTimeout && context.clearTimeout, ctxNow = Date2 && Date2.now !== root.Date.now && Date2.now, ctxSetTimeout = context.setTimeout !== root.setTimeout && context.setTimeout;
@@ -2782,7 +2782,7 @@ var require_lodash = __commonJS({
           try {
             value[symToStringTag] = undefined;
             var unmasked = true;
-          } catch (e2) {
+          } catch (e3) {
           }
           var result2 = nativeObjectToString.call(value);
           if (unmasked) {
@@ -3139,11 +3139,11 @@ var require_lodash = __commonJS({
           if (func != null) {
             try {
               return funcToString.call(func);
-            } catch (e2) {
+            } catch (e3) {
             }
             try {
               return func + "";
-            } catch (e2) {
+            } catch (e3) {
             }
           }
           return "";
@@ -4830,8 +4830,8 @@ var require_lodash = __commonJS({
         var attempt = baseRest(function(func, args) {
           try {
             return apply(func, undefined, args);
-          } catch (e2) {
-            return isError(e2) ? e2 : new Error(e2);
+          } catch (e3) {
+            return isError(e3) ? e3 : new Error(e3);
           }
         });
         var bindAll = flatRest(function(object, methodNames) {
@@ -5519,18 +5519,18 @@ var require_lodash = __commonJS({
 
 // node_modules/.pnpm/ul-utils@1.0.0/node_modules/ul-utils/es/vue/install.mjs
 var n = Symbol("INSTALLED_KEY");
-var s = (o3, c) => {
-  if (o3.install = (e2) => {
-    for (const t4 of [o3, ...Object.values(c ?? {})])
-      e2.component(t4.name, t4);
+var s = (o2, c) => {
+  if (o2.install = (e3) => {
+    for (const t4 of [o2, ...Object.values(c ?? {})])
+      e3.component(t4.name, t4);
   }, c)
-    for (const [e2, t4] of Object.entries(c))
-      o3[e2] = t4;
-  return o3;
+    for (const [e3, t4] of Object.entries(c))
+      o2[e3] = t4;
+  return o2;
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/menu/src/types/menu.mjs
-var o = {
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/menu/src/types/menu.mjs
+var e = {
   ...menuProps,
   menus: {
     type: Array
@@ -5538,24 +5538,27 @@ var o = {
   // 选中后的背景色
   selectBgColor: String,
   // 宽度
-  width: String
+  width: {
+    type: String,
+    default: "200px"
+  }
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/menu/src/menu.vue.mjs
-var w = defineComponent({
-  name: "ul-menu",
-  __name: "menu",
-  props: o,
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/menu/src/menu.vue.mjs
+var B = defineComponent({ name: "ul-menu" });
+var x = defineComponent({
+  ...B,
+  props: e,
   setup(m2) {
-    const e2 = m2, l = computed(() => ({
-      "--selected-bg-color": e2.selectBgColor,
-      "--menu-item-width": e2.width
+    const e3 = m2, u = computed(() => ({
+      "--selected-bg-color": e3.selectBgColor,
+      "--menu-item-width": e3.width
     }));
-    return (u, k) => {
-      const s3 = resolveComponent("ul-menu-item"), c = resolveComponent("el-menu");
-      return openBlock(), createBlock(c, mergeProps({ class: "ul-menu" }, e2, { style: l.value }), {
+    return (s3, C) => {
+      const c = resolveComponent("ul-menu-item"), p = resolveComponent("el-menu");
+      return openBlock(), createBlock(p, mergeProps({ class: "ul-menu" }, e3, { style: unref(u) }), {
         default: withCtx(() => [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(u.menus, (n3) => (openBlock(), createBlock(s3, {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(s3.menus, (n3) => (openBlock(), createBlock(c, {
             key: n3.id,
             menu: n3
           }, null, 8, ["menu"]))), 128))
@@ -5566,8 +5569,8 @@ var w = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/menu/src/types/menu-item.mjs
-var e = {
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/menu/src/types/menu-item.mjs
+var e2 = {
   menu: {
     type: Object,
     required: true,
@@ -7174,7 +7177,7 @@ if (typeof document !== "undefined" && typeof window !== "undefined") {
           ) {
             console.error(err);
           }
-        } catch (e2) {
+        } catch (e3) {
           console.error(err);
         }
       });
@@ -7193,7 +7196,7 @@ if (typeof document !== "undefined" && typeof window !== "undefined") {
           if (!addAPIProvider(key, value)) {
             console.error(err);
           }
-        } catch (e2) {
+        } catch (e3) {
           console.error(err);
         }
       }
@@ -7300,53 +7303,53 @@ var Icon = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/menu/src/menu-item.vue.mjs
-var D = defineComponent({
-  name: "ul-menu-item",
-  __name: "menu-item",
-  props: e,
-  setup(s3) {
-    const i3 = s3, t4 = computed(() => i3.parent + i3.menu.path);
-    return (e2, z) => {
-      const r2 = resolveComponent("el-icon"), d = resolveComponent("menu-item", true), _ = resolveComponent("el-sub-menu"), f2 = resolveComponent("el-menu-item");
-      return e2.menu.children && e2.menu.children.length > 0 ? (openBlock(), createBlock(_, {
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
+var E = defineComponent({ name: "ul-menu-item" });
+var F = defineComponent({
+  ...E,
+  props: e2,
+  setup(d) {
+    const i3 = d, o2 = computed(() => i3.parent + i3.menu.path);
+    return (e3, v) => {
+      const c = resolveComponent("el-icon"), _ = resolveComponent("menu-item", true), f2 = resolveComponent("el-sub-menu"), h3 = resolveComponent("el-menu-item");
+      return e3.menu.children && e3.menu.children.length > 0 ? (openBlock(), createBlock(f2, {
         key: 0,
-        index: t4.value
+        index: unref(o2)
       }, {
         title: withCtx(() => [
-          createVNode(r2, { size: 20 }, {
+          createVNode(c, { size: 20 }, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
-                icon: e2.menu.meta.icon
+                icon: e3.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          createBaseVNode("span", null, toDisplayString(e2.menu.name), 1)
+          createBaseVNode("span", null, toDisplayString(e3.menu.name), 1)
         ]),
         default: withCtx(() => [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(e2.menu.children, (h2, k) => (openBlock(), createBlock(d, {
-            key: k,
-            menu: h2,
-            parent: t4.value
+          (openBlock(true), createElementBlock(Fragment, null, renderList(e3.menu.children, (k, y) => (openBlock(), createBlock(_, {
+            key: y,
+            menu: k,
+            parent: unref(o2)
           }, null, 8, ["menu", "parent"]))), 128))
         ]),
         _: 1
-      }, 8, ["index"])) : (openBlock(), createBlock(f2, {
+      }, 8, ["index"])) : (openBlock(), createBlock(h3, {
         key: 1,
-        index: t4.value,
-        id: t4.value
+        index: unref(o2),
+        id: unref(o2)
       }, {
         default: withCtx(() => [
-          createVNode(r2, { size: 20 }, {
+          createVNode(c, { size: 20 }, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
-                icon: e2.menu.meta.icon
+                icon: e3.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          createTextVNode(" " + toDisplayString(e2.menu.name), 1)
+          createTextVNode(" " + toDisplayString(e3.menu.name), 1)
         ]),
         _: 1
       }, 8, ["index", "id"]));
@@ -7354,11 +7357,11 @@ var D = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/menu/index.mjs
-var s2 = s(w);
-var a = s(D);
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/menu/index.mjs
+var s2 = s(x);
+var a = s(F);
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/form/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/form/src/type.mjs
 var t = {
   ...formProps,
   labelWidth: {
@@ -7372,11 +7375,11 @@ var t = {
   modelValue: Object
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/form/src/handleConetnt.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/form/src/handleConetnt.mjs
 var r = (d) => {
   const t4 = {}, a2 = {}, u = (n3) => {
-    n3.forEach((o3) => {
-      o3.items && o3.items.length > 0 && u(o3.items), o3.id && (o3.inputFormat && (!t4[o3.id] && (t4[o3.id] = {}), t4[o3.id].inputFormat = o3.inputFormat), o3.outputFormat && (!t4[o3.id] && (t4[o3.id] = {}), t4[o3.id].outputFormat = o3.outputFormat), o3.default && (a2[o3.id] = o3.default));
+    n3.forEach((o2) => {
+      o2.items && o2.items.length > 0 && u(o2.items), o2.id && (o2.inputFormat && (!t4[o2.id] && (t4[o2.id] = {}), t4[o2.id].inputFormat = o2.inputFormat), o2.outputFormat && (!t4[o2.id] && (t4[o2.id] = {}), t4[o2.id].outputFormat = o2.outputFormat), o2.default && (a2[o2.id] = o2.default));
     });
   };
   return u(d), {
@@ -7385,78 +7388,78 @@ var r = (d) => {
   };
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/form/src/form.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/form/src/form.vue.mjs
 var import_lodash = __toESM(require_lodash(), 1);
 var H = { key: 0 };
 var J = { key: 0 };
-var Z = defineComponent({
-  name: "UlForm",
-  __name: "form",
+var K = defineComponent({ name: "UlForm" });
+var h2 = defineComponent({
+  ...K,
   props: t,
   emits: ["update:modelValue"],
-  setup(B, { expose: I, emit: N }) {
-    const _ = B, F = ref(), n3 = ref({});
+  setup(I, { expose: N, emit: R2 }) {
+    const _ = I, F2 = ref(), n3 = ref({});
     let m2 = {};
     watch(
       () => _.content,
-      (e2) => {
-        const { formatObj: o3, defaulValue: a2 } = r(e2);
-        m2 = o3, n3.value = Object.assign(a2, n3.value);
+      (e3) => {
+        const { formatObj: o2, defaulValue: l } = r(e3);
+        m2 = o2, n3.value = Object.assign(l, n3.value);
       },
       {
         immediate: true,
         deep: true
       }
     );
-    const R = () => {
-      const { content: e2, modelValue: o3, ...a2 } = _;
-      return a2;
-    }, b = (e2) => {
+    const S = () => {
+      const { content: e3, modelValue: o2, ...l } = _;
+      return l;
+    }, b = (e3) => {
       const {
-        id: o3,
-        type: a2,
+        id: o2,
+        type: l,
         component: u,
         default: s3,
         str: p,
         forceDisabled: t4,
         inputFormat: r2,
         outputFormat: O2,
-        el: K,
-        hide: M2,
-        span: Q,
-        ...q
-      } = e2;
-      return q;
-    }, k = (e2) => {
-      let o3 = !e2;
-      return typeof e2 == "function" && (o3 = !e2(n3.value)), o3;
-    }, w2 = () => {
-      let e2 = (0, import_lodash.cloneDeep)(n3.value) || {};
-      return Object.keys(e2).forEach((o3) => {
-        var a2, u, s3;
-        if (e2[o3] && ((a2 = m2[o3]) != null && a2.outputFormat)) {
-          const p = (s3 = (u = m2[o3]).outputFormat) == null ? void 0 : s3.call(u, e2);
-          Object.assign(e2, p);
+        el: M2,
+        hide: Q,
+        span: T,
+        ...L
+      } = e3;
+      return L;
+    }, k = (e3) => {
+      let o2 = !e3;
+      return typeof e3 == "function" && (o2 = !e3(n3.value)), o2;
+    }, w = () => {
+      let e3 = (0, import_lodash.cloneDeep)(n3.value) || {};
+      return Object.keys(e3).forEach((o2) => {
+        var l, u, s3;
+        if (e3[o2] && ((l = m2[o2]) != null && l.outputFormat)) {
+          const p = (s3 = (u = m2[o2]).outputFormat) == null ? void 0 : s3.call(u, e3);
+          Object.assign(e3, p);
         }
-      }), e2;
-    }, j = (e2) => {
-      let o3 = (0, import_lodash.cloneDeep)(e2) || {};
-      return Object.keys(o3).forEach((a2) => {
+      }), e3;
+    }, j = (e3) => {
+      let o2 = (0, import_lodash.cloneDeep)(e3) || {};
+      return Object.keys(o2).forEach((l) => {
         var u, s3, p;
-        if (o3[a2] && ((u = m2[a2]) != null && u.inputFormat)) {
-          const t4 = m2[a2] && ((p = (s3 = m2[a2]).inputFormat) == null ? void 0 : p.call(s3, o3));
-          Object.assign(o3, t4);
+        if (o2[l] && ((u = m2[l]) != null && u.inputFormat)) {
+          const t4 = m2[l] && ((p = (s3 = m2[l]).inputFormat) == null ? void 0 : p.call(s3, o2));
+          Object.assign(o2, t4);
         }
-      }), o3;
-    }, S = (e2) => {
-      n3.value = j(e2);
+      }), o2;
+    }, q = (e3) => {
+      n3.value = j(e3);
     };
     return _.modelValue && (watch(
       () => _.modelValue,
-      (e2) => {
-        if (e2 && !(0, import_lodash.isEqual)(e2, n3.value)) {
-          const o3 = j(e2);
-          n3.value = Object.assign({}, n3.value, o3);
+      (e3) => {
+        if (e3 && !(0, import_lodash.isEqual)(e3, n3.value)) {
+          const o2 = j(e3);
+          n3.value = Object.assign({}, n3.value, o2);
         }
       },
       {
@@ -7466,26 +7469,26 @@ var Z = defineComponent({
     ), watch(
       () => n3.value,
       async () => {
-        const e2 = await w2();
-        N("update:modelValue", e2);
+        const e3 = await w();
+        R2("update:modelValue", e3);
       },
       {
         deep: true,
         immediate: true
       }
-    )), I({
-      getValue: w2,
-      setValue: S,
-      elFrom: F
-    }), (e2, o3) => {
-      const a2 = resolveComponent("el-form-item"), u = resolveComponent("el-col"), s3 = resolveComponent("el-row"), p = resolveComponent("el-form");
+    )), N({
+      getValue: w,
+      setValue: q,
+      elFrom: F2
+    }), (e3, o2) => {
+      const l = resolveComponent("el-form-item"), u = resolveComponent("el-col"), s3 = resolveComponent("el-row"), p = resolveComponent("el-form");
       return openBlock(), createBlock(p, mergeProps({
         ref_key: "formRef",
-        ref: F,
+        ref: F2,
         class: "ul-form"
-      }, R(), { model: n3.value }), {
+      }, S(), { model: n3.value }), {
         default: withCtx(() => [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(e2.content, (t4) => (openBlock(), createElementBlock(Fragment, null, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList(e3.content, (t4) => (openBlock(), createElementBlock(Fragment, null, [
             t4.type === "row" && t4.items ? (openBlock(), createBlock(s3, {
               key: 0,
               gutter: 20
@@ -7502,11 +7505,11 @@ var Z = defineComponent({
                     lg: { span: r2.span || 6 }
                   }, {
                     default: withCtx(() => [
-                      createVNode(a2, mergeProps({
+                      createVNode(l, mergeProps({
                         prop: r2.id
                       }, b(r2)), {
                         default: withCtx(() => [
-                          e2.disabled && !t4.forceDisabled ? (openBlock(), createElementBlock("span", H, toDisplayString(r2.str ? n3.value[r2.str] : n3.value[r2.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(r2.type || r2.component), mergeProps({ key: 1 }, r2.el, {
+                          e3.disabled && !t4.forceDisabled ? (openBlock(), createElementBlock("span", H, toDisplayString(r2.str ? n3.value[r2.str] : n3.value[r2.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(r2.type || r2.component), mergeProps({ key: 1 }, r2.el, {
                             modelValue: n3.value[r2.id],
                             "onUpdate:modelValue": (O2) => n3.value[r2.id] = O2
                           }), null, 16, ["modelValue", "onUpdate:modelValue"]))
@@ -7520,12 +7523,12 @@ var Z = defineComponent({
               ]),
               _: 2
             }, 1024)) : createCommentVNode("", true),
-            k(t4.hide) ? (openBlock(), createBlock(a2, mergeProps({
+            k(t4.hide) ? (openBlock(), createBlock(l, mergeProps({
               key: 1,
               prop: t4.id
             }, b(t4)), {
               default: withCtx(() => [
-                e2.disabled && !t4.forceDisabled ? (openBlock(), createElementBlock("span", J, toDisplayString(t4.str ? n3.value[t4.str] : n3.value[t4.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t4.type || t4.component), mergeProps({ key: 1 }, t4.el, {
+                e3.disabled && !t4.forceDisabled ? (openBlock(), createElementBlock("span", J, toDisplayString(t4.str ? n3.value[t4.str] : n3.value[t4.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t4.type || t4.component), mergeProps({ key: 1 }, t4.el, {
                   modelValue: n3.value[t4.id],
                   "onUpdate:modelValue": (r2) => n3.value[t4.id] = r2
                 }), null, 16, ["modelValue", "onUpdate:modelValue"]))
@@ -7533,7 +7536,7 @@ var Z = defineComponent({
               _: 2
             }, 1040, ["prop"])) : createCommentVNode("", true)
           ], 64))), 256)),
-          renderSlot(e2.$slots, "last")
+          renderSlot(e3.$slots, "last")
         ]),
         _: 3
       }, 16, ["model"]);
@@ -7541,10 +7544,10 @@ var Z = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/form/index.mjs
-var f = s(Z);
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/form/index.mjs
+var f = s(h2);
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/table/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/table/src/type.mjs
 var t2 = {
   searchForms: {
     type: Array,
@@ -7608,7 +7611,7 @@ var t2 = {
   onEdit: Function
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/table/src/table.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/table/src/table.vue.mjs
 var import_lodash2 = __toESM(require_lodash(), 1);
 var re = { class: "ul-table" };
 var ce = {
@@ -7619,91 +7622,91 @@ var de = { class: "ul-table__content" };
 var ue = { class: "table-head" };
 var pe = { class: "operate-box" };
 var me = { class: "dialog-footer" };
-var be = defineComponent({
-  name: "UlTable",
-  __name: "table",
+var fe = defineComponent({ name: "UlTable" });
+var ye = defineComponent({
+  ...fe,
   props: t2,
-  setup(U) {
-    const l = U;
-    useCssVars((e2) => ({
-      "4ec18386": e2.pagingAlign
+  setup(B2) {
+    const l = B2;
+    useCssVars((e3) => ({
+      "056cbd00": e3.pagingAlign
     }));
-    const F = ref(), B = ref(false), N = ref([]), D3 = ref(0), v = reactive({
+    const F2 = ref(), L = ref(false), N = ref([]), D2 = ref(0), v = reactive({
       [l.pageKey]: 1,
       [l.sizeKey]: 10
     }), f2 = async () => {
-      var e2, t4;
+      var e3, t4;
       if (l.getList) {
-        const a2 = (t4 = (e2 = F.value) == null ? void 0 : e2.getValue) == null ? void 0 : t4.call(e2), s3 = await l.getList({
+        const a2 = (t4 = (e3 = F2.value) == null ? void 0 : e3.getValue) == null ? void 0 : t4.call(e3), s3 = await l.getList({
           ...v,
           ...a2
         }), m2 = l.dataPath || "data", d = l.totalPath || "total";
-        N.value = (0, import_lodash2.get)(s3, m2), D3.value = (0, import_lodash2.get)(s3, d);
+        N.value = (0, import_lodash2.get)(s3, m2), D2.value = (0, import_lodash2.get)(s3, d);
       }
     };
     l.immediate && f2();
-    const L = () => {
-      var e2, t4, a2;
-      (a2 = (t4 = (e2 = F.value) == null ? void 0 : e2.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4), f2();
-    }, A = (e2) => {
-      v[l.sizeKey] = e2, f2();
-    }, O2 = (e2) => {
-      v[l.pageKey] = e2, f2();
-    }, o3 = reactive({
+    const A = () => {
+      var e3, t4, a2;
+      (a2 = (t4 = (e3 = F2.value) == null ? void 0 : e3.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4), f2();
+    }, O2 = (e3) => {
+      v[l.sizeKey] = e3, f2();
+    }, j = (e3) => {
+      v[l.pageKey] = e3, f2();
+    }, n3 = reactive({
       visible: false,
       title: "",
       disabled: false,
       saveType: ""
-    }), b = ref(), j = () => {
-      var e2, t4, a2;
-      (a2 = (t4 = (e2 = b.value) == null ? void 0 : e2.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4);
-    }, I = () => {
+    }), b = ref(), I = () => {
+      var e3, t4, a2;
+      (a2 = (t4 = (e3 = b.value) == null ? void 0 : e3.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4);
+    }, R2 = () => {
       if (l.onNew) {
         l.onNew();
         return;
       }
-      o3.title = "新增", o3.visible = true, o3.disabled = false, o3.saveType = "new";
-    }, T = async (e2) => {
-      let t4 = e2;
-      l.getDetail && (t4 = await l.getDetail(e2)), nextTick(() => {
+      n3.title = "新增", n3.visible = true, n3.disabled = false, n3.saveType = "new";
+    }, T = async (e3) => {
+      let t4 = e3;
+      l.getDetail && (t4 = await l.getDetail(e3)), nextTick(() => {
         var a2, s3;
         (s3 = (a2 = b.value) == null ? void 0 : a2.setValue) == null || s3.call(a2, t4);
       });
-    }, R = async (e2) => {
-      l.deleteSumbit && l.deleteSumbit(e2);
-    }, W = async (e2) => {
+    }, W = async (e3) => {
+      l.deleteSumbit && l.deleteSumbit(e3);
+    }, q = async (e3) => {
       if (l.onEdit) {
-        l.onEdit(e2);
+        l.onEdit(e3);
         return;
       }
-      o3.title = "编辑", o3.visible = true, o3.disabled = false, o3.saveType = "edit", T(e2);
-    }, q = async (e2) => {
+      n3.title = "编辑", n3.visible = true, n3.disabled = false, n3.saveType = "edit", T(e3);
+    }, x2 = async (e3) => {
       if (l.onView) {
-        l.onView(e2);
+        l.onView(e3);
         return;
       }
-      o3.title = "查看", o3.visible = true, o3.disabled = true, T(e2);
-    }, x = async () => {
-      var e2, t4, a2;
-      (a2 = (t4 = (e2 = b.value) == null ? void 0 : e2.elFrom) == null ? void 0 : t4.validate) == null || a2.call(t4, async (s3) => {
+      n3.title = "查看", n3.visible = true, n3.disabled = true, T(e3);
+    }, G2 = async () => {
+      var e3, t4, a2;
+      (a2 = (t4 = (e3 = b.value) == null ? void 0 : e3.elFrom) == null ? void 0 : t4.validate) == null || a2.call(t4, async (s3) => {
         var d, _;
         if (!s3)
           return;
         let m2 = l.newSumbit;
-        if (o3.saveType === "edit" && (m2 = l.editSumbit), m2) {
+        if (n3.saveType === "edit" && (m2 = l.editSumbit), m2) {
           const S = (_ = (d = b.value) == null ? void 0 : d.getValue) == null ? void 0 : _.call(d);
-          await m2(S), o3.visible = false, f2();
+          await m2(S), n3.visible = false, f2();
         }
       });
     };
-    return (e2, t4) => {
-      const a2 = resolveComponent("el-icon"), s3 = resolveComponent("el-button"), m2 = resolveComponent("el-form-item"), d = resolveComponent("ul-form"), _ = resolveComponent("el-table-column"), S = resolveComponent("el-popconfirm"), G2 = resolveComponent("el-table"), H3 = resolveComponent("el-pagination"), J2 = resolveComponent("el-dialog"), M2 = resolveDirective("loading");
+    return (e3, t4) => {
+      const a2 = resolveComponent("el-icon"), s3 = resolveComponent("el-button"), m2 = resolveComponent("el-form-item"), d = resolveComponent("ul-form"), _ = resolveComponent("el-table-column"), S = resolveComponent("el-popconfirm"), H2 = resolveComponent("el-table"), J3 = resolveComponent("el-pagination"), M2 = resolveComponent("el-dialog"), Q = resolveDirective("loading");
       return openBlock(), createElementBlock("div", re, [
-        e2.searchForms.length > 0 ? (openBlock(), createElementBlock("div", ce, [
+        e3.searchForms.length > 0 ? (openBlock(), createElementBlock("div", ce, [
           createVNode(d, {
             ref_key: "searchForm",
-            ref: F,
-            content: e2.searchForms,
+            ref: F2,
+            content: e3.searchForms,
             inline: ""
           }, {
             last: withCtx(() => [
@@ -7726,7 +7729,7 @@ var be = defineComponent({
                     ]),
                     _: 1
                   }),
-                  createVNode(s3, { onClick: L }, {
+                  createVNode(s3, { onClick: A }, {
                     icon: withCtx(() => [
                       createVNode(a2, null, {
                         default: withCtx(() => [
@@ -7751,7 +7754,7 @@ var be = defineComponent({
           createBaseVNode("div", ue, [
             createVNode(s3, {
               type: "primary",
-              onClick: I
+              onClick: R2
             }, {
               icon: withCtx(() => [
                 createVNode(a2, null, {
@@ -7767,38 +7770,38 @@ var be = defineComponent({
               _: 1
             })
           ]),
-          withDirectives((openBlock(), createBlock(G2, mergeProps({
+          withDirectives((openBlock(), createBlock(H2, mergeProps({
             border: "",
             data: N.value,
             "element-loading-text": "正在努力加载..."
-          }, e2.$attrs), {
+          }, e3.$attrs), {
             default: withCtx(() => [
-              (openBlock(true), createElementBlock(Fragment, null, renderList(e2.columns, (r2) => (openBlock(), createElementBlock(Fragment, null, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList(e3.columns, (r2) => (openBlock(), createElementBlock(Fragment, null, [
                 r2.component ? (openBlock(), createBlock(_, {
                   key: 0,
                   label: r2.label
                 }, {
-                  default: withCtx(({ row: h2 }) => [
+                  default: withCtx(({ row: h3 }) => [
                     (openBlock(), createBlock(resolveDynamicComponent(r2.component), mergeProps({
-                      modelValue: h2[r2.prop],
-                      "onUpdate:modelValue": (Q) => h2[r2.prop] = Q
+                      modelValue: h3[r2.prop],
+                      "onUpdate:modelValue": (X) => h3[r2.prop] = X
                     }, r2.el), null, 16, ["modelValue", "onUpdate:modelValue"]))
                   ]),
                   _: 2
                 }, 1032, ["label"])) : (openBlock(), createBlock(_, normalizeProps(mergeProps({ key: 1 }, r2)), null, 16))
               ], 64))), 256)),
-              e2.hasOperateColumn && e2.columns.length > 0 ? (openBlock(), createBlock(_, {
+              e3.hasOperateColumn && e3.columns.length > 0 ? (openBlock(), createBlock(_, {
                 key: 0,
                 label: "操作",
                 align: "center",
-                width: e2.opWidth
+                width: e3.opWidth
               }, {
                 default: withCtx(({ row: r2 }) => [
                   createBaseVNode("div", pe, [
                     createVNode(s3, {
                       link: "",
                       type: "primary",
-                      onClick: (h2) => q(r2)
+                      onClick: (h3) => x2(r2)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("查看")
@@ -7808,7 +7811,7 @@ var be = defineComponent({
                     createVNode(s3, {
                       link: "",
                       type: "primary",
-                      onClick: (h2) => W(r2)
+                      onClick: (h3) => q(r2)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("编辑")
@@ -7819,7 +7822,7 @@ var be = defineComponent({
                       title: "确定要删除该数据吗?",
                       "confirm-button-type": "danger",
                       "confirm-button-text": "删除",
-                      onClick: R
+                      onClick: W
                     }, {
                       reference: withCtx(() => [
                         createVNode(s3, {
@@ -7834,7 +7837,7 @@ var be = defineComponent({
                       ]),
                       _: 1
                     }),
-                    renderSlot(e2.$slots, "extraOp")
+                    renderSlot(e3.$slots, "extraOp")
                   ])
                 ]),
                 _: 3
@@ -7842,44 +7845,44 @@ var be = defineComponent({
             ]),
             _: 3
           }, 16, ["data"])), [
-            [M2, B.value]
+            [Q, L.value]
           ]),
-          e2.hasPagination && D3.value > 0 ? (openBlock(), createBlock(H3, mergeProps({
+          e3.hasPagination && D2.value > 0 ? (openBlock(), createBlock(J3, mergeProps({
             key: 0,
             class: "paging-box",
             layout: "total, sizes, prev, pager, next, jumper",
             background: "",
             small: ""
-          }, e2.pagingAttr, {
+          }, e3.pagingAttr, {
             "current-page": v[l.pageKey],
             "page-size": v[l.sizeKey],
-            total: D3.value,
-            onSizeChange: A,
-            onCurrentChange: O2
+            total: D2.value,
+            onSizeChange: O2,
+            onCurrentChange: j
           }), null, 16, ["current-page", "page-size", "total"])) : createCommentVNode("", true)
         ]),
-        createVNode(J2, {
-          modelValue: o3.visible,
-          "onUpdate:modelValue": t4[2] || (t4[2] = (r2) => o3.visible = r2),
-          title: o3.title,
-          onClose: j
+        createVNode(M2, {
+          modelValue: n3.visible,
+          "onUpdate:modelValue": t4[2] || (t4[2] = (r2) => n3.visible = r2),
+          title: n3.title,
+          onClose: I
         }, createSlots({
           default: withCtx(() => [
             createVNode(d, {
               ref_key: "dialogForm",
               ref: b,
-              disabled: o3.disabled,
-              content: e2.forms
+              disabled: n3.disabled,
+              content: e3.forms
             }, null, 8, ["disabled", "content"])
           ]),
           _: 2
         }, [
-          o3.disabled ? void 0 : {
+          n3.disabled ? void 0 : {
             name: "footer",
             fn: withCtx(() => [
               createBaseVNode("span", me, [
                 createVNode(s3, {
-                  onClick: t4[0] || (t4[0] = (r2) => o3.visible = false)
+                  onClick: t4[0] || (t4[0] = (r2) => n3.visible = false)
                 }, {
                   default: withCtx(() => [
                     createTextVNode("取消")
@@ -7888,7 +7891,7 @@ var be = defineComponent({
                 }),
                 createVNode(s3, {
                   type: "primary",
-                  onClick: t4[1] || (t4[1] = (r2) => x())
+                  onClick: t4[1] || (t4[1] = (r2) => G2())
                 }, {
                   default: withCtx(() => [
                     createTextVNode(" 保存 ")
@@ -7905,11 +7908,11 @@ var be = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/table/index.mjs
-var i = s(be);
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/table/index.mjs
+var i = s(ye);
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/upload/src/type.mjs
-var o2 = {
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/upload/src/type.mjs
+var o = {
   ...uploadProps,
   tip: String,
   limitSize: {
@@ -7922,48 +7925,48 @@ var o2 = {
   }
 };
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/upload/src/upload.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/upload/src/upload.vue.mjs
 var M = { class: "ul-upload" };
 var O = { class: "el-upload__tip" };
-var D2 = ["src"];
-var H2 = defineComponent({
-  name: "UlUpload",
-  __name: "upload",
-  props: o2,
-  setup(h2) {
-    const o3 = h2, n3 = {
+var D = ["src"];
+var R = defineComponent({ name: "UlUpload" });
+var J2 = defineComponent({
+  ...R,
+  props: o,
+  setup($) {
+    const o2 = $, n3 = {
       image: ["png", "jpg", "jpeg", "ico", "gif"],
       video: ["mp4", "avi", "wmv", "rmvb", "mov", "mkv"],
       pdf: ["pdf"],
       word: ["doc", "docx"],
       excel: ["xls", "xlsx"],
       compress: ["zip", "rar"]
-    }, y = computed(() => o3.accept ? o3.accept.split(",").map((e2) => n3[e2]).flat().map((e2) => `.${e2}`).join(",") : ""), u = ref(""), i3 = ref(false), $ = (e2) => {
+    }, x2 = computed(() => o2.accept ? o2.accept.split(",").map((e3) => n3[e3]).flat().map((e3) => `.${e3}`).join(",") : ""), u = ref(""), i3 = ref(false), V = (e3) => {
       var p;
       let t4 = [];
-      o3.accept ? o3.accept.split(",").forEach((r2) => {
+      o2.accept ? o2.accept.split(",").forEach((r2) => {
         n3[r2] && t4.push(...n3[r2]);
       }) : t4 = Object.values(n3).flat();
-      const a2 = (p = e2.name.split(".").pop()) == null ? void 0 : p.toLowerCase();
-      return a2 && t4.indexOf(a2) === -1 ? (ElMessage.warning(`文件类型只能是${t4.join("，")}！`), false) : (e2.size / 1024 / 1024 > o3.limitSize && ElMessage.warning(`文件大小不能超过${o3.limitSize}MB！`), false);
-    }, x = (e2) => {
-      u.value = e2.url, i3.value = true;
-    }, V = () => {
-    }, b = () => {
-      ElMessage.warning(`文件上传数量不得超过${o3.limit}个`);
+      const a2 = (p = e3.name.split(".").pop()) == null ? void 0 : p.toLowerCase();
+      return a2 && t4.indexOf(a2) === -1 ? (ElMessage.warning(`文件类型只能是${t4.join("，")}！`), false) : (e3.size / 1024 / 1024 > o2.limitSize && ElMessage.warning(`文件大小不能超过${o2.limitSize}MB！`), false);
+    }, b = (e3) => {
+      u.value = e3.url, i3.value = true;
+    }, k = () => {
+    }, j = () => {
+      ElMessage.warning(`文件上传数量不得超过${o2.limit}个`);
     };
-    return (e2, t4) => {
-      const a2 = resolveComponent("el-icon"), p = resolveComponent("el-button"), r2 = resolveComponent("el-upload"), k = resolveComponent("el-dialog");
+    return (e3, t4) => {
+      const a2 = resolveComponent("el-icon"), p = resolveComponent("el-button"), r2 = resolveComponent("el-upload"), B2 = resolveComponent("el-dialog");
       return openBlock(), createElementBlock("div", M, [
-        createVNode(r2, mergeProps(e2.$props, {
-          accept: y.value,
-          "before-upload": $,
-          "on-preview": x,
-          "on-remove": V,
-          "on-exceed": b
+        createVNode(r2, mergeProps(e3.$props, {
+          accept: unref(x2),
+          "before-upload": V,
+          "on-preview": b,
+          "on-remove": k,
+          "on-exceed": j
         }), createSlots({
           default: withCtx(() => [
-            e2.$props.listType === "picture-card" ? (openBlock(), createBlock(a2, { key: 0 }, {
+            e3.$props.listType === "picture-card" ? (openBlock(), createBlock(a2, { key: 0 }, {
               default: withCtx(() => [
                 createVNode(unref(Icon), { icon: "mdi:plus" })
               ]),
@@ -7980,21 +7983,21 @@ var H2 = defineComponent({
           ]),
           _: 2
         }, [
-          e2.tip ? {
+          e3.tip ? {
             name: "tip",
             fn: withCtx(() => [
-              createBaseVNode("div", O, toDisplayString(e2.tip), 1)
+              createBaseVNode("div", O, toDisplayString(e3.tip), 1)
             ]),
             key: "0"
           } : void 0,
-          renderList(e2.$slots, (f2, _) => ({
+          renderList(e3.$slots, (f2, _) => ({
             name: _,
             fn: withCtx(() => [
-              renderSlot(e2.$slots, _)
+              renderSlot(e3.$slots, _)
             ])
           }))
         ]), 1040, ["accept"]),
-        createVNode(k, {
+        createVNode(B2, {
           modelValue: i3.value,
           "onUpdate:modelValue": t4[0] || (t4[0] = (f2) => i3.value = f2)
         }, {
@@ -8003,7 +8006,7 @@ var H2 = defineComponent({
               "w-full": "",
               src: u.value,
               alt: "Preview Image"
-            }, null, 8, D2)
+            }, null, 8, D)
           ]),
           _: 1
         }, 8, ["modelValue"])
@@ -8012,20 +8015,21 @@ var H2 = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/upload/index.mjs
-var m = s(H2);
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/upload/index.mjs
+var m = s(J2);
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/installer.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/installer.mjs
 var i2 = (n3 = []) => ({
   install: (t4, s3) => {
-    t4[n] || (t4[n] = true, n3.forEach((o3) => t4.use(o3)));
+    t4[n] || (t4[n] = true, n3.forEach((o2) => t4.use(o2)));
   }
 });
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/component.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/component.mjs
 var n2 = [s2, a, f, i, m];
 
-// node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/index.mjs
+// node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/index.mjs
+console.log(n2);
 var t3 = i2(n2);
 export {
   f as UlForm,

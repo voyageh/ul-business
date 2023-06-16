@@ -9,7 +9,7 @@ export default {
     outline: {
       label: "本页目录",
     },
-    socialLinks: [{ icon: "github", link: "https://github.com/vitejs/vite" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/zephyr-66/ul-business" }],
     nav: [
       { text: "指南", link: "/guide/", activeMatch: "/guide/" },
       { text: "组件", link: "/component/menu", activeMatch: "/component/" },
@@ -42,6 +42,10 @@ export default {
               text: "form 表单",
               link: "/component/form",
             },
+            {
+              text: "table 表格",
+              link: "/component/table",
+            },
           ],
         },
       ],
@@ -53,7 +57,7 @@ export default {
         cssPreprocessor: "sass",
         scriptReplaces: [
           { searchValue: /import ({.*}) from "vue"/g, replaceValue: (s, s1) => `const ${s1} = Vue` },
-          { searchValue: /import ({.*}) from "ul-curd"/g, replaceValue: (s, s1) => `const ${s1} = 'ul-curd'` },
+          { searchValue: /import ({.*}) from "ul-business"/g, replaceValue: (s, s1) => `const ${s1} = 'ul-business'` },
           { searchValue: /import ({.*}) from "vue-router"/g, replaceValue: (s, s1) => `const ${s1} = 'vue-router'` },
           {
             searchValue: /import ({.*}) from "@iconify\/vue"/g,

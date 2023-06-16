@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ul-business/components':
+        specifier: workspace:^
+        version: link:packages/components
       ul-business:
         specifier: npm:ul-business@latest
         version: 1.0.1(vue@3.2.44)

@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { IFormItem } from "@ultra-ui/components";
+import { IFormItem } from "@ul-business/components";
 
 const content = ref<IFormItem[]>([
   {

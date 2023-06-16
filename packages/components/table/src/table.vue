@@ -44,7 +44,12 @@
           </el-table-column>
           <el-table-column v-else v-bind="item" />
         </template>
-        <el-table-column v-if="hasOperateColumn && columns.length > 0" label="操作" align="center" :width="opWidth">
+        <el-table-column
+          v-if="hasOperateColumn && columns.length > 0"
+          label="操作"
+          align="center"
+          :width="opWidth"
+          fixed="right">
           <template #default="{ row }">
             <div class="operate-box">
               <el-button link type="primary" @click="onDefaultView(row)">查看</el-button>

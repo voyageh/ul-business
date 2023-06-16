@@ -15,7 +15,7 @@ hero:
       link: /guide/why
     - theme: alt
       text: 在GitHub上查看
-      link: https://github.com/vitejs/vite
+      link: https://github.com/zephyr-66/ul-business
 features:
   - icon: 💡
     title: 快速生成后台管理页面

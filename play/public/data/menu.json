@@ -8,9 +8,17 @@
     },
     "children": [
       {
-        "id": "fjnfjnk",
+        "id": "jhbbffh-1",
         "name": "表单",
         "path": "form-demo",
+        "meta": {
+          "icon": "mdi:menu"
+        }
+      },
+      {
+        "id": "jhbbffh-2",
+        "name": "表格",
+        "path": "table-demo",
         "meta": {
           "icon": "mdi:menu"
         }

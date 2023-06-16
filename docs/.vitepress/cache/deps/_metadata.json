@@ -1,29 +1,29 @@
 {
-  "hash": "f6fb5853",
-  "browserHash": "34291d05",
+  "hash": "d79caf20",
+  "browserHash": "9f152074",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.2.44/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8bbb5f45",
+      "fileHash": "bd8a31ec",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/.pnpm/element-plus@2.3.6_vue@3.2.44/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "1e060721",
+      "fileHash": "8ea9a034",
       "needsInterop": false
     },
     "ul-business": {
-      "src": "../../../../node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/index.mjs",
+      "src": "../../../../node_modules/.pnpm/ul-business@1.0.1_vue@3.2.44/node_modules/ul-business/es/index.mjs",
       "file": "ul-business.js",
-      "fileHash": "241c5fbb",
+      "fileHash": "342549f5",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-32ZBOWWW": {
-      "file": "chunk-32ZBOWWW.js"
+    "chunk-CEOQQZLC": {
+      "file": "chunk-CEOQQZLC.js"
     },
     "chunk-4XHLZSOK": {
       "file": "chunk-4XHLZSOK.js"

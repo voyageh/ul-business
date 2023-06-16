@@ -1,6 +1,6 @@
 {
   "name": "ul-business",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -13,10 +13,10 @@
     "vue3",
     "curd"
   ],
-  "homepage": "https://zephyr-66.github.io/ul-curd/",
+  "homepage": "https://zephyr-66.github.io/ul-business/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zephyr-66/ul-curd"
+    "url": "git+https://github.com/zephyr-66/ul-business"
   },
   "author": "",
   "license": "ISC",
