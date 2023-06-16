@@ -1,0 +1,33 @@
+{
+  "name": "ul-business",
+  "version": "1.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "element-plus",
+    "vue3",
+    "curd"
+  ],
+  "homepage": "https://zephyr-66.github.io/ul-curd/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephyr-66/ul-curd"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "ul-utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "vue": "^3.2.36",
+    "vue-router": "^4.2.1"
+  }
+}

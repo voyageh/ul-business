@@ -1,0 +1,32 @@
+{
+  "hash": "f6fb5853",
+  "browserHash": "34291d05",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/.pnpm/vue@3.2.44/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "8bbb5f45",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../node_modules/.pnpm/element-plus@2.3.6_vue@3.2.44/node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "1e060721",
+      "needsInterop": false
+    },
+    "ul-business": {
+      "src": "../../../../node_modules/.pnpm/ul-curd@1.0.1_vue@3.2.44/node_modules/ul-curd/es/index.mjs",
+      "file": "ul-business.js",
+      "fileHash": "241c5fbb",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-32ZBOWWW": {
+      "file": "chunk-32ZBOWWW.js"
+    },
+    "chunk-4XHLZSOK": {
+      "file": "chunk-4XHLZSOK.js"
+    }
+  }
+}

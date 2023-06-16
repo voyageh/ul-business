@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "ultra-ui",
+    "target": "es2016",
+    "module": "esnext",
+    "baseUrl": ".",
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "rootDir": ".",
+    "types": [],
+    "paths": {
+      "@ultra-ui/*": ["packages/*"],
+      "element-plus": ["node_modules/element-plus"]
+    }
+  }
+}

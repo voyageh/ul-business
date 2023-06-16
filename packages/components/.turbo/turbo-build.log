@@ -1,0 +1,81 @@
+
+> @ul-business/components@1.0.0 build /Users/zlf/person/ul-business/packages/components
+> vite build
+
+vite v4.3.9 building for production...
+"build.lib.formats" will be ignored because "build.rollupOptions.output" is already an array format.
+transforming...
+✓ 25 modules transformed.
+
+(!) outDir /Users/zlf/person/ul-business/packages/ul-business/components/es is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../ul-business/components/es/style.css                     0.56 kB │ gzip: 0.30 kB
+../ul-business/components/es/menu/src/menu.vue2.mjs        0.04 kB │ gzip: 0.06 kB
+../ul-business/components/es/table/src/table.vue2.mjs      0.04 kB │ gzip: 0.06 kB
+../ul-business/components/es/form/src/form.vue2.mjs        0.06 kB │ gzip: 0.08 kB
+../ul-business/components/es/upload/src/upload.vue2.mjs    0.06 kB │ gzip: 0.08 kB
+../ul-business/components/es/menu/src/menu-item.vue2.mjs   0.06 kB │ gzip: 0.08 kB
+../ul-business/components/es/menu/src/menu.vue3.mjs        0.09 kB │ gzip: 0.08 kB
+../ul-business/components/es/table/src/table.vue3.mjs      0.09 kB │ gzip: 0.08 kB
+../ul-business/components/es/upload/index.mjs              0.14 kB │ gzip: 0.13 kB
+../ul-business/components/es/menu/src/types/menu-item.mjs  0.17 kB │ gzip: 0.13 kB
+../ul-business/components/es/table/index.mjs               0.17 kB │ gzip: 0.14 kB
+../ul-business/components/es/installer.mjs                 0.19 kB │ gzip: 0.17 kB
+../ul-business/components/es/form/index.mjs                0.21 kB │ gzip: 0.16 kB
+../ul-business/components/es/upload/src/type.mjs           0.22 kB │ gzip: 0.16 kB
+../ul-business/components/es/menu/src/types/menu.mjs       0.23 kB │ gzip: 0.21 kB
+../ul-business/components/es/form/src/type.mjs             0.25 kB │ gzip: 0.19 kB
+../ul-business/components/es/component.mjs                 0.27 kB │ gzip: 0.16 kB
+../ul-business/components/es/menu/index.mjs                0.27 kB │ gzip: 0.17 kB
+../ul-business/components/es/form/src/handleConetnt.mjs    0.45 kB │ gzip: 0.22 kB
+../ul-business/components/es/index.mjs                     0.59 kB │ gzip: 0.26 kB
+../ul-business/components/es/menu/src/menu.vue.mjs         0.87 kB │ gzip: 0.49 kB
+../ul-business/components/es/table/src/type.mjs            1.01 kB │ gzip: 0.35 kB
+../ul-business/components/es/menu/src/menu-item.vue.mjs    1.76 kB │ gzip: 0.67 kB
+../ul-business/components/es/upload/src/upload.vue.mjs     3.12 kB │ gzip: 1.38 kB
+../ul-business/components/es/form/src/form.vue.mjs         5.05 kB │ gzip: 1.62 kB
+../ul-business/components/es/table/src/table.vue.mjs       9.86 kB │ gzip: 2.65 kB
+../ul-business/components/lib/menu/src/menu.vue2.js        0.14 kB │ gzip: 0.14 kB
+../ul-business/components/lib/table/src/table.vue2.js      0.14 kB │ gzip: 0.14 kB
+../ul-business/components/lib/form/src/form.vue2.js        0.17 kB │ gzip: 0.16 kB
+../ul-business/components/lib/upload/src/upload.vue2.js    0.17 kB │ gzip: 0.16 kB
+../ul-business/components/lib/menu/src/menu-item.vue2.js   0.17 kB │ gzip: 0.16 kB
+../ul-business/components/lib/menu/src/menu.vue3.js        0.19 kB │ gzip: 0.16 kB
+../ul-business/components/lib/table/src/table.vue3.js      0.20 kB │ gzip: 0.16 kB
+../ul-business/components/lib/menu/src/types/menu-item.js  0.22 kB │ gzip: 0.18 kB
+../ul-business/components/lib/installer.js                 0.23 kB │ gzip: 0.21 kB
+../ul-business/components/lib/upload/src/type.js           0.23 kB │ gzip: 0.19 kB
+../ul-business/components/lib/upload/index.js              0.23 kB │ gzip: 0.19 kB
+../ul-business/components/lib/menu/src/types/menu.js       0.25 kB │ gzip: 0.21 kB
+../ul-business/components/lib/form/src/type.js             0.26 kB │ gzip: 0.21 kB
+../ul-business/components/lib/table/index.js               0.27 kB │ gzip: 0.20 kB
+../ul-business/components/lib/form/index.js                0.29 kB │ gzip: 0.21 kB
+../ul-business/components/lib/component.js                 0.31 kB │ gzip: 0.21 kB
+../ul-business/components/lib/menu/index.js                0.39 kB │ gzip: 0.23 kB
+../ul-business/components/lib/form/src/handleConetnt.js    0.45 kB │ gzip: 0.27 kB
+../ul-business/components/lib/index.js                     0.63 kB │ gzip: 0.30 kB
+../ul-business/components/lib/menu/src/menu.vue.js         0.75 kB │ gzip: 0.45 kB
+../ul-business/components/lib/table/src/type.js            0.79 kB │ gzip: 0.37 kB
+../ul-business/components/lib/menu/src/menu-item.vue.js    1.38 kB │ gzip: 0.58 kB
+../ul-business/components/lib/upload/src/upload.vue.js     2.18 kB │ gzip: 1.20 kB
+../ul-business/components/lib/form/src/form.vue.js         3.44 kB │ gzip: 1.32 kB
+../ul-business/components/lib/table/src/table.vue.js       5.89 kB │ gzip: 2.14 kB
+
+[vite:dts] Start generate declaration files...
+[96minstaller.ts[0m:[93m6[0m:[93m9[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'App<any>'.
+  Property '["ul-utils/es/vue/install".INSTALLED_KEY]' does not exist on type 'App<any>'.
+
+[7m6[0m     if (app[INSTALLED_KEY]) return;
+[7m [0m [91m        ~~~~~~~~~~~~~~~~~~[0m
+[96minstaller.ts[0m:[93m8[0m:[93m5[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'App<any>'.
+  Property '["ul-utils/es/vue/install".INSTALLED_KEY]' does not exist on type 'App<any>'.
+
+[7m8[0m     app[INSTALLED_KEY] = true;
+[7m [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+✓ built in 6.39s
+[vite:dts] Declaration files built in 5920ms.
+

@@ -1,0 +1,45 @@
+{
+  "name": "ul-business",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "turbo run build --filter=\"./packages/*\"",
+    "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
+    "play:dev": "pnpm run -C play dev",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.1.1",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^20.2.6",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "element-plus": "^2.3.6",
+    "lodash": "^4.17.21",
+    "sass": "^1.63.3",
+    "turbo": "^1.10.3",
+    "typescript": "^5.0.4",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.1",
+    "unplugin-vue-macros": "^2.2.1",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-pages": "^0.31.0",
+    "vitepress": "1.0.0-beta.2",
+    "vue": "^3.2.44",
+    "vue-router": "^4.2.2",
+    "vue-tsc": "^1.6.5"
+  },
+  "dependencies": {
+    "ultra-tools": "^1.0.1",
+    "ul-business": "npm:ul-business@latest"
+  }
+}

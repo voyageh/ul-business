@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jhbbffh",
+    "name": "组件管理",
+    "path": "/",
+    "meta": {
+      "icon": "mdi:cog"
+    },
+    "children": [
+      {
+        "id": "fjnfjnk",
+        "name": "表单",
+        "path": "form-demo",
+        "meta": {
+          "icon": "mdi:menu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "jhbbffh",
+    "name": "系统管理",
+    "path": "/sys",
+    "meta": {
+      "icon": "mdi:cog"
+    },
+    "children": [
+      {
+        "id": "fjnfjnk",
+        "name": "菜单管理",
+        "path": "/menu",
+        "meta": {
+          "icon": "mdi:menu"
+        }
+      }
+    ]
+  }
+]

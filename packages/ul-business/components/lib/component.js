@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./menu/index.js"),n=require("./form/index.js"),t=require("./table/index.js"),o=require("./upload/index.js"),r=[e.UlMenu,e.UlMenuItem,n.UlForm,t.UlTable,o.UlUpload];exports.default=r;

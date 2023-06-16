@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("ul-utils"),l=require("./src/table.vue.js");require("./src/table.vue2.js");const e=t.withInstall(l.default);exports.UlTable=e;exports.default=e;
