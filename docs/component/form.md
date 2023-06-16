@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { IFormItem } from "ul-curd";
+import { IFormItem } from "ul-business";
 
 const content = ref<IFormItem[]>([
   {
