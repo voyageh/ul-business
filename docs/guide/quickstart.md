@@ -11,12 +11,12 @@
 ```ts
 // main.ts
 import { createApp } from "vue";
-import UltraUi from "ul-business";
+import curd from "ul-business";
 import "ul-business/es/style.css";
 import App from "./App.vue";
 
 const app = createApp(App);
 
-app.use(UltraUi);
+app.use(curd);
 app.mount("#app");
 ```

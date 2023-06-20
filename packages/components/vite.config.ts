@@ -3,6 +3,9 @@ import { defineConfig } from "vite";
 import VueMacros from "unplugin-vue-macros/vite";
 import Vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig({
   build: {
@@ -15,7 +18,7 @@ export default defineConfig({
     rollupOptions: {
       input: "index.ts",
       //忽略打包vue文件
-      external: ["vue", "element-plus", "@iconify/vue", "ul-utils", "lodash"],
+      external: ["vue", /element-plus/, "@iconify/vue", "ul-utils", "lodash"],
       output: [
         {
           format: "es",
@@ -46,6 +49,12 @@ export default defineConfig({
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: "../../tsconfig.web.json",
       include: ["./"],
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     }),
   ],
 });

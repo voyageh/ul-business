@@ -1,51 +1,56 @@
-import { defineComponent as s, computed as g, resolveComponent as m, openBlock as u, createBlock as r, unref as n, withCtx as t, createVNode as l, createElementVNode as B, toDisplayString as a, createElementBlock as C, Fragment as N, renderList as V, createTextVNode as b } from "vue";
-import z from "./types/menu-item.mjs";
+import { ElIcon as E, ElSubMenu as y, ElMenuItem as g } from "element-plus/es";
+import "element-plus/es/components/base/style/css";
+import "element-plus/es/components/menu-item/style/css";
+import "element-plus/es/components/sub-menu/style/css";
+import "element-plus/es/components/icon/style/css";
+import { defineComponent as a, computed as B, resolveComponent as C, openBlock as m, createBlock as u, unref as n, withCtx as t, createVNode as r, createElementVNode as I, toDisplayString as c, createElementBlock as N, Fragment as V, renderList as b, createTextVNode as z } from "vue";
+import M from "./types/menu-item.mjs";
 import { Icon as p } from "@iconify/vue";
-const E = s({ name: "ul-menu-item" }), F = /* @__PURE__ */ s({
-  ...E,
-  props: z,
+const S = a({ name: "ul-menu-item" }), q = /* @__PURE__ */ a({
+  ...S,
+  props: M,
   setup(d) {
-    const i = d, o = g(() => i.parent + i.menu.path);
+    const i = d, o = B(() => i.parent + i.menu.path);
     return (e, v) => {
-      const c = m("el-icon"), _ = m("menu-item", !0), f = m("el-sub-menu"), h = m("el-menu-item");
-      return e.menu.children && e.menu.children.length > 0 ? (u(), r(f, {
+      const l = E, s = C("menu-item", !0), _ = y, f = g;
+      return e.menu.children && e.menu.children.length > 0 ? (m(), u(_, {
         key: 0,
         index: n(o)
       }, {
         title: t(() => [
-          l(c, { size: 20 }, {
+          r(l, { size: 20 }, {
             default: t(() => [
-              l(n(p), {
+              r(n(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          B("span", null, a(e.menu.name), 1)
+          I("span", null, c(e.menu.name), 1)
         ]),
         default: t(() => [
-          (u(!0), C(N, null, V(e.menu.children, (k, y) => (u(), r(_, {
-            key: y,
-            menu: k,
+          (m(!0), N(V, null, b(e.menu.children, (h, k) => (m(), u(s, {
+            key: k,
+            menu: h,
             parent: n(o)
           }, null, 8, ["menu", "parent"]))), 128))
         ]),
         _: 1
-      }, 8, ["index"])) : (u(), r(h, {
+      }, 8, ["index"])) : (m(), u(f, {
         key: 1,
         index: n(o),
         id: n(o)
       }, {
         default: t(() => [
-          l(c, { size: 20 }, {
+          r(l, { size: 20 }, {
             default: t(() => [
-              l(n(p), {
+              r(n(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          b(" " + a(e.menu.name), 1)
+          z(" " + c(e.menu.name), 1)
         ]),
         _: 1
       }, 8, ["index", "id"]));
@@ -53,5 +58,5 @@ const E = s({ name: "ul-menu-item" }), F = /* @__PURE__ */ s({
   }
 });
 export {
-  F as default
+  q as default
 };

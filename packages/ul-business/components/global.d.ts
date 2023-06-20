@@ -1,10 +1,10 @@
-declare module "@vue/runtime-core" {
+declare module "vue" {
   export interface GlobalComponents {
-    UlMenu: typeof import(".")["UlMenu"];
-    UlMenuItem: typeof import(".")["UlMenuItem"];
-    UlForm: typeof import(".")["UlForm"];
-    UlTable: typeof import(".")["UlTable"];
-    UlUpload: typeof import(".")["UlUpload"];
+    UlMenu: typeof import("./es")["UlMenu"];
+    UlMenuItem: typeof import("./es")["UlMenuItem"];
+    UlForm: typeof import("./es")["UlForm"];
+    UlTable: typeof import("./es")["UlTable"];
+    UlUpload: typeof import("./es")["UlUpload"];
   }
 }
 

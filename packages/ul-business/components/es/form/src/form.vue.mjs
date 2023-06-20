@@ -1,151 +1,157 @@
-import { defineComponent as B, ref as C, watch as y, resolveComponent as V, openBlock as a, createBlock as c, mergeProps as f, withCtx as i, createElementBlock as d, Fragment as v, renderList as D, createVNode as $, toDisplayString as U, resolveDynamicComponent as E, createCommentVNode as g, renderSlot as x } from "vue";
-import { formProps as z } from "./type.mjs";
-import A from "./handleConetnt.mjs";
-import { isEqual as G, cloneDeep as P } from "lodash";
-const H = { key: 0 }, J = { key: 0 }, K = B({ name: "UlForm" }), h = /* @__PURE__ */ B({
-  ...K,
-  props: z,
+import { ElFormItem as L, ElCol as $, ElRow as x, ElForm as z } from "element-plus/es";
+import "element-plus/es/components/base/style/css";
+import "element-plus/es/components/form/style/css";
+import "element-plus/es/components/row/style/css";
+import "element-plus/es/components/col/style/css";
+import "element-plus/es/components/form-item/style/css";
+import { defineComponent as P, ref as j, watch as v, openBlock as l, createBlock as d, mergeProps as f, withCtx as i, createElementBlock as c, Fragment as V, renderList as O, createVNode as A, toDisplayString as C, resolveDynamicComponent as D, createCommentVNode as F, renderSlot as G } from "vue";
+import { formProps as H } from "./type.mjs";
+import J from "./handleConetnt.mjs";
+import { isEqual as K, cloneDeep as U } from "lodash";
+const M = { key: 0 }, Q = { key: 0 }, T = P({ name: "UlForm" }), se = /* @__PURE__ */ P({
+  ...T,
+  props: H,
   emits: ["update:modelValue"],
-  setup(I, { expose: N, emit: R }) {
-    const _ = I, F = C(), n = C({});
+  setup(B, { expose: I, emit: R }) {
+    const _ = B, y = j(), r = j({});
     let m = {};
-    y(
+    v(
       () => _.content,
       (e) => {
-        const { formatObj: o, defaulValue: l } = A(e);
-        m = o, n.value = Object.assign(l, n.value);
+        const { formatObj: t, defaulValue: a } = J(e);
+        m = t, r.value = Object.assign(a, r.value);
       },
       {
         immediate: !0,
         deep: !0
       }
     );
-    const S = () => {
-      const { content: e, modelValue: o, ...l } = _;
-      return l;
-    }, b = (e) => {
+    const N = () => {
+      const { content: e, modelValue: t, ...a } = _;
+      return a;
+    }, g = (e) => {
       const {
-        id: o,
-        type: l,
+        id: t,
+        type: a,
         component: u,
         default: s,
         str: p,
-        forceDisabled: t,
-        inputFormat: r,
-        outputFormat: O,
-        el: M,
-        hide: Q,
-        span: T,
-        ...L
+        forceDisabled: o,
+        inputFormat: n,
+        outputFormat: E,
+        el: W,
+        hide: X,
+        span: Y,
+        ...q
       } = e;
-      return L;
-    }, k = (e) => {
-      let o = !e;
-      return typeof e == "function" && (o = !e(n.value)), o;
-    }, w = () => {
-      let e = P(n.value) || {};
-      return Object.keys(e).forEach((o) => {
-        var l, u, s;
-        if (e[o] && ((l = m[o]) != null && l.outputFormat)) {
-          const p = (s = (u = m[o]).outputFormat) == null ? void 0 : s.call(u, e);
+      return q;
+    }, b = (e) => {
+      let t = !e;
+      return typeof e == "function" && (t = !e(r.value)), t;
+    }, k = () => {
+      let e = U(r.value) || {};
+      return Object.keys(e).forEach((t) => {
+        var a, u, s;
+        if (e[t] && ((a = m[t]) != null && a.outputFormat)) {
+          const p = (s = (u = m[t]).outputFormat) == null ? void 0 : s.call(u, e);
           Object.assign(e, p);
         }
       }), e;
-    }, j = (e) => {
-      let o = P(e) || {};
-      return Object.keys(o).forEach((l) => {
+    }, w = (e) => {
+      let t = U(e) || {};
+      return Object.keys(t).forEach((a) => {
         var u, s, p;
-        if (o[l] && ((u = m[l]) != null && u.inputFormat)) {
-          const t = m[l] && ((p = (s = m[l]).inputFormat) == null ? void 0 : p.call(s, o));
-          Object.assign(o, t);
+        if (t[a] && ((u = m[a]) != null && u.inputFormat)) {
+          const o = m[a] && ((p = (s = m[a]).inputFormat) == null ? void 0 : p.call(s, t));
+          Object.assign(t, o);
         }
-      }), o;
-    }, q = (e) => {
-      n.value = j(e);
+      }), t;
+    }, S = (e) => {
+      r.value = w(e);
     };
-    return _.modelValue && (y(
+    return _.modelValue && (v(
       () => _.modelValue,
       (e) => {
-        if (e && !G(e, n.value)) {
-          const o = j(e);
-          n.value = Object.assign({}, n.value, o);
+        if (e && !K(e, r.value)) {
+          const t = w(e);
+          r.value = Object.assign({}, r.value, t);
         }
       },
       {
         immediate: !0,
         deep: !0
       }
-    ), y(
-      () => n.value,
+    ), v(
+      () => r.value,
       async () => {
-        const e = await w();
+        const e = await k();
         R("update:modelValue", e);
       },
       {
         deep: !0,
         immediate: !0
       }
-    )), N({
-      getValue: w,
-      setValue: q,
-      elFrom: F
-    }), (e, o) => {
-      const l = V("el-form-item"), u = V("el-col"), s = V("el-row"), p = V("el-form");
-      return a(), c(p, f({
+    )), I({
+      getValue: k,
+      setValue: S,
+      elFrom: y
+    }), (e, t) => {
+      const a = L, u = $, s = x, p = z;
+      return l(), d(p, f({
         ref_key: "formRef",
-        ref: F,
+        ref: y,
         class: "ul-form"
-      }, S(), { model: n.value }), {
+      }, N(), { model: r.value }), {
         default: i(() => [
-          (a(!0), d(v, null, D(e.content, (t) => (a(), d(v, null, [
-            t.type === "row" && t.items ? (a(), c(s, {
+          (l(!0), c(V, null, O(e.content, (o) => (l(), c(V, null, [
+            o.type === "row" && o.items ? (l(), d(s, {
               key: 0,
               gutter: 20
             }, {
               default: i(() => [
-                (a(!0), d(v, null, D(t.items || [], (r) => (a(), d(v, {
-                  key: r.id
+                (l(!0), c(V, null, O(o.items || [], (n) => (l(), c(V, {
+                  key: n.id
                 }, [
-                  k(r.hide) ? (a(), c(u, {
+                  b(n.hide) ? (l(), d(u, {
                     key: 0,
                     xs: { span: 24 },
                     sm: { span: 12 },
                     md: { span: 8 },
-                    lg: { span: r.span || 6 }
+                    lg: { span: n.span || 6 }
                   }, {
                     default: i(() => [
-                      $(l, f({
-                        prop: r.id
-                      }, b(r)), {
+                      A(a, f({
+                        prop: n.id
+                      }, g(n)), {
                         default: i(() => [
-                          e.disabled && !t.forceDisabled ? (a(), d("span", H, U(r.str ? n.value[r.str] : n.value[r.id]), 1)) : (a(), c(E(r.type || r.component), f({ key: 1 }, r.el, {
-                            modelValue: n.value[r.id],
-                            "onUpdate:modelValue": (O) => n.value[r.id] = O
+                          e.disabled && !o.forceDisabled ? (l(), c("span", M, C(n.str ? r.value[n.str] : r.value[n.id]), 1)) : (l(), d(D(n.type || n.component), f({ key: 1 }, n.el, {
+                            modelValue: r.value[n.id],
+                            "onUpdate:modelValue": (E) => r.value[n.id] = E
                           }), null, 16, ["modelValue", "onUpdate:modelValue"]))
                         ]),
                         _: 2
                       }, 1040, ["prop"])
                     ]),
                     _: 2
-                  }, 1032, ["lg"])) : g("", !0)
+                  }, 1032, ["lg"])) : F("", !0)
                 ], 64))), 128))
               ]),
               _: 2
-            }, 1024)) : g("", !0),
-            k(t.hide) ? (a(), c(l, f({
+            }, 1024)) : F("", !0),
+            b(o.hide) ? (l(), d(a, f({
               key: 1,
-              prop: t.id
-            }, b(t)), {
+              prop: o.id
+            }, g(o)), {
               default: i(() => [
-                e.disabled && !t.forceDisabled ? (a(), d("span", J, U(t.str ? n.value[t.str] : n.value[t.id]), 1)) : (a(), c(E(t.type || t.component), f({ key: 1 }, t.el, {
-                  modelValue: n.value[t.id],
-                  "onUpdate:modelValue": (r) => n.value[t.id] = r
+                e.disabled && !o.forceDisabled ? (l(), c("span", Q, C(o.str ? r.value[o.str] : r.value[o.id]), 1)) : (l(), d(D(o.type || o.component), f({ key: 1 }, o.el, {
+                  modelValue: r.value[o.id],
+                  "onUpdate:modelValue": (n) => r.value[o.id] = n
                 }), null, 16, ["modelValue", "onUpdate:modelValue"]))
               ]),
               _: 2
-            }, 1040, ["prop"])) : g("", !0)
+            }, 1040, ["prop"])) : F("", !0)
           ], 64))), 256)),
-          x(e.$slots, "last")
+          G(e.$slots, "last")
         ]),
         _: 3
       }, 16, ["model"]);
@@ -153,5 +159,5 @@ const H = { key: 0 }, J = { key: 0 }, K = B({ name: "UlForm" }), h = /* @__PURE_
   }
 });
 export {
-  h as default
+  se as default
 };
