@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress-theme-demoblock": "^2.0.2"
+    "vitepress-theme-demoblock": "^2.0.2",
+    "vue": "3.2.44"
   }
 }
