@@ -4,7 +4,6 @@
 
 :::demo ul-table 会自动根据 columns 生成表格的列
 
-````vue
 ```vue
 <template>
   <ul-table v-bind="config">
@@ -162,7 +161,7 @@ const config = reactive<UlTableProps>({
 </script>
 
 <style scoped></style>
-````
+```
 
 :::
 
