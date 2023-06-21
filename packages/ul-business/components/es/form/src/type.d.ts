@@ -1,12 +1,12 @@
-import { PropType, ExtractPropTypes } from "vue";
+import { PropType, ExtractPropTypes, VNode } from "vue";
 import type { FormItemProps } from "element-plus";
 export interface IFormat {
     inputFormat?(row: any): object;
     outputFormat?(row: any): object;
 }
-export interface IFormItem extends Partial<FormItemProps>, IFormat {
+export interface IFormItem extends Partial<Omit<FormItemProps, "label">>, IFormat {
     id?: string;
-    label?: string;
+    label?: string | (() => object | VNode);
     type?: string;
     component?: string | object;
     default?: any;

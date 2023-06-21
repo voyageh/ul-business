@@ -1,56 +1,57 @@
-import { ElIcon as E, ElSubMenu as y, ElMenuItem as g } from "element-plus/es";
+import { ElIcon as k, ElSubMenu as v, ElMenuItem as E } from "element-plus/es";
 import "element-plus/es/components/base/style/css";
 import "element-plus/es/components/menu-item/style/css";
 import "element-plus/es/components/sub-menu/style/css";
 import "element-plus/es/components/icon/style/css";
-import { defineComponent as a, computed as B, resolveComponent as C, openBlock as m, createBlock as u, unref as n, withCtx as t, createVNode as r, createElementVNode as I, toDisplayString as c, createElementBlock as N, Fragment as V, renderList as b, createTextVNode as z } from "vue";
-import M from "./types/menu-item.mjs";
+import { defineComponent as y, computed as g, resolveComponent as B, openBlock as o, createBlock as u, withCtx as n, createVNode as m, unref as l, createElementVNode as C, toDisplayString as a, createElementBlock as I, Fragment as N, renderList as V, createTextVNode as b } from "vue";
+import z from "./types/menu-item.mjs";
 import { Icon as p } from "@iconify/vue";
-const S = a({ name: "ul-menu-item" }), q = /* @__PURE__ */ a({
-  ...S,
-  props: M,
-  setup(d) {
-    const i = d, o = B(() => i.parent + i.menu.path);
-    return (e, v) => {
-      const l = E, s = C("menu-item", !0), _ = y, f = g;
-      return e.menu.children && e.menu.children.length > 0 ? (m(), u(_, {
+const j = /* @__PURE__ */ y({
+  name: "ul-menu-item",
+  __name: "menu-item",
+  props: z,
+  setup(c) {
+    const r = c, t = g(() => r.parent + r.menu.path);
+    return (e, M) => {
+      const i = k, d = B("menu-item", !0), s = v, _ = E;
+      return e.menu.children && e.menu.children.length > 0 ? (o(), u(s, {
         key: 0,
-        index: n(o)
+        index: t.value
       }, {
-        title: t(() => [
-          r(l, { size: 20 }, {
-            default: t(() => [
-              r(n(p), {
+        title: n(() => [
+          m(i, { size: 20 }, {
+            default: n(() => [
+              m(l(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          I("span", null, c(e.menu.name), 1)
+          C("span", null, a(e.menu.name), 1)
         ]),
-        default: t(() => [
-          (m(!0), N(V, null, b(e.menu.children, (h, k) => (m(), u(s, {
-            key: k,
-            menu: h,
-            parent: n(o)
+        default: n(() => [
+          (o(!0), I(N, null, V(e.menu.children, (f, h) => (o(), u(d, {
+            key: h,
+            menu: f,
+            parent: t.value
           }, null, 8, ["menu", "parent"]))), 128))
         ]),
         _: 1
-      }, 8, ["index"])) : (m(), u(f, {
+      }, 8, ["index"])) : (o(), u(_, {
         key: 1,
-        index: n(o),
-        id: n(o)
+        index: t.value,
+        id: t.value
       }, {
-        default: t(() => [
-          r(l, { size: 20 }, {
-            default: t(() => [
-              r(n(p), {
+        default: n(() => [
+          m(i, { size: 20 }, {
+            default: n(() => [
+              m(l(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
             _: 1
           }),
-          z(" " + c(e.menu.name), 1)
+          b(" " + a(e.menu.name), 1)
         ]),
         _: 1
       }, 8, ["index", "id"]));
@@ -58,5 +59,5 @@ const S = a({ name: "ul-menu-item" }), q = /* @__PURE__ */ a({
   }
 });
 export {
-  q as default
+  j as default
 };

@@ -1,11 +1,15 @@
 declare const _sfc_main: import("vue").DefineComponent<{
     tip: StringConstructor;
+    size: {
+        type: import("vue").PropType<"" | "small" | "mini">;
+        default: string;
+    };
     limitSize: {
         type: NumberConstructor;
         default: number;
     };
     accept: {
-        type: import("vue").PropType<import("./type").fileTypes>;
+        type: import("vue").PropType<"" | "image" | "video" | "word" | "excel" | "pdf" | "compress">;
         default: string;
     };
     beforeUpload: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | (() => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | {
@@ -117,12 +121,16 @@ declare const _sfc_main: import("vue").DefineComponent<{
     limit: NumberConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     tip: StringConstructor;
+    size: {
+        type: import("vue").PropType<"" | "small" | "mini">;
+        default: string;
+    };
     limitSize: {
         type: NumberConstructor;
         default: number;
     };
     accept: {
-        type: import("vue").PropType<import("./type").fileTypes>;
+        type: import("vue").PropType<"" | "image" | "video" | "word" | "excel" | "pdf" | "compress">;
         default: string;
     };
     beforeUpload: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | (() => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | {
@@ -234,10 +242,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
     limit: NumberConstructor;
 }>>, {
     type: string;
-    disabled: boolean;
     name: string;
+    size: "" | "small" | "mini";
+    disabled: boolean;
     limitSize: number;
-    accept: import("./type").fileTypes;
+    accept: "" | "image" | "video" | "word" | "excel" | "pdf" | "compress";
     beforeUpload: (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>;
     onRemove: (uploadFile: import("element-plus").UploadFile, uploadFiles: import("element-plus").UploadFiles) => void;
     onChange: (uploadFile: import("element-plus").UploadFile, uploadFiles: import("element-plus").UploadFiles) => void;
@@ -257,5 +266,5 @@ declare const _sfc_main: import("vue").DefineComponent<{
     autoUpload: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     listType: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "picture" | "picture-card", unknown>;
     httpRequest: import("element-plus").UploadRequestHandler;
-}>;
+}, {}>;
 export default _sfc_main;

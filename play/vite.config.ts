@@ -4,10 +4,11 @@ import Pages from "vite-plugin-pages";
 import path from "path";
 // @ts-ignore
 import VueMacros from "unplugin-vue-macros/vite";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), VueMacros(), , Pages()],
+  plugins: [vue(), vueJsx(), VueMacros(), Pages()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

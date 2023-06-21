@@ -1,8 +1,9 @@
-import { PropType, ExtractPropTypes } from "vue";
+import { PropType, ExtractPropTypes, VNode } from "vue";
 import { TableColumnCtx, TableProps, PaginationProps } from "element-plus";
 import { IFormItem } from "../../form";
 export type ITableAttr = Omit<TableProps<any>, "data">;
-export interface ITableColumn<T extends any> extends Partial<TableColumnCtx<T>> {
+export interface ITableColumn<T extends any> extends Partial<Omit<TableColumnCtx<T>, "label">> {
+    label?: string | (() => VNode | string);
     component?: string | object;
     el?: Object;
 }
@@ -61,7 +62,6 @@ export declare const tableProps: {
     };
     onNew: FunctionConstructor;
     newSumbit: FunctionConstructor;
-    onDelete: FunctionConstructor;
     deleteSumbit: FunctionConstructor;
     getDetail: FunctionConstructor;
     onView: FunctionConstructor;

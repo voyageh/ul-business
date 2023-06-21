@@ -21,5 +21,5 @@ declare const _sfc_main: import("vue").DefineComponent<{
 }>>, {
     menu: import("./types/menu-item").IMenuItem;
     parent: string;
-}>;
+}, {}>;
 export default _sfc_main;

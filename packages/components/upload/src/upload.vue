@@ -1,5 +1,5 @@
 <template>
-  <div class="ul-upload">
+  <div class="ul-upload" :class="[size && `ul-upload__${size}`]">
     <el-upload
       v-bind="$props"
       :accept="accept"
@@ -31,6 +31,7 @@ import { uploadProps } from "./type";
 import type { UploadProps } from "element-plus";
 import { Icon } from "@iconify/vue";
 import { ElMessage } from "element-plus";
+import { flatMapDeep as _flatMapDeep } from "lodash";
 
 defineOptions({ name: "UlUpload" });
 
@@ -46,10 +47,8 @@ const props = defineProps(uploadProps);
 
 const accept = computed(() => {
   if (props.accept) {
-    return props.accept
-      .split(",")
-      .map((key) => acceptType[key])
-      .flat()
+    const arr = props.accept.split(",").map((key) => acceptType[key]);
+    return _flatMapDeep(arr)
       .map((key) => `.${key}`)
       .join(",");
   }
@@ -93,3 +92,24 @@ const handleExceed: UploadProps["onExceed"] = () => {
   ElMessage.warning(`文件上传数量不得超过${props.limit}个`);
 };
 </script>
+
+<style lang="scss">
+.ul-upload {
+  $size: (
+    small: 120px,
+    mini: 90px,
+  );
+
+  @each $label, $value in $size {
+    &__#{$label} {
+      .el-upload-list--picture-card {
+        --el-upload-list-picture-card-size: #{$value};
+
+        .el-upload--picture-card {
+          --el-upload-picture-card-size: #{$value};
+        }
+      }
+    }
+  }
+}
+</style>

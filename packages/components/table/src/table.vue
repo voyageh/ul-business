@@ -2,7 +2,7 @@
   <div class="ul-table">
     <div v-if="searchForms.length > 0" class="ul-table__search">
       <ul-form ref="searchForm" :content="searchForms" inline>
-        <template #last>
+        <template #final>
           <el-form-item>
             <el-button type="primary" @click="onSearch">
               <template #icon>
@@ -34,15 +34,25 @@
           </template>
           新增
         </el-button>
+        <slot name="head"></slot>
       </div>
       <el-table border :data="list" v-loading="loading" element-loading-text="正在努力加载..." v-bind="$attrs">
         <template v-for="item in columns">
-          <el-table-column v-if="item.component" :label="item.label">
+          <el-table-column v-if="item.component" v-bind="getColumnProps(item)">
+            <template #header>
+              <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
+              <span v-else>{{ item.label }}</span>
+            </template>
             <template #default="{ row }">
               <Component :is="item.component" v-model="row[item.prop!]" v-bind="item.el" />
             </template>
           </el-table-column>
-          <el-table-column v-else v-bind="item" />
+          <el-table-column v-else v-bind="getColumnProps(item)">
+            <template #header>
+              <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
+              <span v-else>{{ item.label }}</span>
+            </template>
+          </el-table-column>
         </template>
         <el-table-column
           v-if="hasOperateColumn && columns.length > 0"
@@ -95,7 +105,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, nextTick } from "vue";
-import { tableProps } from "./type";
+import { tableProps, ITableColumn } from "./type";
 import { Icon } from "@iconify/vue";
 import { FormInstance } from "../../form";
 import { get as _get } from "lodash";
@@ -114,6 +124,15 @@ const pagination = reactive({
   [props.pageKey]: 1,
   [props.sizeKey]: 10,
 });
+
+/**
+ * 用来获取el-table-column的props
+ * @param obj
+ */
+const getColumnProps = (obj: ITableColumn<any>) => {
+  const { label, component, el, ...rest } = obj;
+  return rest;
+};
 
 /**
  * 查询
@@ -263,9 +282,11 @@ const onSave = async () => {
     }
     if (save) {
       const formValue = dialogForm.value?.getValue?.();
-      await save(formValue);
-      dialogState.visible = false;
-      onSearch();
+      const flag = await save(formValue);
+      if (flag !== false) {
+        dialogState.visible = false;
+        onSearch();
+      }
     }
   });
 };
@@ -273,16 +294,43 @@ const onSave = async () => {
 
 <style lang="scss">
 .ul-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__search {
+    border-radius: 6px;
+    border: 1px solid #e4e7ed;
+    background-color: #fff;
+    padding: 18px 20px 0;
+    margin-bottom: 10px;
+  }
   &__content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 1px solid #e4e7ed;
+    background-color: #fff;
+    padding: 20px;
+
     .table-head {
       margin-bottom: 15px;
     }
-    :deep(.el-table__header th) {
+
+    .el-table__header th {
       height: 45px;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 14px;
       color: var(--el-text-color-primary);
-      background: var(--el-fill-color-light);
+      background: var(--el-fill-color-light) !important;
+    }
+
+    .el-table__cell > .cell > *:first-child {
+      display: flex;
+      align-items: center;
     }
 
     .paging-box {

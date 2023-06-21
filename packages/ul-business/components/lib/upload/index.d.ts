@@ -1,12 +1,16 @@
 import upload from "./src/upload.vue";
 export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").DefineComponent<{
     tip: StringConstructor;
+    size: {
+        type: import("vue").PropType<"" | "small" | "mini">;
+        default: string;
+    };
     limitSize: {
         type: NumberConstructor;
         default: number;
     };
     accept: {
-        type: import("vue").PropType<import("./src/type").fileTypes>;
+        type: import("vue").PropType<"" | "image" | "video" | "word" | "excel" | "pdf" | "compress">;
         default: string;
     };
     beforeUpload: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | (() => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | {
@@ -118,12 +122,16 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     limit: NumberConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     tip: StringConstructor;
+    size: {
+        type: import("vue").PropType<"" | "small" | "mini">;
+        default: string;
+    };
     limitSize: {
         type: NumberConstructor;
         default: number;
     };
     accept: {
-        type: import("vue").PropType<import("./src/type").fileTypes>;
+        type: import("vue").PropType<"" | "image" | "video" | "word" | "excel" | "pdf" | "compress">;
         default: string;
     };
     beforeUpload: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | (() => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | {
@@ -235,10 +243,11 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     limit: NumberConstructor;
 }>>, {
     type: string;
-    disabled: boolean;
     name: string;
+    size: "" | "small" | "mini";
+    disabled: boolean;
     limitSize: number;
-    accept: import("./src/type").fileTypes;
+    accept: "" | "image" | "video" | "word" | "excel" | "pdf" | "compress";
     beforeUpload: (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>;
     onRemove: (uploadFile: import("element-plus").UploadFile, uploadFiles: import("element-plus").UploadFiles) => void;
     onChange: (uploadFile: import("element-plus").UploadFile, uploadFiles: import("element-plus").UploadFiles) => void;
@@ -258,6 +267,6 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     autoUpload: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     listType: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "picture" | "picture-card", unknown>;
     httpRequest: import("element-plus").UploadRequestHandler;
-}>> & Record<string, any>;
+}, {}>> & Record<string, any>;
 export default UlUpload;
 export type UploadInstance = InstanceType<typeof upload>;

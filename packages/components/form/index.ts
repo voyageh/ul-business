@@ -1,9 +1,9 @@
 import { withInstall } from "ul-utils";
-import form from "./src/form.vue";
+import Form from "./src/form.vue";
 
-export const UlForm = withInstall(form);
+export const UlForm = withInstall(Form);
 
 export default UlForm;
 
 export * from "./src/type";
-export type FormInstance = InstanceType<typeof form>;
+export type FormInstance = InstanceType<typeof Form>;

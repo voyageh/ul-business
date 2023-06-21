@@ -59,5 +59,11 @@ onMounted(async () => {
       margin-right: 20px;
     }
   }
+
+  :deep(.el-main) {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background-color: var(--el-bg-color-page);
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 import type { vShow } from "vue";
-import type { INSTALLED_KEY } from "ultra-tools";
+import type { INSTALLED_KEY } from "ul-utils";
 
 declare global {
   namespace JSX {

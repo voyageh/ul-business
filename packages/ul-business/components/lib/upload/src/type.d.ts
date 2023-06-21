@@ -1,13 +1,16 @@
 import { ExtractPropTypes, PropType } from "vue";
-export type fileTypes = "image" | "video" | "word" | "excel" | "pdf" | "compress" | "";
 export declare const uploadProps: {
     tip: StringConstructor;
+    size: {
+        type: PropType<"" | "small" | "mini">;
+        default: string;
+    };
     limitSize: {
         type: NumberConstructor;
         default: number;
     };
     accept: {
-        type: PropType<fileTypes>;
+        type: PropType<"" | "image" | "video" | "word" | "excel" | "pdf" | "compress">;
         default: string;
     };
     beforeUpload: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | (() => (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>) | {

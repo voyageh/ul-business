@@ -7,7 +7,6 @@ import zhCn from "element-plus/dist/locale/zh-cn.mjs";
 
 import curd from "@ul-business/components";
 import router from "./router";
-console.log(curd);
 
 const app = createApp(App);
 app.use(router);

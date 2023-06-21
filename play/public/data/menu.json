@@ -4,7 +4,7 @@
     "name": "组件管理",
     "path": "/",
     "meta": {
-      "icon": "mdi:cog"
+      "icon": "uiw:component"
     },
     "children": [
       {
@@ -12,7 +12,7 @@
         "name": "表单",
         "path": "form-demo",
         "meta": {
-          "icon": "mdi:menu"
+          "icon": "mdi:form-select"
         }
       },
       {
@@ -20,7 +20,33 @@
         "name": "表格",
         "path": "table-demo",
         "meta": {
-          "icon": "mdi:menu"
+          "icon": "bx:table"
+        },
+        "children": [
+          {
+            "id": "jhbbffh-2-1",
+            "name": "基础表格",
+            "path": "",
+            "meta": {
+              "icon": "mdi:menu"
+            }
+          },
+          {
+            "id": "jhbbffh-2-2",
+            "name": "自定义表格",
+            "path": "/custom",
+            "meta": {
+              "icon": "mdi:menu"
+            }
+          }
+        ]
+      },
+      {
+        "id": "jhbbffh-3",
+        "name": "上传",
+        "path": "upload-demo",
+        "meta": {
+          "icon": "mdi:upload"
         }
       }
     ]

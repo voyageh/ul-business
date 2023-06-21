@@ -5,61 +5,69 @@
 vite v4.3.9 building for production...
 "build.lib.formats" will be ignored because "build.rollupOptions.output" is already an array format.
 transforming...
-"resolveDirective" is imported from external module "vue" but never used in "menu/src/menu.vue?vue&type=script&setup=true&lang.ts", "menu/src/menu-item.vue?vue&type=script&setup=true&lang.ts", "table/src/table.vue?vue&type=script&setup=true&lang.ts", "upload/src/upload.vue?vue&type=script&setup=true&lang.ts" and "form/src/form.vue?vue&type=script&setup=true&lang.ts".
-✓ 25 modules transformed.
+"resolveDirective" is imported from external module "vue" but never used in "menu/src/menu.vue?vue&type=script&setup=true&lang.ts", "menu/src/menu-item.vue?vue&type=script&setup=true&lang.ts", "table/src/table.vue?vue&type=script&setup=true&lang.ts", "form/src/form.vue?vue&type=script&setup=true&lang.ts" and "upload/src/upload.vue?vue&type=script&setup=true&lang.ts".
+✓ 27 modules transformed.
+
+(!) outDir /Users/zlf/person/ul-business/packages/ul-business/components/es is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
 rendering chunks...
 computing gzip size...
-../ul-business/components/es/style.css                      0.56 kB │ gzip: 0.29 kB
+../ul-business/components/es/style.css                      1.47 kB │ gzip: 0.52 kB
 ../ul-business/components/es/menu/src/menu.vue2.mjs         0.04 kB │ gzip: 0.06 kB
+../ul-business/components/es/form/src/form.vue2.mjs         0.04 kB │ gzip: 0.06 kB
 ../ul-business/components/es/table/src/table.vue2.mjs       0.04 kB │ gzip: 0.06 kB
-../ul-business/components/es/form/src/form.vue2.mjs         0.06 kB │ gzip: 0.08 kB
-../ul-business/components/es/upload/src/upload.vue2.mjs     0.06 kB │ gzip: 0.08 kB
+../ul-business/components/es/upload/src/upload.vue2.mjs     0.04 kB │ gzip: 0.06 kB
 ../ul-business/components/es/menu/src/menu-item.vue2.mjs    0.06 kB │ gzip: 0.08 kB
 ../ul-business/components/es/menu/src/menu.vue3.mjs         0.09 kB │ gzip: 0.08 kB
+../ul-business/components/es/form/src/form.vue3.mjs         0.09 kB │ gzip: 0.08 kB
 ../ul-business/components/es/table/src/table.vue3.mjs       0.09 kB │ gzip: 0.08 kB
-../ul-business/components/es/upload/index.mjs               0.14 kB │ gzip: 0.13 kB
+../ul-business/components/es/upload/src/upload.vue3.mjs     0.09 kB │ gzip: 0.09 kB
 ../ul-business/components/es/menu/src/types/menu-item.mjs   0.17 kB │ gzip: 0.13 kB
 ../ul-business/components/es/table/index.mjs                0.17 kB │ gzip: 0.14 kB
+../ul-business/components/es/upload/index.mjs               0.18 kB │ gzip: 0.14 kB
 ../ul-business/components/es/installer.mjs                  0.19 kB │ gzip: 0.17 kB
-../ul-business/components/es/form/index.mjs                 0.21 kB │ gzip: 0.16 kB
-../ul-business/components/es/upload/src/type.mjs            0.22 kB │ gzip: 0.16 kB
 ../ul-business/components/es/menu/src/types/menu.mjs        0.23 kB │ gzip: 0.21 kB
+../ul-business/components/es/form/index.mjs                 0.24 kB │ gzip: 0.16 kB
 ../ul-business/components/es/form/src/type.mjs              0.25 kB │ gzip: 0.19 kB
 ../ul-business/components/es/component.mjs                  0.27 kB │ gzip: 0.16 kB
 ../ul-business/components/es/menu/index.mjs                 0.27 kB │ gzip: 0.17 kB
+../ul-business/components/es/upload/src/type.mjs            0.27 kB │ gzip: 0.17 kB
 ../ul-business/components/es/form/src/handleConetnt.mjs     0.45 kB │ gzip: 0.22 kB
-../ul-business/components/es/index.mjs                      0.59 kB │ gzip: 0.26 kB
-../ul-business/components/es/table/src/type.mjs             1.01 kB │ gzip: 0.35 kB
-../ul-business/components/es/menu/src/menu.vue.mjs          1.01 kB │ gzip: 0.53 kB
-../ul-business/components/es/menu/src/menu-item.vue.mjs     2.02 kB │ gzip: 0.73 kB
-../ul-business/components/es/upload/src/upload.vue.mjs      3.40 kB │ gzip: 1.44 kB
-../ul-business/components/es/form/src/form.vue.mjs          5.33 kB │ gzip: 1.69 kB
-../ul-business/components/es/table/src/table.vue.mjs       10.50 kB │ gzip: 2.78 kB
+../ul-business/components/es/index.mjs                      0.57 kB │ gzip: 0.26 kB
+../ul-business/components/es/table/src/type.mjs             0.99 kB │ gzip: 0.34 kB
+../ul-business/components/es/menu/src/menu.vue.mjs          1.00 kB │ gzip: 0.52 kB
+../ul-business/components/es/menu/src/menu-item.vue.mjs     2.04 kB │ gzip: 0.73 kB
+../ul-business/components/es/upload/src/upload.vue.mjs      3.60 kB │ gzip: 1.51 kB
+../ul-business/components/es/form/src/form.vue.mjs          5.77 kB │ gzip: 1.76 kB
+../ul-business/components/es/table/src/table.vue.mjs       11.06 kB │ gzip: 2.91 kB
 ../ul-business/components/lib/menu/src/menu.vue2.js        0.14 kB │ gzip: 0.14 kB
+../ul-business/components/lib/form/src/form.vue2.js        0.14 kB │ gzip: 0.14 kB
 ../ul-business/components/lib/table/src/table.vue2.js      0.14 kB │ gzip: 0.14 kB
-../ul-business/components/lib/form/src/form.vue2.js        0.17 kB │ gzip: 0.16 kB
-../ul-business/components/lib/upload/src/upload.vue2.js    0.17 kB │ gzip: 0.16 kB
+../ul-business/components/lib/upload/src/upload.vue2.js    0.14 kB │ gzip: 0.14 kB
 ../ul-business/components/lib/menu/src/menu-item.vue2.js   0.17 kB │ gzip: 0.16 kB
 ../ul-business/components/lib/menu/src/menu.vue3.js        0.19 kB │ gzip: 0.16 kB
+../ul-business/components/lib/form/src/form.vue3.js        0.19 kB │ gzip: 0.16 kB
 ../ul-business/components/lib/table/src/table.vue3.js      0.20 kB │ gzip: 0.16 kB
+../ul-business/components/lib/upload/src/upload.vue3.js    0.20 kB │ gzip: 0.16 kB
 ../ul-business/components/lib/menu/src/types/menu-item.js  0.22 kB │ gzip: 0.18 kB
 ../ul-business/components/lib/installer.js                 0.23 kB │ gzip: 0.21 kB
-../ul-business/components/lib/upload/src/type.js           0.23 kB │ gzip: 0.19 kB
-../ul-business/components/lib/upload/index.js              0.23 kB │ gzip: 0.19 kB
 ../ul-business/components/lib/menu/src/types/menu.js       0.25 kB │ gzip: 0.21 kB
 ../ul-business/components/lib/form/src/type.js             0.26 kB │ gzip: 0.21 kB
+../ul-business/components/lib/upload/src/type.js           0.26 kB │ gzip: 0.19 kB
 ../ul-business/components/lib/table/index.js               0.27 kB │ gzip: 0.20 kB
-../ul-business/components/lib/form/index.js                0.29 kB │ gzip: 0.21 kB
+../ul-business/components/lib/upload/index.js              0.27 kB │ gzip: 0.20 kB
 ../ul-business/components/lib/component.js                 0.31 kB │ gzip: 0.21 kB
+../ul-business/components/lib/form/index.js                0.32 kB │ gzip: 0.22 kB
 ../ul-business/components/lib/menu/index.js                0.39 kB │ gzip: 0.23 kB
 ../ul-business/components/lib/form/src/handleConetnt.js    0.45 kB │ gzip: 0.27 kB
-../ul-business/components/lib/index.js                     0.63 kB │ gzip: 0.30 kB
-../ul-business/components/lib/table/src/type.js            0.79 kB │ gzip: 0.37 kB
-../ul-business/components/lib/menu/src/menu.vue.js         0.87 kB │ gzip: 0.49 kB
-../ul-business/components/lib/menu/src/menu-item.vue.js    1.57 kB │ gzip: 0.63 kB
-../ul-business/components/lib/upload/src/upload.vue.js     2.41 kB │ gzip: 1.24 kB
-../ul-business/components/lib/form/src/form.vue.js         3.66 kB │ gzip: 1.37 kB
-../ul-business/components/lib/table/src/table.vue.js       6.32 kB │ gzip: 2.23 kB
+../ul-business/components/lib/index.js                     0.60 kB │ gzip: 0.29 kB
+../ul-business/components/lib/table/src/type.js            0.77 kB │ gzip: 0.37 kB
+../ul-business/components/lib/menu/src/menu.vue.js         0.85 kB │ gzip: 0.48 kB
+../ul-business/components/lib/menu/src/menu-item.vue.js    1.55 kB │ gzip: 0.63 kB
+../ul-business/components/lib/upload/src/upload.vue.js     2.50 kB │ gzip: 1.30 kB
+../ul-business/components/lib/form/src/form.vue.js         4.10 kB │ gzip: 1.44 kB
+../ul-business/components/lib/table/src/table.vue.js       6.87 kB │ gzip: 2.36 kB
 
 [vite:dts] Start generate declaration files...
 [96minstaller.ts[0m:[93m6[0m:[93m9[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'App<any>'.
@@ -72,7 +80,31 @@ computing gzip size...
 
 [7m8[0m     app[INSTALLED_KEY] = true;
 [7m [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m46[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
 
-✓ built in 6.79s
-[vite:dts] Declaration files built in 6301ms.
+[7m46[0m     const formValue = searchForm.value?.getValue?.();
+[7m  [0m [91m                                        ~~~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m66[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
+
+[7m66[0m   searchForm.value?.elFrom?.resetFields?.();
+[7m  [0m [91m                    ~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m102[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
+
+[7m102[0m   dialogForm.value?.elFrom?.resetFields?.();
+[7m   [0m [91m                    ~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m129[0m:[93m23[0m - [91merror[0m[90m TS2339: [0mProperty 'setValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
+
+[7m129[0m     dialogForm.value?.setValue?.(detail);
+[7m   [0m [91m                      ~~~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m181[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
+
+[7m181[0m   dialogForm.value?.elFrom?.validate?.(async (vaild: boolean) => {
+[7m   [0m [91m                    ~~~~~~[0m
+[96mtable/src/table.vue.ts[0m:[93m188[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: { inline?: boolean | undefined; labelWidth?: string | number | undefined; inlineMessage?: boolean | undefined; ... 27 more ...; class?: unknown; }; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R...'.
+
+[7m188[0m       const formValue = dialogForm.value?.getValue?.();
+[7m   [0m [91m                                          ~~~~~~~~[0m
+
+✓ built in 6.34s
+[vite:dts] Declaration files built in 5902ms.
 

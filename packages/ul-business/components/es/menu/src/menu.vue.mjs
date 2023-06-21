@@ -1,23 +1,24 @@
-import { ElMenu as p } from "element-plus/es";
+import { ElMenu as c } from "element-plus/es";
 import "element-plus/es/components/base/style/css";
 import "element-plus/es/components/menu/style/css";
-import { defineComponent as r, computed as i, resolveComponent as _, openBlock as t, createBlock as n, mergeProps as a, unref as d, withCtx as f, createElementBlock as g, Fragment as h, renderList as k } from "vue";
-import B from "./types/menu.mjs";
-const C = r({ name: "ul-menu" }), v = /* @__PURE__ */ r({
-  ...C,
-  props: B,
-  setup(m) {
-    const e = m, l = i(() => ({
+import { defineComponent as p, computed as i, resolveComponent as a, openBlock as t, createBlock as o, mergeProps as _, withCtx as d, createElementBlock as f, Fragment as g, renderList as h } from "vue";
+import k from "./types/menu.mjs";
+const E = /* @__PURE__ */ p({
+  name: "ul-menu",
+  __name: "menu",
+  props: k,
+  setup(r) {
+    const e = r, m = i(() => ({
       "--selected-bg-color": e.selectBgColor,
       "--menu-item-width": e.width
     }));
-    return (u, w) => {
-      const s = _("ul-menu-item"), c = p;
-      return t(), n(c, a({ class: "ul-menu" }, e, { style: d(l) }), {
-        default: f(() => [
-          (t(!0), g(h, null, k(u.menus, (o) => (t(), n(s, {
-            key: o.id,
-            menu: o
+    return (l, B) => {
+      const u = a("ul-menu-item"), s = c;
+      return t(), o(s, _({ class: "ul-menu" }, e, { style: m.value }), {
+        default: d(() => [
+          (t(!0), f(g, null, h(l.menus, (n) => (t(), o(u, {
+            key: n.id,
+            menu: n
           }, null, 8, ["menu"]))), 128))
         ]),
         _: 1
@@ -26,5 +27,5 @@ const C = r({ name: "ul-menu" }), v = /* @__PURE__ */ r({
   }
 });
 export {
-  v as default
+  E as default
 };

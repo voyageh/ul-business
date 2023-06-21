@@ -1,4 +1,4 @@
-import f from "./form.vue.mjs";
+const e = "";
 export {
-  f as default
+  e as default
 };

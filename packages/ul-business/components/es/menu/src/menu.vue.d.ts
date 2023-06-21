@@ -54,5 +54,5 @@ declare const _sfc_main: import("vue").DefineComponent<{
     collapseTransition: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     ellipsis: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popperEffect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark", unknown>;
-}>;
+}, {}>;
 export default _sfc_main;

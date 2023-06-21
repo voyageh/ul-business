@@ -10,6 +10,10 @@
             :md="{ span: 8 }"
             :lg="{ span: child.span || 6 }">
             <el-form-item :prop="child.id" v-bind="getFromItemprops(child)">
+              <template #label>
+                <component v-if="child.label && typeof child.label === 'function'" :is="child.label()"></component>
+                <span v-else>{{ child.label }}</span>
+              </template>
               <span v-if="disabled && !item.forceDisabled">
                 {{ child.str ? form[child.str] : form[child.id!] }}
               </span>
@@ -19,13 +23,17 @@
         </template>
       </el-row>
       <el-form-item v-if="show(item.hide)" :prop="item.id" v-bind="getFromItemprops(item)">
+        <template #label>
+          <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
+          <span v-else>{{ item.label }}</span>
+        </template>
         <span v-if="disabled && !item.forceDisabled">
           {{ item.str ? form[item.str] : form[item.id!] }}
         </span>
         <component v-else :is="item.type || item.component!" v-bind="item.el" v-model="form[item.id!]" />
       </el-form-item>
     </template>
-    <slot name="last" />
+    <slot name="final" />
   </el-form>
 </template>
 
@@ -84,6 +92,7 @@ const getFromItemprops = (obj: IFormItem) => {
     el,
     hide,
     span,
+    label,
     ...rest
   } = obj;
   return rest;
@@ -176,4 +185,11 @@ defineExpose({
 });
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.ul-form {
+  .el-form-item__label > *:first-child {
+    display: flex;
+    align-items: center;
+  }
+}
+</style>

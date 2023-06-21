@@ -54,7 +54,7 @@ export declare const UlMenu: import("ul-utils").SFCWithInstall<import("vue").Def
     collapseTransition: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     ellipsis: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popperEffect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark", unknown>;
-}>> & Record<string, any>;
+}, {}>> & Record<string, any>;
 export default UlMenu;
 export declare const UlMenuItem: import("ul-utils").SFCWithInstall<import("vue").DefineComponent<{
     menu: {
@@ -79,6 +79,6 @@ export declare const UlMenuItem: import("ul-utils").SFCWithInstall<import("vue")
 }>>, {
     menu: import("./src/types/menu-item").IMenuItem;
     parent: string;
-}>> & Record<string, any>;
+}, {}>> & Record<string, any>;
 export * from "./src/types/menu";
 export * from "./src/types/menu-item";

@@ -1,3 +1,4 @@
+import { ITableColumn } from "./type";
 declare const _sfc_main: import("vue").DefineComponent<{
     searchForms: {
         type: import("vue").PropType<import("../../form").IFormItem[]>;
@@ -8,7 +9,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: () => {};
     };
     columns: {
-        type: import("vue").PropType<import("./type").ITableColumn<any>[]>;
+        type: import("vue").PropType<ITableColumn<any>[]>;
+        /**
+         * 用来获取el-table-column的props
+         * @param obj
+         */
         required: boolean;
         default: () => never[];
     };
@@ -51,9 +56,12 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    /**
+     * 条数改变
+     * @param v 条数
+     */
     onNew: FunctionConstructor;
     newSumbit: FunctionConstructor;
-    onDelete: FunctionConstructor;
     deleteSumbit: FunctionConstructor;
     getDetail: FunctionConstructor;
     onView: FunctionConstructor;
@@ -69,7 +77,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: () => {};
     };
     columns: {
-        type: import("vue").PropType<import("./type").ITableColumn<any>[]>;
+        type: import("vue").PropType<ITableColumn<any>[]>;
+        /**
+         * 用来获取el-table-column的props
+         * @param obj
+         */
         required: boolean;
         default: () => never[];
     };
@@ -112,16 +124,19 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    /**
+     * 条数改变
+     * @param v 条数
+     */
     onNew: FunctionConstructor;
     newSumbit: FunctionConstructor;
-    onDelete: FunctionConstructor;
     deleteSumbit: FunctionConstructor;
     getDetail: FunctionConstructor;
     onView: FunctionConstructor;
     editSumbit: FunctionConstructor;
     onEdit: FunctionConstructor;
 }>>, {
-    columns: import("./type").ITableColumn<any>[];
+    columns: ITableColumn<any>[];
     searchForms: import("../../form").IFormItem[];
     tableAttr: Record<string, any>;
     hasOperateColumn: boolean;
@@ -133,5 +148,5 @@ declare const _sfc_main: import("vue").DefineComponent<{
     pagingAttr: Partial<import("element-plus").PaginationProps>;
     forms: import("../../form").IFormItem[];
     immediate: boolean;
-}>;
+}, {}>;
 export default _sfc_main;

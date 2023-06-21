@@ -1,7 +1,11 @@
-import { uploadProps as p } from "element-plus";
-const o = {
-  ...p,
+import { uploadProps as t } from "element-plus";
+const e = {
+  ...t,
   tip: String,
+  size: {
+    type: String,
+    default: ""
+  },
   limitSize: {
     type: Number,
     default: 1
@@ -12,5 +16,5 @@ const o = {
   }
 };
 export {
-  o as uploadProps
+  e as uploadProps
 };

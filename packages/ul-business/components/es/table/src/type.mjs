@@ -53,7 +53,6 @@ const t = {
   },
   onNew: Function,
   newSumbit: Function,
-  onDelete: Function,
   deleteSumbit: Function,
   getDetail: Function,
   onView: Function,

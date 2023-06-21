@@ -1,4 +1,4 @@
-import { PropType, ExtractPropTypes } from "vue";
+import { PropType, ExtractPropTypes, VNode } from "vue";
 import type { FormItemProps } from "element-plus";
 import { formProps as elFormProps } from "element-plus";
 
@@ -9,9 +9,9 @@ export interface IFormat {
   outputFormat?(row: any): object;
 }
 
-export interface IFormItem extends Partial<FormItemProps>, IFormat {
+export interface IFormItem extends Partial<Omit<FormItemProps, "label">>, IFormat {
   id?: string;
-  label?: string;
+  label?: string | (() => object | VNode);
   type?: string;
   // 组件，可以是全局组件的名字，可以是导入过来的组件
   component?: string | object;

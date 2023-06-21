@@ -1,4 +1,4 @@
-import f from "./upload.vue.mjs";
+const e = "";
 export {
-  f as default
+  e as default
 };

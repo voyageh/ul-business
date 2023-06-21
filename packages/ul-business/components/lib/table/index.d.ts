@@ -54,7 +54,6 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
     };
     onNew: FunctionConstructor;
     newSumbit: FunctionConstructor;
-    onDelete: FunctionConstructor;
     deleteSumbit: FunctionConstructor;
     getDetail: FunctionConstructor;
     onView: FunctionConstructor;
@@ -115,7 +114,6 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
     };
     onNew: FunctionConstructor;
     newSumbit: FunctionConstructor;
-    onDelete: FunctionConstructor;
     deleteSumbit: FunctionConstructor;
     getDetail: FunctionConstructor;
     onView: FunctionConstructor;
@@ -134,7 +132,7 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
     pagingAttr: Partial<import("element-plus").PaginationProps>;
     forms: import("..").IFormItem[];
     immediate: boolean;
-}>> & Record<string, any>;
+}, {}>> & Record<string, any>;
 export default UlTable;
 export * from "./src/type";
 export type TableInstance = InstanceType<typeof table>;
