@@ -2,7 +2,7 @@
 
 ## 基础用法
 
-:::demo ul-table 会自动根据 columns 生成表格的列
+:::demo ul-table 会自动根据 columns 生成表格的列 <br/> searchForms 会自动生成筛选表单 <br/> forms 会自动生成弹窗表单
 
 ```vue
 <template>
@@ -108,32 +108,14 @@ const config = reactive<UlTableProps>({
           age: 18,
           tel: "12345678901",
         },
-        {
-          username: "zs",
-          realName: "张三",
-          age: 18,
-          tel: "12345678901",
-        },
-        {
-          username: "zs",
-          realName: "张三",
-          age: 18,
-          tel: "12345678901",
-        },
-        {
-          username: "zs",
-          realName: "张三",
-          age: 18,
-          tel: "12345678901",
-        },
       ],
-      total: 1000,
+      total: 138,
     };
   },
   forms: [
     {
       id: "username",
-      label: "用户名:",
+      label: () => h("span", ["自定义label"]),
       type: "el-input",
       el: {
         placeholder: "请输入用户名",
