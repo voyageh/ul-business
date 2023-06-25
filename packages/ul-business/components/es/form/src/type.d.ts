@@ -42,7 +42,7 @@ export declare const formProps: {
     statusIcon: BooleanConstructor;
     showMessage: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     validateOnRuleChange: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    hideRequiredAsterisk: BooleanConstructor;
     scrollToError: BooleanConstructor;
     scrollIntoViewOptions: {
         readonly type: PropType<import("element-plus/es/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown>>;

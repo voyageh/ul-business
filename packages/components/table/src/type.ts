@@ -1,23 +1,22 @@
 import { PropType, ExtractPropTypes, VNode } from "vue";
-import { TableColumnCtx, TableProps, PaginationProps } from "element-plus";
+import { TableColumnCtx, PaginationProps } from "element-plus";
+import elTableProps from "element-plus/es/components/table/src/table/defaults";
 import { IFormItem } from "../../form";
 
-export type ITableAttr = Omit<TableProps<any>, "data">;
-
-export interface ITableColumn<T extends any> extends Partial<Omit<TableColumnCtx<T>, "label">> {
+export interface ITableColumn<T extends any> extends Partial<Omit<TableColumnCtx<T>, "label" | "children">> {
   label?: string | (() => VNode | string);
   component?: string | object;
   el?: Object;
+  children?: ITableColumn<T>[];
 }
 
+export { elTableProps };
+
 export const tableProps = {
+  ...elTableProps,
   searchForms: {
     type: Array as PropType<IFormItem[]>,
     default: () => [],
-  },
-  tableAttr: {
-    type: Object,
-    default: () => ({}),
   },
   columns: {
     type: Array as PropType<ITableColumn<any>[]>,

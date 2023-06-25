@@ -1,8 +1,10 @@
-import { withInstall as t } from "ul-utils";
-import o from "./src/table.vue.mjs";
+import { withInstall as o } from "ul-utils";
+import t from "./src/table.vue.mjs";
 import "./src/table.vue2.mjs";
-const i = t(o);
+import { tableProps as f } from "./src/type.mjs";
+const l = o(t);
 export {
-  i as UlTable,
-  i as default
+  l as UlTable,
+  l as default,
+  f as tableProps
 };

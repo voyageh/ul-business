@@ -67416,6 +67416,7 @@ export {
   switchProps,
   switchEmits,
   ElSwitch,
+  defaultProps2 as defaultProps,
   ElTable,
   ElTableColumn2 as ElTableColumn,
   SortOrder,
@@ -67534,4 +67535,4 @@ normalize-wheel-es/dist/index.mjs:
    * @license Modernizr 3.0.0pre (Custom Build) | MIT
    *)
 */
-//# sourceMappingURL=chunk-KW3HRFEG.js.map
+//# sourceMappingURL=chunk-4BXD7XMT.js.map

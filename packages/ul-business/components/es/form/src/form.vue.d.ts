@@ -24,7 +24,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     statusIcon: BooleanConstructor;
     showMessage: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     validateOnRuleChange: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    hideRequiredAsterisk: BooleanConstructor;
     scrollToError: BooleanConstructor;
     scrollIntoViewOptions: {
         readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown>>;
@@ -64,7 +64,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     statusIcon: BooleanConstructor;
     showMessage: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     validateOnRuleChange: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    hideRequiredAsterisk: BooleanConstructor;
     scrollToError: BooleanConstructor;
     scrollIntoViewOptions: {
         readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown>>;
@@ -92,8 +92,8 @@ declare const _sfc_main: import("vue").DefineComponent<{
     inline: boolean;
     statusIcon: boolean;
     validateOnRuleChange: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    hideRequiredAsterisk: boolean;
     scrollToError: boolean;
     disabled: boolean;
-}, {}>;
+}>;
 export default _sfc_main;

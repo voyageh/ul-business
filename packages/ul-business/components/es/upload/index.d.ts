@@ -246,6 +246,7 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     name: string;
     size: "" | "small" | "mini";
     disabled: boolean;
+    data: Record<string, any>;
     limitSize: number;
     accept: "" | "image" | "video" | "word" | "excel" | "pdf" | "compress";
     beforeUpload: (rawFile: import("element-plus").UploadRawFile) => import("element-plus/es/utils").Awaitable<boolean | void | File | Blob | null | undefined>;
@@ -258,7 +259,6 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     onExceed: (files: File[], uploadFiles: import("element-plus").UploadUserFile[]) => void;
     action: string;
     method: string;
-    data: Record<string, any>;
     multiple: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     drag: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     withCredentials: boolean;
@@ -267,6 +267,6 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     autoUpload: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     listType: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "picture" | "picture-card", unknown>;
     httpRequest: import("element-plus").UploadRequestHandler;
-}, {}>> & Record<string, any>;
+}>> & Record<string, any>;
 export default UlUpload;
 export type UploadInstance = InstanceType<typeof upload>;

@@ -57,6 +57,10 @@ export default {
         cssPreprocessor: "sass",
         scriptReplaces: [
           { searchValue: /import ({.*}) from "vue"/g, replaceValue: (s, s1) => `const ${s1} = Vue` },
+          {
+            searchValue: /import ({.*}) from "element-plus"/g,
+            replaceValue: (s, s1) => `const ${s1} = 'element-plus'`,
+          },
           { searchValue: /import ({.*}) from "ul-business"/g, replaceValue: (s, s1) => `const ${s1} = 'ul-business'` },
           { searchValue: /import ({.*}) from "vue-router"/g, replaceValue: (s, s1) => `const ${s1} = 'vue-router'` },
           {

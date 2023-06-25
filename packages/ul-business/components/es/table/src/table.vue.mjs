@@ -1,4 +1,4 @@
-import { ElIcon as te, ElButton as le, ElFormItem as oe, ElTableColumn as ne, ElPopconfirm as ae, ElTable as ie, ElPagination as se, ElDialog as re, ElLoadingDirective as ce } from "element-plus/es";
+import { ElIcon as ne, ElButton as ae, ElFormItem as se, ElTableColumn as ie, ElPopconfirm as re, ElTable as pe, ElPagination as ue, ElDialog as ce, ElLoadingDirective as de } from "element-plus/es";
 import "element-plus/es/components/base/style/css";
 import "element-plus/es/components/loading/style/css";
 import "element-plus/es/components/dialog/style/css";
@@ -9,134 +9,140 @@ import "element-plus/es/components/table-column/style/css";
 import "element-plus/es/components/form-item/style/css";
 import "element-plus/es/components/button/style/css";
 import "element-plus/es/components/icon/style/css";
-import { defineComponent as de, useCssVars as ue, ref as v, reactive as K, resolveComponent as pe, openBlock as c, createElementBlock as g, createVNode as s, withCtx as l, unref as F, createTextVNode as p, createCommentVNode as S, createElementVNode as C, renderSlot as B, withDirectives as me, createBlock as m, mergeProps as h, Fragment as L, renderList as fe, normalizeProps as U, resolveDynamicComponent as P, toDisplayString as I, createSlots as _e, nextTick as ge } from "vue";
-import { tableProps as be } from "./type.mjs";
-import { Icon as w } from "@iconify/vue";
-import { get as A } from "lodash";
-const ye = { class: "ul-table" }, ve = {
+import { defineComponent as me, useCssVars as fe, ref as C, reactive as L, resolveComponent as _e, openBlock as s, createElementBlock as m, createVNode as r, withCtx as o, unref as w, createTextVNode as f, createCommentVNode as N, createElementVNode as F, renderSlot as I, withDirectives as ge, createBlock as d, mergeProps as b, Fragment as V, renderList as O, normalizeProps as A, resolveDynamicComponent as E, toDisplayString as D, createSlots as be, nextTick as ye } from "vue";
+import { tableProps as ve } from "./type.mjs";
+import { Icon as $ } from "@iconify/vue";
+import { get as j } from "lodash";
+import ke from "element-plus/es/components/table/src/table/defaults";
+const he = { class: "ul-table" }, Ce = {
   key: 0,
   class: "ul-table__search"
-}, he = { class: "ul-table__content" }, ke = { class: "table-head" }, Ce = { key: 1 }, Ve = { key: 1 }, Ee = { class: "operate-box" }, De = { class: "dialog-footer" }, je = /* @__PURE__ */ de({
+}, Ve = { class: "ul-table__content" }, Ee = { class: "table-head" }, De = { key: 1 }, Fe = { key: 1 }, Pe = { key: 1 }, Se = { class: "operate-box" }, Te = { class: "dialog-footer" }, Ge = /* @__PURE__ */ me({
   name: "UlTable",
   __name: "table",
-  props: be,
-  setup(O) {
-    const o = O;
-    ue((e) => ({
-      "67d2737d": e.pagingAlign
+  props: ve,
+  setup(R) {
+    const a = R;
+    fe((e) => ({
+      "6dea391e": e.pagingAlign
     }));
-    const V = v(), j = v(!1), z = v([]), E = v(0), b = K({
-      [o.pageKey]: 1,
-      [o.sizeKey]: 10
-    }), T = (e) => {
-      const { label: t, component: a, el: r, ...d } = e;
-      return d;
-    }, f = async () => {
+    const P = C(), W = C(!1), K = C([]), S = C(0), v = L({
+      [a.pageKey]: 1,
+      [a.sizeKey]: 10
+    }), q = (e) => {
+      const t = {};
+      return Object.keys(ke).forEach((n) => {
+        e[n] && (t[n] = e[n]);
+      }), t;
+    }, T = (e) => {
+      const { label: t, component: n, el: u, children: _, ...c } = e;
+      return c;
+    }, y = async () => {
       var e, t;
-      if (o.getList) {
-        const a = (t = (e = V.value) == null ? void 0 : e.getValue) == null ? void 0 : t.call(e), r = await o.getList({
-          ...b,
-          ...a
-        }), d = o.dataPath || "data", u = o.totalPath || "total";
-        z.value = A(r, d), E.value = A(r, u);
+      if (a.getList) {
+        const n = (t = (e = P.value) == null ? void 0 : e.getValue) == null ? void 0 : t.call(e), u = await a.getList({
+          ...v,
+          ...n
+        }), _ = a.dataPath || "data", c = a.totalPath || "total";
+        K.value = j(u, _), S.value = j(u, c);
       }
     };
-    o.immediate && f();
-    const R = () => {
-      var e, t, a;
-      (a = (t = (e = V.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.resetFields) == null || a.call(t), f();
-    }, W = (e) => {
-      b[o.sizeKey] = e, f();
-    }, q = (e) => {
-      b[o.pageKey] = e, f();
-    }, i = K({
+    a.immediate && y();
+    const x = () => {
+      var e, t, n;
+      (n = (t = (e = P.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.resetFields) == null || n.call(t), y();
+    }, G = (e) => {
+      v[a.sizeKey] = e, y();
+    }, H = (e) => {
+      v[a.pageKey] = e, y();
+    }, i = L({
       visible: !1,
       title: "",
       disabled: !1,
       saveType: ""
-    }), y = v(), x = () => {
-      var e, t, a;
-      (a = (t = (e = y.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.resetFields) == null || a.call(t);
-    }, G = () => {
-      if (o.onNew) {
-        o.onNew();
+    }), k = C(), J = () => {
+      var e, t, n;
+      (n = (t = (e = k.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.resetFields) == null || n.call(t);
+    }, M = () => {
+      if (a.onNew) {
+        a.onNew();
         return;
       }
       i.title = "新增", i.visible = !0, i.disabled = !1, i.saveType = "new";
-    }, N = async (e) => {
+    }, U = async (e) => {
       let t = e;
-      o.getDetail && (t = await o.getDetail(e)), ge(() => {
-        var a, r;
-        (r = (a = y.value) == null ? void 0 : a.setValue) == null || r.call(a, t);
+      a.getDetail && (t = await a.getDetail(e)), ye(() => {
+        var n, u;
+        (u = (n = k.value) == null ? void 0 : n.setValue) == null || u.call(n, t);
       });
-    }, H = async (e) => {
-      o.deleteSumbit && o.deleteSumbit(e);
-    }, J = async (e) => {
-      if (o.onEdit) {
-        o.onEdit(e);
+    }, Q = async (e) => {
+      a.deleteSumbit && a.deleteSumbit(e);
+    }, X = async (e) => {
+      if (a.onEdit) {
+        a.onEdit(e);
         return;
       }
-      i.title = "编辑", i.visible = !0, i.disabled = !1, i.saveType = "edit", N(e);
-    }, M = async (e) => {
-      if (o.onView) {
-        o.onView(e);
+      i.title = "编辑", i.visible = !0, i.disabled = !1, i.saveType = "edit", U(e);
+    }, Y = async (e) => {
+      if (a.onView) {
+        a.onView(e);
         return;
       }
-      i.title = "查看", i.visible = !0, i.disabled = !0, N(e);
-    }, Q = async () => {
-      var e, t, a;
-      (a = (t = (e = y.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.validate) == null || a.call(t, async (r) => {
-        var u, _;
-        if (!r)
+      i.title = "查看", i.visible = !0, i.disabled = !0, U(e);
+    }, Z = async () => {
+      var e, t, n;
+      (n = (t = (e = k.value) == null ? void 0 : e.elFrom) == null ? void 0 : t.validate) == null || n.call(t, async (u) => {
+        var c, g;
+        if (!u)
           return;
-        let d = o.newSumbit;
-        if (i.saveType === "edit" && (d = o.editSumbit), d) {
-          const D = (_ = (u = y.value) == null ? void 0 : u.getValue) == null ? void 0 : _.call(u);
-          await d(D) !== !1 && (i.visible = !1, f());
+        let _ = a.newSumbit;
+        if (i.saveType === "edit" && (_ = a.editSumbit), _) {
+          const z = (g = (c = k.value) == null ? void 0 : c.getValue) == null ? void 0 : g.call(c);
+          await _(z) !== !1 && (i.visible = !1, y());
         }
       });
     };
     return (e, t) => {
-      const a = te, r = le, d = oe, u = pe("ul-form"), _ = ne, D = ae, $ = ie, X = se, Y = re, Z = ce;
-      return c(), g("div", ye, [
-        e.searchForms.length > 0 ? (c(), g("div", ve, [
-          s(u, {
+      const n = ne, u = ae, _ = se, c = _e("ul-form"), g = ie, z = re, B = pe, ee = ue, te = ce, oe = de;
+      return s(), m("div", he, [
+        e.searchForms.length > 0 ? (s(), m("div", Ce, [
+          r(c, {
             ref_key: "searchForm",
-            ref: V,
+            ref: P,
             content: e.searchForms,
             inline: ""
           }, {
-            final: l(() => [
-              s(d, null, {
-                default: l(() => [
-                  s(r, {
+            final: o(() => [
+              r(_, null, {
+                default: o(() => [
+                  r(u, {
                     type: "primary",
-                    onClick: f
+                    onClick: y
                   }, {
-                    icon: l(() => [
-                      s(a, null, {
-                        default: l(() => [
-                          s(F(w), { icon: "ep:search" })
+                    icon: o(() => [
+                      r(n, null, {
+                        default: o(() => [
+                          r(w($), { icon: "ep:search" })
                         ]),
                         _: 1
                       })
                     ]),
-                    default: l(() => [
-                      p(" 查询 ")
+                    default: o(() => [
+                      f(" 查询 ")
                     ]),
                     _: 1
                   }),
-                  s(r, { onClick: R }, {
-                    icon: l(() => [
-                      s(a, null, {
-                        default: l(() => [
-                          s(F(w), { icon: "ep:refresh" })
+                  r(u, { onClick: x }, {
+                    icon: o(() => [
+                      r(n, null, {
+                        default: o(() => [
+                          r(w($), { icon: "ep:refresh" })
                         ]),
                         _: 1
                       })
                     ]),
-                    default: l(() => [
-                      p(" 重置 ")
+                    default: o(() => [
+                      f(" 重置 ")
                     ]),
                     _: 1
                   })
@@ -146,135 +152,156 @@ const ye = { class: "ul-table" }, ve = {
             ]),
             _: 1
           }, 8, ["content"])
-        ])) : S("", !0),
-        C("div", he, [
-          C("div", ke, [
-            s(r, {
+        ])) : N("", !0),
+        F("div", Ve, [
+          F("div", Ee, [
+            r(u, {
               type: "primary",
-              onClick: G
+              onClick: M
             }, {
-              icon: l(() => [
-                s(a, null, {
-                  default: l(() => [
-                    s(F(w), { icon: "ep:plus" })
+              icon: o(() => [
+                r(n, null, {
+                  default: o(() => [
+                    r(w($), { icon: "ep:plus" })
                   ]),
                   _: 1
                 })
               ]),
-              default: l(() => [
-                p(" 新增 ")
+              default: o(() => [
+                f(" 新增 ")
               ]),
               _: 1
             }),
-            B(e.$slots, "head")
+            I(e.$slots, "head")
           ]),
-          me((c(), m($, h({
-            border: "",
-            data: z.value,
+          ge((s(), d(B, b({ border: "" }, q(e.$props), {
+            data: K.value,
             "element-loading-text": "正在努力加载..."
-          }, e.$attrs), {
-            default: l(() => [
-              (c(!0), g(L, null, fe(e.columns, (n) => (c(), g(L, null, [
-                n.component ? (c(), m(_, U(h({ key: 0 }, T(n))), {
-                  header: l(() => [
-                    n.label && typeof n.label == "function" ? (c(), m(P(n.label()), { key: 0 })) : (c(), g("span", Ce, I(n.label), 1))
+          }), {
+            default: o(() => [
+              (s(!0), m(V, null, O(e.columns, (l) => (s(), m(V, null, [
+                l.children ? (s(), d(g, A(b({ key: 0 }, T(l))), {
+                  header: o(() => [
+                    l.label && typeof l.label == "function" ? (s(), d(E(l.label()), { key: 0 })) : (s(), m("span", De, D(l.label), 1))
                   ]),
-                  default: l(({ row: k }) => [
-                    (c(), m(P(n.component), h({
-                      modelValue: k[n.prop],
-                      "onUpdate:modelValue": (ee) => k[n.prop] = ee
-                    }, n.el), null, 16, ["modelValue", "onUpdate:modelValue"]))
+                  default: o(() => [
+                    (s(!0), m(V, null, O(l.children, (p) => (s(), d(g, b({
+                      key: p.prop
+                    }, T(p)), {
+                      header: o(() => [
+                        p.label && typeof p.label == "function" ? (s(), d(E(p.label()), { key: 0 })) : (s(), m("span", Fe, D(p.label), 1))
+                      ]),
+                      default: o(({ row: h }) => [
+                        p.component ? (s(), d(E(p.component), b({
+                          key: 0,
+                          modelValue: h[p.prop],
+                          "onUpdate:modelValue": (le) => h[p.prop] = le
+                        }, p.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (s(), m(V, { key: 1 }, [
+                          f(D(h[p.prop]), 1)
+                        ], 64))
+                      ]),
+                      _: 2
+                    }, 1040))), 128))
                   ]),
                   _: 2
-                }, 1040)) : (c(), m(_, U(h({ key: 1 }, T(n))), {
-                  header: l(() => [
-                    n.label && typeof n.label == "function" ? (c(), m(P(n.label()), { key: 0 })) : (c(), g("span", Ve, I(n.label), 1))
+                }, 1040)) : (s(), d(g, A(b({ key: 1 }, T(l))), {
+                  header: o(() => [
+                    l.label && typeof l.label == "function" ? (s(), d(E(l.label()), { key: 0 })) : (s(), m("span", Pe, D(l.label), 1))
+                  ]),
+                  default: o(({ row: p }) => [
+                    l.component ? (s(), d(E(l.component), b({
+                      key: 0,
+                      modelValue: p[l.prop],
+                      "onUpdate:modelValue": (h) => p[l.prop] = h
+                    }, l.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (s(), m(V, { key: 1 }, [
+                      f(D(p[l.prop]), 1)
+                    ], 64))
                   ]),
                   _: 2
                 }, 1040))
               ], 64))), 256)),
-              e.hasOperateColumn && e.columns.length > 0 ? (c(), m(_, {
+              e.hasOperateColumn && e.columns.length > 0 ? (s(), d(g, {
                 key: 0,
                 label: "操作",
                 align: "center",
                 width: e.opWidth,
                 fixed: "right"
               }, {
-                default: l(({ row: n }) => [
-                  C("div", Ee, [
-                    s(r, {
+                default: o(({ row: l }) => [
+                  F("div", Se, [
+                    r(u, {
                       link: "",
                       type: "primary",
-                      onClick: (k) => M(n)
+                      onClick: (p) => Y(l)
                     }, {
-                      default: l(() => [
-                        p("查看")
+                      default: o(() => [
+                        f("查看")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    s(r, {
+                    r(u, {
                       link: "",
                       type: "primary",
-                      onClick: (k) => J(n)
+                      onClick: (p) => X(l)
                     }, {
-                      default: l(() => [
-                        p("编辑")
+                      default: o(() => [
+                        f("编辑")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    s(D, {
+                    r(z, {
                       title: "确定要删除该数据吗?",
                       "confirm-button-type": "danger",
                       "confirm-button-text": "删除",
-                      onClick: H
+                      onClick: Q
                     }, {
-                      reference: l(() => [
-                        s(r, {
+                      reference: o(() => [
+                        r(u, {
                           link: "",
                           type: "danger"
                         }, {
-                          default: l(() => [
-                            p("删除")
+                          default: o(() => [
+                            f("删除")
                           ]),
                           _: 1
                         })
                       ]),
                       _: 1
                     }),
-                    B(e.$slots, "extraOp")
+                    I(e.$slots, "extraOp")
                   ])
                 ]),
                 _: 3
-              }, 8, ["width"])) : S("", !0)
+              }, 8, ["width"])) : N("", !0)
             ]),
             _: 3
           }, 16, ["data"])), [
-            [Z, j.value]
+            [oe, W.value]
           ]),
-          e.hasPagination && E.value > 0 ? (c(), m(X, h({
+          e.hasPagination && S.value > 0 ? (s(), d(ee, b({
             key: 0,
             class: "paging-box",
             layout: "total, sizes, prev, pager, next, jumper",
             background: "",
             small: ""
           }, e.pagingAttr, {
-            "current-page": b[o.pageKey],
-            "page-size": b[o.sizeKey],
-            total: E.value,
-            onSizeChange: W,
-            onCurrentChange: q
-          }), null, 16, ["current-page", "page-size", "total"])) : S("", !0)
+            "current-page": v[a.pageKey],
+            "page-size": v[a.sizeKey],
+            total: S.value,
+            onSizeChange: G,
+            onCurrentChange: H
+          }), null, 16, ["current-page", "page-size", "total"])) : N("", !0)
         ]),
-        s(Y, {
+        r(te, {
           modelValue: i.visible,
-          "onUpdate:modelValue": t[2] || (t[2] = (n) => i.visible = n),
+          "onUpdate:modelValue": t[2] || (t[2] = (l) => i.visible = l),
           title: i.title,
-          onClose: x
-        }, _e({
-          default: l(() => [
-            s(u, {
+          onClose: J
+        }, be({
+          default: o(() => [
+            r(c, {
               ref_key: "dialogForm",
-              ref: y,
+              ref: k,
               disabled: i.disabled,
               content: e.forms
             }, null, 8, ["disabled", "content"])
@@ -283,22 +310,22 @@ const ye = { class: "ul-table" }, ve = {
         }, [
           i.disabled ? void 0 : {
             name: "footer",
-            fn: l(() => [
-              C("span", De, [
-                s(r, {
-                  onClick: t[0] || (t[0] = (n) => i.visible = !1)
+            fn: o(() => [
+              F("span", Te, [
+                r(u, {
+                  onClick: t[0] || (t[0] = (l) => i.visible = !1)
                 }, {
-                  default: l(() => [
-                    p("取消")
+                  default: o(() => [
+                    f("取消")
                   ]),
                   _: 1
                 }),
-                s(r, {
+                r(u, {
                   type: "primary",
-                  onClick: t[1] || (t[1] = (n) => Q())
+                  onClick: t[1] || (t[1] = (l) => Z())
                 }, {
-                  default: l(() => [
-                    p(" 保存 ")
+                  default: o(() => [
+                    f(" 保存 ")
                   ]),
                   _: 1
                 })
@@ -312,5 +339,5 @@ const ye = { class: "ul-table" }, ve = {
   }
 });
 export {
-  je as default
+  Ge as default
 };

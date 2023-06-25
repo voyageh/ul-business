@@ -24,7 +24,7 @@ export declare const UlForm: import("ul-utils").SFCWithInstall<import("vue").Def
     statusIcon: BooleanConstructor;
     showMessage: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     validateOnRuleChange: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    hideRequiredAsterisk: BooleanConstructor;
     scrollToError: BooleanConstructor;
     scrollIntoViewOptions: {
         readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown>>;
@@ -64,7 +64,7 @@ export declare const UlForm: import("ul-utils").SFCWithInstall<import("vue").Def
     statusIcon: BooleanConstructor;
     showMessage: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     validateOnRuleChange: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    hideRequiredAsterisk: BooleanConstructor;
     scrollToError: BooleanConstructor;
     scrollIntoViewOptions: {
         readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown>>;
@@ -92,10 +92,10 @@ export declare const UlForm: import("ul-utils").SFCWithInstall<import("vue").Def
     inline: boolean;
     statusIcon: boolean;
     validateOnRuleChange: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    hideRequiredAsterisk: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    hideRequiredAsterisk: boolean;
     scrollToError: boolean;
     disabled: boolean;
-}, {}>> & Record<string, any>;
+}>> & Record<string, any>;
 export default UlForm;
 export * from "./src/type";
 export type FormInstance = InstanceType<typeof Form>;

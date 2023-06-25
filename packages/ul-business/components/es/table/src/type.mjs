@@ -1,11 +1,10 @@
-const t = {
+import t from "element-plus/es/components/table/src/table/defaults";
+import { default as i } from "element-plus/es/components/table/src/table/defaults";
+const a = {
+  ...t,
   searchForms: {
     type: Array,
     default: () => []
-  },
-  tableAttr: {
-    type: Object,
-    default: () => ({})
   },
   columns: {
     type: Array,
@@ -60,5 +59,6 @@ const t = {
   onEdit: Function
 };
 export {
-  t as tableProps
+  i as elTableProps,
+  a as tableProps
 };

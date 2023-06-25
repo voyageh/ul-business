@@ -15,11 +15,12 @@ import {
   ElTable,
   ElTableColumn,
   ElUpload,
+  defaultProps,
   formProps,
   menuProps,
   uploadProps,
   vLoading
-} from "./chunk-KW3HRFEG.js";
+} from "./chunk-4BXD7XMT.js";
 import {
   Fragment,
   __commonJS,
@@ -5537,11 +5538,11 @@ var require_lodash = __commonJS({
 var n = Symbol("INSTALLED_KEY");
 var s = (o, c) => {
   if (o.install = (e4) => {
-    for (const t4 of [o, ...Object.values(c ?? {})])
-      e4.component(t4.name, t4);
+    for (const t2 of [o, ...Object.values(c ?? {})])
+      e4.component(t2.name, t2);
   }, c)
-    for (const [e4, t4] of Object.entries(c))
-      o[e4] = t4;
+    for (const [e4, t2] of Object.entries(c))
+      o[e4] = t2;
   return o;
 };
 
@@ -5557,7 +5558,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/popper/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-popper.css";
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
 var e = {
   ...menuProps,
   menus: {
@@ -5572,21 +5573,21 @@ var e = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
 var E = defineComponent({
   name: "ul-menu",
   __name: "menu",
   props: e,
   setup(r2) {
-    const e4 = r2, m = computed(() => ({
+    const e4 = r2, m2 = computed(() => ({
       "--selected-bg-color": e4.selectBgColor,
       "--menu-item-width": e4.width
     }));
-    return (l, B) => {
+    return (l2, B) => {
       const u = resolveComponent("ul-menu-item"), s3 = ElMenu;
-      return openBlock(), createBlock(s3, mergeProps({ class: "ul-menu" }, e4, { style: m.value }), {
+      return openBlock(), createBlock(s3, mergeProps({ class: "ul-menu" }, e4, { style: m2.value }), {
         default: withCtx(() => [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(l.menus, (n3) => (openBlock(), createBlock(u, {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(l2.menus, (n3) => (openBlock(), createBlock(u, {
             key: n3.id,
             menu: n3
           }, null, 8, ["menu"]))), 128))
@@ -5606,7 +5607,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/icon/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-icon.css";
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
 var e2 = {
   menu: {
     type: Object,
@@ -6296,14 +6297,14 @@ function sortIcons(icons) {
     pending: []
   };
   const storage2 = /* @__PURE__ */ Object.create(null);
-  icons.sort((a2, b) => {
-    if (a2.provider !== b.provider) {
-      return a2.provider.localeCompare(b.provider);
+  icons.sort((a3, b) => {
+    if (a3.provider !== b.provider) {
+      return a3.provider.localeCompare(b.provider);
     }
-    if (a2.prefix !== b.prefix) {
-      return a2.prefix.localeCompare(b.prefix);
+    if (a3.prefix !== b.prefix) {
+      return a3.prefix.localeCompare(b.prefix);
     }
-    return a2.name.localeCompare(b.name);
+    return a3.name.localeCompare(b.name);
   });
   let lastIcon = {
     provider: "",
@@ -6741,8 +6742,8 @@ function iterateBrowserStorage(key, callback) {
   if (version !== browserCacheVersion) {
     if (version) {
       const total2 = getBrowserStorageItemsCount(func);
-      for (let i4 = 0; i4 < total2; i4++) {
-        removeStoredItem(func, browserCachePrefix + i4.toString());
+      for (let i3 = 0; i3 < total2; i3++) {
+        removeStoredItem(func, browserCachePrefix + i3.toString());
       }
     }
     setStoredItem(func, browserCacheVersionKey, browserCacheVersion);
@@ -6767,13 +6768,13 @@ function iterateBrowserStorage(key, callback) {
     removeStoredItem(func, name);
   };
   let total = getBrowserStorageItemsCount(func);
-  for (let i4 = total - 1; i4 >= 0; i4--) {
-    if (!parseItem(i4)) {
-      if (i4 === total - 1) {
+  for (let i3 = total - 1; i3 >= 0; i3--) {
+    if (!parseItem(i3)) {
+      if (i3 === total - 1) {
         total--;
         setBrowserStorageItemsCount(func, total);
       } else {
-        browserStorageEmptyItems[key].add(i4);
+        browserStorageEmptyItems[key].add(i3);
       }
     }
   }
@@ -7340,21 +7341,21 @@ var Icon = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
 var j = defineComponent({
   name: "ul-menu-item",
   __name: "menu-item",
   props: e2,
   setup(c) {
-    const r2 = c, t4 = computed(() => r2.parent + r2.menu.path);
+    const r2 = c, t2 = computed(() => r2.parent + r2.menu.path);
     return (e4, M2) => {
-      const i4 = ElIcon, d = resolveComponent("menu-item", true), s3 = ElSubMenu, _ = ElMenuItem;
+      const i3 = ElIcon, d = resolveComponent("menu-item", true), s3 = ElSubMenu, _ = ElMenuItem;
       return e4.menu.children && e4.menu.children.length > 0 ? (openBlock(), createBlock(s3, {
         key: 0,
-        index: t4.value
+        index: t2.value
       }, {
         title: withCtx(() => [
-          createVNode(i4, { size: 20 }, {
+          createVNode(i3, { size: 20 }, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
                 icon: e4.menu.meta.icon
@@ -7368,17 +7369,17 @@ var j = defineComponent({
           (openBlock(true), createElementBlock(Fragment, null, renderList(e4.menu.children, (f, h2) => (openBlock(), createBlock(d, {
             key: h2,
             menu: f,
-            parent: t4.value
+            parent: t2.value
           }, null, 8, ["menu", "parent"]))), 128))
         ]),
         _: 1
       }, 8, ["index"])) : (openBlock(), createBlock(_, {
         key: 1,
-        index: t4.value,
-        id: t4.value
+        index: t2.value,
+        id: t2.value
       }, {
         default: withCtx(() => [
-          createVNode(i4, { size: 20 }, {
+          createVNode(i3, { size: 20 }, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
                 icon: e4.menu.meta.icon
@@ -7394,7 +7395,7 @@ var j = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
 var s2 = s(E);
 var a = s(j);
 
@@ -7410,7 +7411,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/form-item/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-form-item.css";
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
 var t = {
   ...formProps,
   labelWidth: {
@@ -7424,20 +7425,20 @@ var t = {
   modelValue: Object
 };
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
 var r = (d) => {
-  const t4 = {}, a2 = {}, u = (n3) => {
+  const t2 = {}, a3 = {}, u = (n3) => {
     n3.forEach((o) => {
-      o.items && o.items.length > 0 && u(o.items), o.id && (o.inputFormat && (!t4[o.id] && (t4[o.id] = {}), t4[o.id].inputFormat = o.inputFormat), o.outputFormat && (!t4[o.id] && (t4[o.id] = {}), t4[o.id].outputFormat = o.outputFormat), o.default && (a2[o.id] = o.default));
+      o.items && o.items.length > 0 && u(o.items), o.id && (o.inputFormat && (!t2[o.id] && (t2[o.id] = {}), t2[o.id].inputFormat = o.inputFormat), o.outputFormat && (!t2[o.id] && (t2[o.id] = {}), t2[o.id].outputFormat = o.outputFormat), o.default && (a3[o.id] = o.default));
     });
   };
   return u(d), {
-    formatObj: t4,
-    defaulValue: a2
+    formatObj: t2,
+    defaulValue: a3
   };
 };
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
 var import_lodash = __toESM(require_lodash(), 1);
 var M = { key: 1 };
 var Q = { key: 0 };
@@ -7449,13 +7450,13 @@ var me = defineComponent({
   props: t,
   emits: ["update:modelValue"],
   setup(P, { expose: B, emit: I }) {
-    const _ = P, g = ref(), a2 = ref({});
+    const _ = P, g = ref(), a3 = ref({});
     let f = {};
     watch(
       () => _.content,
       (e4) => {
-        const { formatObj: l, defaulValue: r2 } = r(e4);
-        f = l, a2.value = Object.assign(r2, a2.value);
+        const { formatObj: l2, defaulValue: r2 } = r(e4);
+        f = l2, a3.value = Object.assign(r2, a3.value);
       },
       {
         immediate: true,
@@ -7463,17 +7464,17 @@ var me = defineComponent({
       }
     );
     const R = () => {
-      const { content: e4, modelValue: l, ...r2 } = _;
+      const { content: e4, modelValue: l2, ...r2 } = _;
       return r2;
     }, k = (e4) => {
       const {
-        id: l,
+        id: l2,
         type: r2,
         component: s3,
         default: u,
         str: c,
         forceDisabled: o,
-        inputFormat: t4,
+        inputFormat: t2,
         outputFormat: O,
         el: X,
         hide: Y,
@@ -7483,35 +7484,35 @@ var me = defineComponent({
       } = e4;
       return S;
     }, w = (e4) => {
-      let l = !e4;
-      return typeof e4 == "function" && (l = !e4(a2.value)), l;
+      let l2 = !e4;
+      return typeof e4 == "function" && (l2 = !e4(a3.value)), l2;
     }, E2 = () => {
-      let e4 = (0, import_lodash.cloneDeep)(a2.value) || {};
-      return Object.keys(e4).forEach((l) => {
+      let e4 = (0, import_lodash.cloneDeep)(a3.value) || {};
+      return Object.keys(e4).forEach((l2) => {
         var r2, s3, u;
-        if (e4[l] && ((r2 = f[l]) != null && r2.outputFormat)) {
-          const c = (u = (s3 = f[l]).outputFormat) == null ? void 0 : u.call(s3, e4);
+        if (e4[l2] && ((r2 = f[l2]) != null && r2.outputFormat)) {
+          const c = (u = (s3 = f[l2]).outputFormat) == null ? void 0 : u.call(s3, e4);
           Object.assign(e4, c);
         }
       }), e4;
-    }, j2 = (e4) => {
-      let l = (0, import_lodash.cloneDeep)(e4) || {};
-      return Object.keys(l).forEach((r2) => {
+    }, j3 = (e4) => {
+      let l2 = (0, import_lodash.cloneDeep)(e4) || {};
+      return Object.keys(l2).forEach((r2) => {
         var s3, u, c;
-        if (l[r2] && ((s3 = f[r2]) != null && s3.inputFormat)) {
-          const o = f[r2] && ((c = (u = f[r2]).inputFormat) == null ? void 0 : c.call(u, l));
-          Object.assign(l, o);
+        if (l2[r2] && ((s3 = f[r2]) != null && s3.inputFormat)) {
+          const o = f[r2] && ((c = (u = f[r2]).inputFormat) == null ? void 0 : c.call(u, l2));
+          Object.assign(l2, o);
         }
-      }), l;
+      }), l2;
     }, N = (e4) => {
-      a2.value = j2(e4);
+      a3.value = j3(e4);
     };
     return _.modelValue && (watch(
       () => _.modelValue,
       (e4) => {
-        if (e4 && !(0, import_lodash.isEqual)(e4, a2.value)) {
-          const l = j2(e4);
-          a2.value = Object.assign({}, a2.value, l);
+        if (e4 && !(0, import_lodash.isEqual)(e4, a3.value)) {
+          const l2 = j3(e4);
+          a3.value = Object.assign({}, a3.value, l2);
         }
       },
       {
@@ -7519,7 +7520,7 @@ var me = defineComponent({
         deep: true
       }
     ), watch(
-      () => a2.value,
+      () => a3.value,
       async () => {
         const e4 = await E2();
         I("update:modelValue", e4);
@@ -7532,13 +7533,13 @@ var me = defineComponent({
       getValue: E2,
       setValue: N,
       elFrom: g
-    }), (e4, l) => {
+    }), (e4, l2) => {
       const r2 = ElFormItem, s3 = ElCol, u = ElRow, c = ElForm;
       return openBlock(), createBlock(c, mergeProps({
         ref_key: "formRef",
         ref: g,
         class: "ul-form"
-      }, R(), { model: a2.value }), {
+      }, R(), { model: a3.value }), {
         default: withCtx(() => [
           (openBlock(true), createElementBlock(Fragment, null, renderList(e4.content, (o) => (openBlock(), createElementBlock(Fragment, null, [
             o.type === "row" && o.items ? (openBlock(), createBlock(u, {
@@ -7546,27 +7547,27 @@ var me = defineComponent({
               gutter: 20
             }, {
               default: withCtx(() => [
-                (openBlock(true), createElementBlock(Fragment, null, renderList(o.items || [], (t4) => (openBlock(), createElementBlock(Fragment, {
-                  key: t4.id
+                (openBlock(true), createElementBlock(Fragment, null, renderList(o.items || [], (t2) => (openBlock(), createElementBlock(Fragment, {
+                  key: t2.id
                 }, [
-                  w(t4.hide) ? (openBlock(), createBlock(s3, {
+                  w(t2.hide) ? (openBlock(), createBlock(s3, {
                     key: 0,
                     xs: { span: 24 },
                     sm: { span: 12 },
                     md: { span: 8 },
-                    lg: { span: t4.span || 6 }
+                    lg: { span: t2.span || 6 }
                   }, {
                     default: withCtx(() => [
                       createVNode(r2, mergeProps({
-                        prop: t4.id
-                      }, k(t4)), {
+                        prop: t2.id
+                      }, k(t2)), {
                         label: withCtx(() => [
-                          t4.label && typeof t4.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(t4.label()), { key: 0 })) : (openBlock(), createElementBlock("span", M, toDisplayString(t4.label), 1))
+                          t2.label && typeof t2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(t2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", M, toDisplayString(t2.label), 1))
                         ]),
                         default: withCtx(() => [
-                          e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", Q, toDisplayString(t4.str ? a2.value[t4.str] : a2.value[t4.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t4.type || t4.component), mergeProps({ key: 1 }, t4.el, {
-                            modelValue: a2.value[t4.id],
-                            "onUpdate:modelValue": (O) => a2.value[t4.id] = O
+                          e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", Q, toDisplayString(t2.str ? a3.value[t2.str] : a3.value[t2.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t2.type || t2.component), mergeProps({ key: 1 }, t2.el, {
+                            modelValue: a3.value[t2.id],
+                            "onUpdate:modelValue": (O) => a3.value[t2.id] = O
                           }), null, 16, ["modelValue", "onUpdate:modelValue"]))
                         ]),
                         _: 2
@@ -7586,9 +7587,9 @@ var me = defineComponent({
                 o.label && typeof o.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(o.label()), { key: 0 })) : (openBlock(), createElementBlock("span", T, toDisplayString(o.label), 1))
               ]),
               default: withCtx(() => [
-                e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", W, toDisplayString(o.str ? a2.value[o.str] : a2.value[o.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(o.type || o.component), mergeProps({ key: 1 }, o.el, {
-                  modelValue: a2.value[o.id],
-                  "onUpdate:modelValue": (t4) => a2.value[o.id] = t4
+                e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", W, toDisplayString(o.str ? a3.value[o.str] : a3.value[o.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(o.type || o.component), mergeProps({ key: 1 }, o.el, {
+                  modelValue: a3.value[o.id],
+                  "onUpdate:modelValue": (t2) => a3.value[o.id] = t2
                 }), null, 16, ["modelValue", "onUpdate:modelValue"]))
               ]),
               _: 2
@@ -7602,7 +7603,7 @@ var me = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
 var p = s(me);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/loading/style/css.mjs
@@ -7653,15 +7654,12 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/table-column/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-table-column.css";
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
-var t2 = {
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
+var a2 = {
+  ...defaultProps,
   searchForms: {
     type: Array,
     default: () => []
-  },
-  tableAttr: {
-    type: Object,
-    default: () => ({})
   },
   columns: {
     type: Array,
@@ -7716,118 +7714,124 @@ var t2 = {
   onEdit: Function
 };
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
 var import_lodash2 = __toESM(require_lodash(), 1);
-var ye = { class: "ul-table" };
-var ve = {
+var he = { class: "ul-table" };
+var Ce = {
   key: 0,
   class: "ul-table__search"
 };
-var he = { class: "ul-table__content" };
-var ke = { class: "table-head" };
-var Ce = { key: 1 };
-var Ve = { key: 1 };
-var Ee = { class: "operate-box" };
-var De = { class: "dialog-footer" };
-var je = defineComponent({
+var Ve = { class: "ul-table__content" };
+var Ee = { class: "table-head" };
+var De = { key: 1 };
+var Fe = { key: 1 };
+var Pe = { key: 1 };
+var Se = { class: "operate-box" };
+var Te = { class: "dialog-footer" };
+var Ge = defineComponent({
   name: "UlTable",
   __name: "table",
-  props: t2,
-  setup(O) {
-    const o = O;
+  props: a2,
+  setup(R) {
+    const a3 = R;
     useCssVars((e4) => ({
-      "67d2737d": e4.pagingAlign
+      "6dea391e": e4.pagingAlign
     }));
-    const V = ref(), j2 = ref(false), z = ref([]), E2 = ref(0), b = reactive({
-      [o.pageKey]: 1,
-      [o.sizeKey]: 10
-    }), T2 = (e4) => {
-      const { label: t4, component: a2, el: r2, ...d } = e4;
-      return d;
-    }, f = async () => {
-      var e4, t4;
-      if (o.getList) {
-        const a2 = (t4 = (e4 = V.value) == null ? void 0 : e4.getValue) == null ? void 0 : t4.call(e4), r2 = await o.getList({
-          ...b,
-          ...a2
-        }), d = o.dataPath || "data", u = o.totalPath || "total";
-        z.value = (0, import_lodash2.get)(r2, d), E2.value = (0, import_lodash2.get)(r2, u);
+    const P = ref(), W2 = ref(false), K2 = ref([]), S = ref(0), v = reactive({
+      [a3.pageKey]: 1,
+      [a3.sizeKey]: 10
+    }), q2 = (e4) => {
+      const t2 = {};
+      return Object.keys(defaultProps).forEach((n3) => {
+        e4[n3] && (t2[n3] = e4[n3]);
+      }), t2;
+    }, T2 = (e4) => {
+      const { label: t2, component: n3, el: u, children: _, ...c } = e4;
+      return c;
+    }, y = async () => {
+      var e4, t2;
+      if (a3.getList) {
+        const n3 = (t2 = (e4 = P.value) == null ? void 0 : e4.getValue) == null ? void 0 : t2.call(e4), u = await a3.getList({
+          ...v,
+          ...n3
+        }), _ = a3.dataPath || "data", c = a3.totalPath || "total";
+        K2.value = (0, import_lodash2.get)(u, _), S.value = (0, import_lodash2.get)(u, c);
       }
     };
-    o.immediate && f();
-    const R = () => {
-      var e4, t4, a2;
-      (a2 = (t4 = (e4 = V.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4), f();
-    }, W2 = (e4) => {
-      b[o.sizeKey] = e4, f();
-    }, q2 = (e4) => {
-      b[o.pageKey] = e4, f();
-    }, i4 = reactive({
+    a3.immediate && y();
+    const x = () => {
+      var e4, t2, n3;
+      (n3 = (t2 = (e4 = P.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.resetFields) == null || n3.call(t2), y();
+    }, G2 = (e4) => {
+      v[a3.sizeKey] = e4, y();
+    }, H = (e4) => {
+      v[a3.pageKey] = e4, y();
+    }, i3 = reactive({
       visible: false,
       title: "",
       disabled: false,
       saveType: ""
-    }), y = ref(), x = () => {
-      var e4, t4, a2;
-      (a2 = (t4 = (e4 = y.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t4.resetFields) == null || a2.call(t4);
-    }, G2 = () => {
-      if (o.onNew) {
-        o.onNew();
+    }), k = ref(), J = () => {
+      var e4, t2, n3;
+      (n3 = (t2 = (e4 = k.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.resetFields) == null || n3.call(t2);
+    }, M2 = () => {
+      if (a3.onNew) {
+        a3.onNew();
         return;
       }
-      i4.title = "新增", i4.visible = true, i4.disabled = false, i4.saveType = "new";
-    }, N = async (e4) => {
-      let t4 = e4;
-      o.getDetail && (t4 = await o.getDetail(e4)), nextTick(() => {
-        var a2, r2;
-        (r2 = (a2 = y.value) == null ? void 0 : a2.setValue) == null || r2.call(a2, t4);
+      i3.title = "新增", i3.visible = true, i3.disabled = false, i3.saveType = "new";
+    }, U2 = async (e4) => {
+      let t2 = e4;
+      a3.getDetail && (t2 = await a3.getDetail(e4)), nextTick(() => {
+        var n3, u;
+        (u = (n3 = k.value) == null ? void 0 : n3.setValue) == null || u.call(n3, t2);
       });
-    }, H = async (e4) => {
-      o.deleteSumbit && o.deleteSumbit(e4);
-    }, J = async (e4) => {
-      if (o.onEdit) {
-        o.onEdit(e4);
+    }, Q2 = async (e4) => {
+      a3.deleteSumbit && a3.deleteSumbit(e4);
+    }, X = async (e4) => {
+      if (a3.onEdit) {
+        a3.onEdit(e4);
         return;
       }
-      i4.title = "编辑", i4.visible = true, i4.disabled = false, i4.saveType = "edit", N(e4);
-    }, M2 = async (e4) => {
-      if (o.onView) {
-        o.onView(e4);
+      i3.title = "编辑", i3.visible = true, i3.disabled = false, i3.saveType = "edit", U2(e4);
+    }, Y = async (e4) => {
+      if (a3.onView) {
+        a3.onView(e4);
         return;
       }
-      i4.title = "查看", i4.visible = true, i4.disabled = true, N(e4);
-    }, Q2 = async () => {
-      var e4, t4, a2;
-      (a2 = (t4 = (e4 = y.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t4.validate) == null || a2.call(t4, async (r2) => {
-        var u, _;
-        if (!r2)
+      i3.title = "查看", i3.visible = true, i3.disabled = true, U2(e4);
+    }, Z = async () => {
+      var e4, t2, n3;
+      (n3 = (t2 = (e4 = k.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.validate) == null || n3.call(t2, async (u) => {
+        var c, g;
+        if (!u)
           return;
-        let d = o.newSumbit;
-        if (i4.saveType === "edit" && (d = o.editSumbit), d) {
-          const D = (_ = (u = y.value) == null ? void 0 : u.getValue) == null ? void 0 : _.call(u);
-          await d(D) !== false && (i4.visible = false, f());
+        let _ = a3.newSumbit;
+        if (i3.saveType === "edit" && (_ = a3.editSumbit), _) {
+          const z = (g = (c = k.value) == null ? void 0 : c.getValue) == null ? void 0 : g.call(c);
+          await _(z) !== false && (i3.visible = false, y());
         }
       });
     };
-    return (e4, t4) => {
-      const a2 = ElIcon, r2 = ElButton, d = ElFormItem, u = resolveComponent("ul-form"), _ = ElTableColumn, D = ElPopconfirm, $ = ElTable, X = ElPagination, Y = ElDialog, Z = vLoading;
-      return openBlock(), createElementBlock("div", ye, [
-        e4.searchForms.length > 0 ? (openBlock(), createElementBlock("div", ve, [
-          createVNode(u, {
+    return (e4, t2) => {
+      const n3 = ElIcon, u = ElButton, _ = ElFormItem, c = resolveComponent("ul-form"), g = ElTableColumn, z = ElPopconfirm, B = ElTable, ee = ElPagination, te2 = ElDialog, oe = vLoading;
+      return openBlock(), createElementBlock("div", he, [
+        e4.searchForms.length > 0 ? (openBlock(), createElementBlock("div", Ce, [
+          createVNode(c, {
             ref_key: "searchForm",
-            ref: V,
+            ref: P,
             content: e4.searchForms,
             inline: ""
           }, {
             final: withCtx(() => [
-              createVNode(d, null, {
+              createVNode(_, null, {
                 default: withCtx(() => [
-                  createVNode(r2, {
+                  createVNode(u, {
                     type: "primary",
-                    onClick: f
+                    onClick: y
                   }, {
                     icon: withCtx(() => [
-                      createVNode(a2, null, {
+                      createVNode(n3, null, {
                         default: withCtx(() => [
                           createVNode(unref(Icon), { icon: "ep:search" })
                         ]),
@@ -7839,9 +7843,9 @@ var je = defineComponent({
                     ]),
                     _: 1
                   }),
-                  createVNode(r2, { onClick: R }, {
+                  createVNode(u, { onClick: x }, {
                     icon: withCtx(() => [
-                      createVNode(a2, null, {
+                      createVNode(n3, null, {
                         default: withCtx(() => [
                           createVNode(unref(Icon), { icon: "ep:refresh" })
                         ]),
@@ -7860,14 +7864,14 @@ var je = defineComponent({
             _: 1
           }, 8, ["content"])
         ])) : createCommentVNode("", true),
-        createBaseVNode("div", he, [
-          createBaseVNode("div", ke, [
-            createVNode(r2, {
+        createBaseVNode("div", Ve, [
+          createBaseVNode("div", Ee, [
+            createVNode(u, {
               type: "primary",
-              onClick: G2
+              onClick: M2
             }, {
               icon: withCtx(() => [
-                createVNode(a2, null, {
+                createVNode(n3, null, {
                   default: withCtx(() => [
                     createVNode(unref(Icon), { icon: "ep:plus" })
                   ]),
@@ -7881,68 +7885,89 @@ var je = defineComponent({
             }),
             renderSlot(e4.$slots, "head")
           ]),
-          withDirectives((openBlock(), createBlock($, mergeProps({
-            border: "",
-            data: z.value,
+          withDirectives((openBlock(), createBlock(B, mergeProps({ border: "" }, q2(e4.$props), {
+            data: K2.value,
             "element-loading-text": "正在努力加载..."
-          }, e4.$attrs), {
+          }), {
             default: withCtx(() => [
-              (openBlock(true), createElementBlock(Fragment, null, renderList(e4.columns, (n3) => (openBlock(), createElementBlock(Fragment, null, [
-                n3.component ? (openBlock(), createBlock(_, normalizeProps(mergeProps({ key: 0 }, T2(n3))), {
+              (openBlock(true), createElementBlock(Fragment, null, renderList(e4.columns, (l2) => (openBlock(), createElementBlock(Fragment, null, [
+                l2.children ? (openBlock(), createBlock(g, normalizeProps(mergeProps({ key: 0 }, T2(l2))), {
                   header: withCtx(() => [
-                    n3.label && typeof n3.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(n3.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Ce, toDisplayString(n3.label), 1))
+                    l2.label && typeof l2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(l2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", De, toDisplayString(l2.label), 1))
                   ]),
-                  default: withCtx(({ row: k }) => [
-                    (openBlock(), createBlock(resolveDynamicComponent(n3.component), mergeProps({
-                      modelValue: k[n3.prop],
-                      "onUpdate:modelValue": (ee) => k[n3.prop] = ee
-                    }, n3.el), null, 16, ["modelValue", "onUpdate:modelValue"]))
+                  default: withCtx(() => [
+                    (openBlock(true), createElementBlock(Fragment, null, renderList(l2.children, (p2) => (openBlock(), createBlock(g, mergeProps({
+                      key: p2.prop
+                    }, T2(p2)), {
+                      header: withCtx(() => [
+                        p2.label && typeof p2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(p2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Fe, toDisplayString(p2.label), 1))
+                      ]),
+                      default: withCtx(({ row: h2 }) => [
+                        p2.component ? (openBlock(), createBlock(resolveDynamicComponent(p2.component), mergeProps({
+                          key: 0,
+                          modelValue: h2[p2.prop],
+                          "onUpdate:modelValue": (le) => h2[p2.prop] = le
+                        }, p2.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                          createTextVNode(toDisplayString(h2[p2.prop]), 1)
+                        ], 64))
+                      ]),
+                      _: 2
+                    }, 1040))), 128))
                   ]),
                   _: 2
-                }, 1040)) : (openBlock(), createBlock(_, normalizeProps(mergeProps({ key: 1 }, T2(n3))), {
+                }, 1040)) : (openBlock(), createBlock(g, normalizeProps(mergeProps({ key: 1 }, T2(l2))), {
                   header: withCtx(() => [
-                    n3.label && typeof n3.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(n3.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Ve, toDisplayString(n3.label), 1))
+                    l2.label && typeof l2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(l2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Pe, toDisplayString(l2.label), 1))
+                  ]),
+                  default: withCtx(({ row: p2 }) => [
+                    l2.component ? (openBlock(), createBlock(resolveDynamicComponent(l2.component), mergeProps({
+                      key: 0,
+                      modelValue: p2[l2.prop],
+                      "onUpdate:modelValue": (h2) => p2[l2.prop] = h2
+                    }, l2.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                      createTextVNode(toDisplayString(p2[l2.prop]), 1)
+                    ], 64))
                   ]),
                   _: 2
                 }, 1040))
               ], 64))), 256)),
-              e4.hasOperateColumn && e4.columns.length > 0 ? (openBlock(), createBlock(_, {
+              e4.hasOperateColumn && e4.columns.length > 0 ? (openBlock(), createBlock(g, {
                 key: 0,
                 label: "操作",
                 align: "center",
                 width: e4.opWidth,
                 fixed: "right"
               }, {
-                default: withCtx(({ row: n3 }) => [
-                  createBaseVNode("div", Ee, [
-                    createVNode(r2, {
+                default: withCtx(({ row: l2 }) => [
+                  createBaseVNode("div", Se, [
+                    createVNode(u, {
                       link: "",
                       type: "primary",
-                      onClick: (k) => M2(n3)
+                      onClick: (p2) => Y(l2)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("查看")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    createVNode(r2, {
+                    createVNode(u, {
                       link: "",
                       type: "primary",
-                      onClick: (k) => J(n3)
+                      onClick: (p2) => X(l2)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("编辑")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    createVNode(D, {
+                    createVNode(z, {
                       title: "确定要删除该数据吗?",
                       "confirm-button-type": "danger",
                       "confirm-button-text": "删除",
-                      onClick: H
+                      onClick: Q2
                     }, {
                       reference: withCtx(() => [
-                        createVNode(r2, {
+                        createVNode(u, {
                           link: "",
                           type: "danger"
                         }, {
@@ -7962,53 +7987,53 @@ var je = defineComponent({
             ]),
             _: 3
           }, 16, ["data"])), [
-            [Z, j2.value]
+            [oe, W2.value]
           ]),
-          e4.hasPagination && E2.value > 0 ? (openBlock(), createBlock(X, mergeProps({
+          e4.hasPagination && S.value > 0 ? (openBlock(), createBlock(ee, mergeProps({
             key: 0,
             class: "paging-box",
             layout: "total, sizes, prev, pager, next, jumper",
             background: "",
             small: ""
           }, e4.pagingAttr, {
-            "current-page": b[o.pageKey],
-            "page-size": b[o.sizeKey],
-            total: E2.value,
-            onSizeChange: W2,
-            onCurrentChange: q2
+            "current-page": v[a3.pageKey],
+            "page-size": v[a3.sizeKey],
+            total: S.value,
+            onSizeChange: G2,
+            onCurrentChange: H
           }), null, 16, ["current-page", "page-size", "total"])) : createCommentVNode("", true)
         ]),
-        createVNode(Y, {
-          modelValue: i4.visible,
-          "onUpdate:modelValue": t4[2] || (t4[2] = (n3) => i4.visible = n3),
-          title: i4.title,
-          onClose: x
+        createVNode(te2, {
+          modelValue: i3.visible,
+          "onUpdate:modelValue": t2[2] || (t2[2] = (l2) => i3.visible = l2),
+          title: i3.title,
+          onClose: J
         }, createSlots({
           default: withCtx(() => [
-            createVNode(u, {
+            createVNode(c, {
               ref_key: "dialogForm",
-              ref: y,
-              disabled: i4.disabled,
+              ref: k,
+              disabled: i3.disabled,
               content: e4.forms
             }, null, 8, ["disabled", "content"])
           ]),
           _: 2
         }, [
-          i4.disabled ? void 0 : {
+          i3.disabled ? void 0 : {
             name: "footer",
             fn: withCtx(() => [
-              createBaseVNode("span", De, [
-                createVNode(r2, {
-                  onClick: t4[0] || (t4[0] = (n3) => i4.visible = false)
+              createBaseVNode("span", Te, [
+                createVNode(u, {
+                  onClick: t2[0] || (t2[0] = (l2) => i3.visible = false)
                 }, {
                   default: withCtx(() => [
                     createTextVNode("取消")
                   ]),
                   _: 1
                 }),
-                createVNode(r2, {
+                createVNode(u, {
                   type: "primary",
-                  onClick: t4[1] || (t4[1] = (n3) => Q2())
+                  onClick: t2[1] || (t2[1] = (l2) => Z())
                 }, {
                   default: withCtx(() => [
                     createTextVNode(" 保存 ")
@@ -8025,8 +8050,8 @@ var je = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
-var i = s(je);
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
+var l = s(Ge);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/upload/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-upload.css";
@@ -8034,7 +8059,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/progress/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-progress.css";
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
 var e3 = {
   ...uploadProps,
   tip: String,
@@ -8052,16 +8077,16 @@ var e3 = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
 var import_lodash3 = __toESM(require_lodash(), 1);
-var A2 = { class: "el-upload__tip" };
+var A = { class: "el-upload__tip" };
 var G = ["src"];
 var te = defineComponent({
   name: "UlUpload",
   __name: "upload",
   props: e3,
   setup(w) {
-    const t4 = w, r2 = {
+    const t2 = w, r2 = {
       image: ["png", "jpg", "jpeg", "ico", "gif"],
       video: ["mp4", "avi", "wmv", "rmvb", "mov", "mkv"],
       pdf: ["pdf"],
@@ -8069,27 +8094,27 @@ var te = defineComponent({
       excel: ["xls", "xlsx"],
       compress: ["zip", "rar"]
     }, E2 = computed(() => {
-      if (t4.accept) {
-        const e4 = t4.accept.split(",").map((o) => r2[o]);
+      if (t2.accept) {
+        const e4 = t2.accept.split(",").map((o) => r2[o]);
         return (0, import_lodash3.flatMapDeep)(e4).map((o) => `.${o}`).join(",");
       }
       return "";
-    }), d = ref(""), i4 = ref(false), $ = (e4) => {
+    }), d = ref(""), i3 = ref(false), $ = (e4) => {
       var p2;
       let o = [];
-      t4.accept ? t4.accept.split(",").forEach((n3) => {
+      t2.accept ? t2.accept.split(",").forEach((n3) => {
         r2[n3] && o.push(...r2[n3]);
       }) : o = Object.values(r2).flat();
-      const a2 = (p2 = e4.name.split(".").pop()) == null ? void 0 : p2.toLowerCase();
-      return a2 && o.indexOf(a2) === -1 ? (ElMessage.warning(`文件类型只能是${o.join("，")}！`), false) : (e4.size / 1024 / 1024 > t4.limitSize && ElMessage.warning(`文件大小不能超过${t4.limitSize}MB！`), false);
+      const a3 = (p2 = e4.name.split(".").pop()) == null ? void 0 : p2.toLowerCase();
+      return a3 && o.indexOf(a3) === -1 ? (ElMessage.warning(`文件类型只能是${o.join("，")}！`), false) : (e4.size / 1024 / 1024 > t2.limitSize && ElMessage.warning(`文件大小不能超过${t2.limitSize}MB！`), false);
     }, h2 = (e4) => {
-      d.value = e4.url, i4.value = true;
+      d.value = e4.url, i3.value = true;
     }, y = () => {
     }, z = () => {
-      ElMessage.warning(`文件上传数量不得超过${t4.limit}个`);
+      ElMessage.warning(`文件上传数量不得超过${t2.limit}个`);
     };
     return (e4, o) => {
-      const a2 = ElIcon, p2 = ElButton, n3 = ElUpload, V = ElDialog;
+      const a3 = ElIcon, p2 = ElButton, n3 = ElUpload, V = ElDialog;
       return openBlock(), createElementBlock("div", {
         class: normalizeClass(["ul-upload", [e4.size && `ul-upload__${e4.size}`]])
       }, [
@@ -8101,7 +8126,7 @@ var te = defineComponent({
           "on-exceed": z
         }), createSlots({
           default: withCtx(() => [
-            e4.$props.listType === "picture-card" ? (openBlock(), createBlock(a2, { key: 0 }, {
+            e4.$props.listType === "picture-card" ? (openBlock(), createBlock(a3, { key: 0 }, {
               default: withCtx(() => [
                 createVNode(unref(Icon), { icon: "mdi:plus" })
               ]),
@@ -8121,7 +8146,7 @@ var te = defineComponent({
           e4.tip ? {
             name: "tip",
             fn: withCtx(() => [
-              createBaseVNode("div", A2, toDisplayString(e4.tip), 1)
+              createBaseVNode("div", A, toDisplayString(e4.tip), 1)
             ]),
             key: "0"
           } : void 0,
@@ -8133,8 +8158,8 @@ var te = defineComponent({
           }))
         ]), 1040, ["accept"]),
         createVNode(V, {
-          modelValue: i4.value,
-          "onUpdate:modelValue": o[0] || (o[0] = (u) => i4.value = u)
+          modelValue: i3.value,
+          "onUpdate:modelValue": o[0] || (o[0] = (u) => i3.value = u)
         }, {
           default: withCtx(() => [
             createBaseVNode("img", {
@@ -8150,30 +8175,31 @@ var te = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
-var i2 = s(te);
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
+var i = s(te);
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/installer.mjs
-var i3 = (n3 = []) => ({
-  install: (t4, s3) => {
-    t4[n] || (t4[n] = true, n3.forEach((o) => t4.use(o)));
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/installer.mjs
+var i2 = (n3 = []) => ({
+  install: (t2, s3) => {
+    t2[n] || (t2[n] = true, n3.forEach((o) => t2.use(o)));
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/component.mjs
-var n2 = [s2, a, p, i, i2];
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/component.mjs
+var n2 = [s2, a, p, l, i];
 
-// node_modules/.pnpm/ul-business@1.0.8_vue@3.3.4/node_modules/ul-business/es/index.mjs
-var t3 = i3(n2);
+// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/index.mjs
+var m = i2(n2);
 export {
   p as UlForm,
   s2 as UlMenu,
   a as UlMenuItem,
-  i as UlTable,
-  i2 as UlUpload,
-  t3 as default,
+  l as UlTable,
+  i as UlUpload,
+  m as default,
+  defaultProps as elTableProps,
   t as formProps,
-  t2 as tableProps
+  a2 as tableProps
 };
 /*! Bundled license information:
 

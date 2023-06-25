@@ -38,6 +38,14 @@
             "meta": {
               "icon": "mdi:menu"
             }
+          },
+          {
+            "id": "jhbbffh-2-3",
+            "name": "嵌套",
+            "path": "/child",
+            "meta": {
+              "icon": "mdi:menu"
+            }
           }
         ]
       },

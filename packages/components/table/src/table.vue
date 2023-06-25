@@ -36,21 +36,40 @@
         </el-button>
         <slot name="head"></slot>
       </div>
-      <el-table border :data="list" v-loading="loading" element-loading-text="正在努力加载..." v-bind="$attrs">
+      <el-table
+        border
+        v-bind="getTableProps($props)"
+        :data="list"
+        v-loading="loading"
+        element-loading-text="正在努力加载...">
         <template v-for="item in columns">
-          <el-table-column v-if="item.component" v-bind="getColumnProps(item)">
+          <!-- 多级表头 -->
+          <el-table-column v-if="item.children" v-bind="getColumnProps(item)">
+            <template #header>
+              <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
+              <span v-else>{{ item.label }}</span>
+            </template>
+
+            <el-table-column v-for="child in item.children" :key="child.prop" v-bind="getColumnProps(child)">
+              <template #header>
+                <component v-if="child.label && typeof child.label === 'function'" :is="child.label()"></component>
+                <span v-else>{{ child.label }}</span>
+              </template>
+              <template #default="{ row }">
+                <Component v-if="child.component" :is="child.component" v-model="row[child.prop!]" v-bind="child.el" />
+                <template v-else>{{ row[child.prop!] }}</template>
+              </template>
+            </el-table-column>
+          </el-table-column>
+
+          <el-table-column v-else v-bind="getColumnProps(item)">
             <template #header>
               <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
               <span v-else>{{ item.label }}</span>
             </template>
             <template #default="{ row }">
-              <Component :is="item.component" v-model="row[item.prop!]" v-bind="item.el" />
-            </template>
-          </el-table-column>
-          <el-table-column v-else v-bind="getColumnProps(item)">
-            <template #header>
-              <component v-if="item.label && typeof item.label === 'function'" :is="item.label()"></component>
-              <span v-else>{{ item.label }}</span>
+              <Component v-if="item.component" :is="item.component" v-model="row[item.prop!]" v-bind="item.el" />
+              <template v-else>{{ row[item.prop!] }}</template>
             </template>
           </el-table-column>
         </template>
@@ -105,7 +124,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, nextTick } from "vue";
-import { tableProps, ITableColumn } from "./type";
+import { tableProps, ITableColumn, elTableProps } from "./type";
 import { Icon } from "@iconify/vue";
 import { FormInstance } from "../../form";
 import { get as _get } from "lodash";
@@ -126,11 +145,25 @@ const pagination = reactive({
 });
 
 /**
+ * 用来获取el-table的props
+ * @param obj
+ */
+const getTableProps = (obj: any) => {
+  const t: any = {};
+  Object.keys(elTableProps).forEach((key) => {
+    if (obj[key]) {
+      t[key] = obj[key];
+    }
+  });
+  return t;
+};
+
+/**
  * 用来获取el-table-column的props
  * @param obj
  */
 const getColumnProps = (obj: ITableColumn<any>) => {
-  const { label, component, el, ...rest } = obj;
+  const { label, component, el, children, ...rest } = obj;
   return rest;
 };
 
@@ -328,9 +361,15 @@ const onSave = async () => {
       background: var(--el-fill-color-light) !important;
     }
 
-    .el-table__cell > .cell > *:first-child {
-      display: flex;
-      align-items: center;
+    .el-table__header-wrapper {
+      .el-table__cell > .cell > *:first-child {
+        display: flex;
+        align-items: center;
+      }
+
+      .el-table__cell.is-center > .cell > *:first-child {
+        justify-content: center;
+      }
     }
 
     .paging-box {
