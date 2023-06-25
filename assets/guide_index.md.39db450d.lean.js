@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as e,O as l}from"./chunks/framework.285fac2e.js";const y=JSON.parse('{"title":"安装","description":"","frontmatter":{},"headers":[],"relativePath":"guide/index.md","filePath":"guide/index.md"}'),n={name:"guide/index.md"},o=l("",3),t=[o];function p(c,i,r,d,C,u){return e(),s("div",null,t)}const b=a(n,[["render",p]]);export{y as __pageData,b as default};
