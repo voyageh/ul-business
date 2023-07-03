@@ -5558,7 +5558,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/popper/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-popper.css";
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
 var e = {
   ...menuProps,
   menus: {
@@ -5573,7 +5573,7 @@ var e = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
 var E = defineComponent({
   name: "ul-menu",
   __name: "menu",
@@ -5607,7 +5607,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/icon/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-icon.css";
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
 var e2 = {
   menu: {
     type: Object,
@@ -7341,21 +7341,21 @@ var Icon = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
-var j = defineComponent({
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
+var q = defineComponent({
   name: "ul-menu-item",
   __name: "menu-item",
   props: e2,
   setup(c) {
-    const r2 = c, t2 = computed(() => r2.parent + r2.menu.path);
-    return (e4, M2) => {
-      const i3 = ElIcon, d = resolveComponent("menu-item", true), s3 = ElSubMenu, _ = ElMenuItem;
+    const l2 = c, t2 = computed(() => l2.parent + l2.menu.path);
+    return (e4, S) => {
+      const r2 = ElIcon, d = resolveComponent("menu-item", true), s3 = ElSubMenu, _ = ElMenuItem;
       return e4.menu.children && e4.menu.children.length > 0 ? (openBlock(), createBlock(s3, {
         key: 0,
         index: t2.value
       }, {
         title: withCtx(() => [
-          createVNode(i3, { size: 20 }, {
+          createVNode(r2, null, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
                 icon: e4.menu.meta.icon
@@ -7379,7 +7379,7 @@ var j = defineComponent({
         id: t2.value
       }, {
         default: withCtx(() => [
-          createVNode(i3, { size: 20 }, {
+          createVNode(r2, null, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
                 icon: e4.menu.meta.icon
@@ -7395,9 +7395,9 @@ var j = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
 var s2 = s(E);
-var a = s(j);
+var a = s(q);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/form/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-form.css";
@@ -7411,7 +7411,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/form-item/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-form-item.css";
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
 var t = {
   ...formProps,
   labelWidth: {
@@ -7425,7 +7425,7 @@ var t = {
   modelValue: Object
 };
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
 var r = (d) => {
   const t2 = {}, a3 = {}, u = (n3) => {
     n3.forEach((o) => {
@@ -7438,7 +7438,7 @@ var r = (d) => {
   };
 };
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
 var import_lodash = __toESM(require_lodash(), 1);
 var M = { key: 1 };
 var Q = { key: 0 };
@@ -7495,7 +7495,7 @@ var me = defineComponent({
           Object.assign(e4, c);
         }
       }), e4;
-    }, j3 = (e4) => {
+    }, j2 = (e4) => {
       let l2 = (0, import_lodash.cloneDeep)(e4) || {};
       return Object.keys(l2).forEach((r2) => {
         var s3, u, c;
@@ -7505,13 +7505,13 @@ var me = defineComponent({
         }
       }), l2;
     }, N = (e4) => {
-      a3.value = j3(e4);
+      a3.value = j2(e4);
     };
     return _.modelValue && (watch(
       () => _.modelValue,
       (e4) => {
         if (e4 && !(0, import_lodash.isEqual)(e4, a3.value)) {
-          const l2 = j3(e4);
+          const l2 = j2(e4);
           a3.value = Object.assign({}, a3.value, l2);
         }
       },
@@ -7603,7 +7603,7 @@ var me = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
 var p = s(me);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/loading/style/css.mjs
@@ -7654,7 +7654,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/table-column/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-table-column.css";
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
 var a2 = {
   ...defaultProps,
   searchForms: {
@@ -7671,8 +7671,8 @@ var a2 = {
     default: true
   },
   opWidth: {
-    type: Number,
-    default: 160
+    type: String,
+    default: "160px"
   },
   hasPagination: {
     type: Boolean,
@@ -7714,7 +7714,7 @@ var a2 = {
   onEdit: Function
 };
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
 var import_lodash2 = __toESM(require_lodash(), 1);
 var he = { class: "ul-table" };
 var Ce = {
@@ -7740,7 +7740,7 @@ var Ge = defineComponent({
     const P = ref(), W2 = ref(false), K2 = ref([]), S = ref(0), v = reactive({
       [a3.pageKey]: 1,
       [a3.sizeKey]: 10
-    }), q2 = (e4) => {
+    }), q3 = (e4) => {
       const t2 = {};
       return Object.keys(defaultProps).forEach((n3) => {
         e4[n3] && (t2[n3] = e4[n3]);
@@ -7885,7 +7885,7 @@ var Ge = defineComponent({
             }),
             renderSlot(e4.$slots, "head")
           ]),
-          withDirectives((openBlock(), createBlock(B, mergeProps({ border: "" }, q2(e4.$props), {
+          withDirectives((openBlock(), createBlock(B, mergeProps({ border: "" }, q3(e4.$props), {
             data: K2.value,
             "element-loading-text": "正在努力加载..."
           }), {
@@ -8050,7 +8050,7 @@ var Ge = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
 var l = s(Ge);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/upload/style/css.mjs
@@ -8059,7 +8059,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/progress/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-progress.css";
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
 var e3 = {
   ...uploadProps,
   tip: String,
@@ -8077,7 +8077,7 @@ var e3 = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
 var import_lodash3 = __toESM(require_lodash(), 1);
 var A = { class: "el-upload__tip" };
 var G = ["src"];
@@ -8175,20 +8175,20 @@ var te = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
 var i = s(te);
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/installer.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/installer.mjs
 var i2 = (n3 = []) => ({
   install: (t2, s3) => {
     t2[n] || (t2[n] = true, n3.forEach((o) => t2.use(o)));
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/component.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/component.mjs
 var n2 = [s2, a, p, l, i];
 
-// node_modules/.pnpm/ul-business@1.0.10_vue@3.3.4/node_modules/ul-business/es/index.mjs
+// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/index.mjs
 var m = i2(n2);
 export {
   p as UlForm,

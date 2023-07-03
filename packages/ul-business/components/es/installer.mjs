@@ -1,9 +1,9 @@
-import { INSTALLED_KEY as r } from "ul-utils";
-const i = (n = []) => ({
-  install: (t, s) => {
-    t[r] || (t[r] = !0, n.forEach((o) => t.use(o)));
+import { INSTALLED_KEY as l } from "ul-utils";
+const c = (t = []) => ({
+  install: (e, r) => {
+    e[l] || (e[l] = !0, r != null && r.table && e.provide("table", r.table), t.forEach((a) => e.use(a)));
   }
 });
 export {
-  i as makeInstaller
+  c as makeInstaller
 };

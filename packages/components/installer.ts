@@ -4,8 +4,9 @@ import { INSTALLED_KEY } from "ul-utils";
 export const makeInstaller = (components: Plugin[] = []) => {
   const install = (app: App, options?: any) => {
     if (app[INSTALLED_KEY]) return;
-
     app[INSTALLED_KEY] = true;
+
+    options?.table && app.provide("table", options.table);
     components.forEach((c) => app.use(c));
   };
 

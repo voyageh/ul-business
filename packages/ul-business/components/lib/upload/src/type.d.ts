@@ -121,4 +121,4 @@ export declare const uploadProps: {
     disabled: BooleanConstructor;
     limit: NumberConstructor;
 };
-export type UlFormProps = ExtractPropTypes<typeof uploadProps>;
+export type UlUploadProps = ExtractPropTypes<typeof uploadProps>;

@@ -12,6 +12,13 @@ export interface ITableColumn<T extends any> extends Partial<Omit<TableColumnCtx
 
 export { elTableProps };
 
+export interface IGlobalTableProps {
+  pageKey?: string;
+  sizeKey?: string;
+  dataPath?: string;
+  totalPath?: string;
+}
+
 export const tableProps = {
   ...elTableProps,
   searchForms: {
@@ -28,21 +35,15 @@ export const tableProps = {
     default: true,
   },
   opWidth: {
-    type: Number,
-    default: 160,
+    type: String,
+    default: "160px",
   },
   hasPagination: {
     type: Boolean,
     default: true,
   },
-  sizeKey: {
-    type: String,
-    default: "pageSize",
-  },
-  pageKey: {
-    type: String,
-    default: "PageNo",
-  },
+  sizeKey: String,
+  pageKey: String,
   pagingAlign: {
     type: String,
     default: "flex-end",

@@ -73,12 +73,7 @@
             </template>
           </el-table-column>
         </template>
-        <el-table-column
-          v-if="hasOperateColumn && columns.length > 0"
-          label="操作"
-          align="center"
-          :width="opWidth"
-          fixed="right">
+        <el-table-column v-if="hasOperateColumn && columns.length > 0" label="操作" align="center" fixed="right">
           <template #default="{ row }">
             <div class="operate-box">
               <el-button link type="primary" @click="onDefaultView(row)">查看</el-button>
@@ -104,8 +99,8 @@
         background
         small
         v-bind="pagingAttr"
-        :current-page="pagination[props.pageKey]"
-        :page-size="pagination[props.sizeKey]"
+        :current-page="pagination[pageKey]"
+        :page-size="pagination[sizeKey]"
         :total="total"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange" />
@@ -123,25 +118,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, nextTick } from "vue";
-import { tableProps, ITableColumn, elTableProps } from "./type";
+import { ref, reactive, nextTick, inject } from "vue";
+import { tableProps, ITableColumn, elTableProps, IGlobalTableProps } from "./type";
 import { Icon } from "@iconify/vue";
-import { FormInstance } from "../../form";
+import { UlFormInstance } from "../../form";
 import { get as _get } from "lodash";
 
 defineOptions({ name: "UlTable" });
 const props = defineProps(tableProps);
+const global = inject<IGlobalTableProps>("table");
+const pageKey = props.pageKey ?? global?.sizeKey ?? "pageSize";
+const sizeKey = props.sizeKey ?? global?.pageKey ?? "PageNo";
 
 // 搜索表单的实例
-const searchForm = ref<FormInstance>();
+const searchForm = ref<UlFormInstance>();
 const loading = ref(false);
 const list = ref<any[]>([]);
 const total = ref(0);
 
 // 分页参数
 const pagination = reactive({
-  [props.pageKey]: 1,
-  [props.sizeKey]: 10,
+  [pageKey]: 1,
+  [sizeKey]: 10,
 });
 
 /**
@@ -172,15 +170,17 @@ const getColumnProps = (obj: ITableColumn<any>) => {
  */
 const onSearch = async () => {
   if (props.getList) {
+    loading.value = true;
     const formValue = searchForm.value?.getValue?.();
     const result = await props.getList({
       ...pagination,
       ...formValue,
     });
-    const dataPath = props.dataPath || "data";
-    const totalPath = props.totalPath || "total";
+    const dataPath = props.dataPath ?? global?.dataPath ?? "data";
+    const totalPath = props.totalPath ?? global?.totalPath ?? "total";
     list.value = _get(result, dataPath);
     total.value = _get(result, totalPath);
+    loading.value = false;
   }
 };
 
@@ -201,7 +201,7 @@ const onRefresh = () => {
  * @param v 条数
  */
 const handleSizeChange = (v: number) => {
-  pagination[props.sizeKey] = v;
+  pagination[sizeKey] = v;
   onSearch();
 };
 
@@ -210,7 +210,7 @@ const handleSizeChange = (v: number) => {
  * @param v 页数
  */
 const handleCurrentChange = (v: number) => {
-  pagination[props.pageKey] = v;
+  pagination[pageKey] = v;
   onSearch();
 };
 
@@ -222,7 +222,7 @@ const dialogState = reactive({
   saveType: "",
 });
 // 弹窗的表单实例
-const dialogForm = ref<FormInstance>();
+const dialogForm = ref<UlFormInstance>();
 
 /**
  * 弹窗关闭
@@ -370,6 +370,10 @@ const onSave = async () => {
       .el-table__cell.is-center > .cell > *:first-child {
         justify-content: center;
       }
+    }
+
+    colgroup > col[name^="el-table_"]:last-child {
+      width: v-bind(opWidth);
     }
 
     .paging-box {

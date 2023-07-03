@@ -18,4 +18,4 @@ export const uploadProps = {
   },
 };
 
-export type UlFormProps = ExtractPropTypes<typeof uploadProps>;
+export type UlUploadProps = ExtractPropTypes<typeof uploadProps>;

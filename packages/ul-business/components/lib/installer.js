@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("ul-utils"),n=(r=[])=>({install:(t,o)=>{t[e.INSTALLED_KEY]||(t[e.INSTALLED_KEY]=!0,r.forEach(l=>t.use(l)))}});exports.makeInstaller=n;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("ul-utils"),u=(t=[])=>({install:(e,l)=>{e[r.INSTALLED_KEY]||(e[r.INSTALLED_KEY]=!0,l!=null&&l.table&&e.provide("table",l.table),t.forEach(a=>e.use(a)))}});exports.makeInstaller=u;

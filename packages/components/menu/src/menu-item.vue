@@ -1,16 +1,16 @@
 <template>
   <el-sub-menu v-if="menu.children && menu.children.length > 0" :index="path">
     <template #title>
-      <el-icon :size="20">
-        <Icon :icon="menu.meta.icon" />
+      <el-icon>
+        <Icon :icon="menu.meta.icon ?? 'ep:menu'" />
       </el-icon>
       <span>{{ menu.name }}</span>
     </template>
     <menu-item v-for="(child, id) in menu.children" :key="id" :menu="child" :parent="path" />
   </el-sub-menu>
   <el-menu-item v-else :index="path" :id="path">
-    <el-icon :size="20">
-      <Icon :icon="menu.meta.icon" />
+    <el-icon>
+      <Icon :icon="menu.meta.icon ?? 'ep:menu'" />
     </el-icon>
     {{ menu.name }}
   </el-menu-item>

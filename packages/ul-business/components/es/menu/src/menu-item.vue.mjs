@@ -3,25 +3,25 @@ import "element-plus/es/components/base/style/css";
 import "element-plus/es/components/menu-item/style/css";
 import "element-plus/es/components/sub-menu/style/css";
 import "element-plus/es/components/icon/style/css";
-import { defineComponent as y, computed as g, resolveComponent as B, openBlock as o, createBlock as u, withCtx as n, createVNode as m, unref as l, createElementVNode as C, toDisplayString as a, createElementBlock as I, Fragment as N, renderList as V, createTextVNode as b } from "vue";
-import z from "./types/menu-item.mjs";
+import { defineComponent as y, computed as g, resolveComponent as B, openBlock as o, createBlock as u, withCtx as n, createVNode as m, unref as i, createElementVNode as C, toDisplayString as a, createElementBlock as I, Fragment as N, renderList as V, createTextVNode as b } from "vue";
+import M from "./types/menu-item.mjs";
 import { Icon as p } from "@iconify/vue";
-const j = /* @__PURE__ */ y({
+const q = /* @__PURE__ */ y({
   name: "ul-menu-item",
   __name: "menu-item",
-  props: z,
+  props: M,
   setup(c) {
-    const r = c, t = g(() => r.parent + r.menu.path);
-    return (e, M) => {
-      const i = k, d = B("menu-item", !0), s = v, _ = E;
+    const l = c, t = g(() => l.parent + l.menu.path);
+    return (e, S) => {
+      const r = k, d = B("menu-item", !0), s = v, _ = E;
       return e.menu.children && e.menu.children.length > 0 ? (o(), u(s, {
         key: 0,
         index: t.value
       }, {
         title: n(() => [
-          m(i, { size: 20 }, {
+          m(r, null, {
             default: n(() => [
-              m(l(p), {
+              m(i(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
@@ -43,9 +43,9 @@ const j = /* @__PURE__ */ y({
         id: t.value
       }, {
         default: n(() => [
-          m(i, { size: 20 }, {
+          m(r, null, {
             default: n(() => [
-              m(l(p), {
+              m(i(p), {
                 icon: e.menu.meta.icon
               }, null, 8, ["icon"])
             ]),
@@ -59,5 +59,5 @@ const j = /* @__PURE__ */ y({
   }
 });
 export {
-  j as default
+  q as default
 };

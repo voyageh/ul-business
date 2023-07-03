@@ -1,6 +1,6 @@
 {
   "name": "ul-business",
-  "version": "1.0.10",
+  "version": "1.0.17",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -24,10 +24,12 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "ul-utils": "^1.0.0"
+    "ul-utils": "^1.0.0",
+    "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
     "vue": "^3.2.36",
-    "vue-router": "^4.2.1"
+    "vue-router": "^4.2.1",
+    "@types/tinycolor2": "^1.4.3"
   }
 }

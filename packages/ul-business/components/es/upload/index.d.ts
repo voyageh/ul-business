@@ -269,4 +269,5 @@ export declare const UlUpload: import("ul-utils").SFCWithInstall<import("vue").D
     httpRequest: import("element-plus").UploadRequestHandler;
 }>> & Record<string, any>;
 export default UlUpload;
-export type UploadInstance = InstanceType<typeof upload>;
+export * from "./src/type";
+export type UlUploadInstance = InstanceType<typeof upload>;

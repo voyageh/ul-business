@@ -9,6 +9,12 @@ export interface ITableColumn<T extends any> extends Partial<Omit<TableColumnCtx
     children?: ITableColumn<T>[];
 }
 export { elTableProps };
+export interface IGlobalTableProps {
+    pageKey?: string;
+    sizeKey?: string;
+    dataPath?: string;
+    totalPath?: string;
+}
 export declare const tableProps: {
     searchForms: {
         type: PropType<IFormItem[]>;
@@ -24,21 +30,15 @@ export declare const tableProps: {
         default: boolean;
     };
     opWidth: {
-        type: NumberConstructor;
-        default: number;
+        type: StringConstructor;
+        default: string;
     };
     hasPagination: {
         type: BooleanConstructor;
         default: boolean;
     };
-    sizeKey: {
-        type: StringConstructor;
-        default: string;
-    };
-    pageKey: {
-        type: StringConstructor;
-        default: string;
-    };
+    sizeKey: StringConstructor;
+    pageKey: StringConstructor;
     pagingAlign: {
         type: StringConstructor;
         default: string;

@@ -14,25 +14,17 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: boolean;
     };
     opWidth: {
-        type: NumberConstructor;
-        default: number;
+        type: StringConstructor;
+        default: string;
     };
     hasPagination: {
         type: BooleanConstructor;
         default: boolean;
     };
-    sizeKey: {
-        type: StringConstructor;
-        default: string;
-    };
-    pageKey: {
-        type: StringConstructor;
-        default: string;
-    };
+    sizeKey: StringConstructor;
+    pageKey: StringConstructor;
     pagingAlign: {
-        type: StringConstructor; /**
-         * 查询
-         */
+        type: StringConstructor;
         default: string;
     };
     pagingAttr: {
@@ -162,25 +154,17 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: boolean;
     };
     opWidth: {
-        type: NumberConstructor;
-        default: number;
+        type: StringConstructor;
+        default: string;
     };
     hasPagination: {
         type: BooleanConstructor;
         default: boolean;
     };
-    sizeKey: {
-        type: StringConstructor;
-        default: string;
-    };
-    pageKey: {
-        type: StringConstructor;
-        default: string;
-    };
+    sizeKey: StringConstructor;
+    pageKey: StringConstructor;
     pagingAlign: {
-        type: StringConstructor; /**
-         * 查询
-         */
+        type: StringConstructor;
         default: string;
     };
     pagingAttr: {
@@ -301,10 +285,8 @@ declare const _sfc_main: import("vue").DefineComponent<{
     style: import("vue").CSSProperties;
     searchForms: import("../../form").IFormItem[];
     hasOperateColumn: boolean;
-    opWidth: number;
+    opWidth: string;
     hasPagination: boolean;
-    sizeKey: string;
-    pageKey: string;
     pagingAlign: string;
     pagingAttr: Partial<import("element-plus").PaginationProps>;
     forms: import("../../form").IFormItem[];

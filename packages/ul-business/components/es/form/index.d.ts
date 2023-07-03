@@ -98,4 +98,4 @@ export declare const UlForm: import("ul-utils").SFCWithInstall<import("vue").Def
 }>> & Record<string, any>;
 export default UlForm;
 export * from "./src/type";
-export type FormInstance = InstanceType<typeof Form>;
+export type UlFormInstance = InstanceType<typeof Form>;

@@ -14,21 +14,15 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
         default: boolean;
     };
     opWidth: {
-        type: NumberConstructor;
-        default: number;
+        type: StringConstructor;
+        default: string;
     };
     hasPagination: {
         type: BooleanConstructor;
         default: boolean;
     };
-    sizeKey: {
-        type: StringConstructor;
-        default: string;
-    };
-    pageKey: {
-        type: StringConstructor;
-        default: string;
-    };
+    sizeKey: StringConstructor;
+    pageKey: StringConstructor;
     pagingAlign: {
         type: StringConstructor;
         default: string;
@@ -160,21 +154,15 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
         default: boolean;
     };
     opWidth: {
-        type: NumberConstructor;
-        default: number;
+        type: StringConstructor;
+        default: string;
     };
     hasPagination: {
         type: BooleanConstructor;
         default: boolean;
     };
-    sizeKey: {
-        type: StringConstructor;
-        default: string;
-    };
-    pageKey: {
-        type: StringConstructor;
-        default: string;
-    };
+    sizeKey: StringConstructor;
+    pageKey: StringConstructor;
     pagingAlign: {
         type: StringConstructor;
         default: string;
@@ -297,10 +285,8 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
     style: import("vue").CSSProperties;
     searchForms: import("..").IFormItem[];
     hasOperateColumn: boolean;
-    opWidth: number;
+    opWidth: string;
     hasPagination: boolean;
-    sizeKey: string;
-    pageKey: string;
     pagingAlign: string;
     pagingAttr: Partial<import("element-plus").PaginationProps>;
     forms: import("..").IFormItem[];
@@ -326,4 +312,4 @@ export declare const UlTable: import("ul-utils").SFCWithInstall<import("vue").De
 }>> & Record<string, any>;
 export default UlTable;
 export * from "./src/type";
-export type TableInstance = InstanceType<typeof table>;
+export type UlTableInstance = InstanceType<typeof table>;

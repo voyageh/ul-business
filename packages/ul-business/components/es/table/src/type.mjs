@@ -1,6 +1,6 @@
 import t from "element-plus/es/components/table/src/table/defaults";
-import { default as i } from "element-plus/es/components/table/src/table/defaults";
-const a = {
+import { default as o } from "element-plus/es/components/table/src/table/defaults";
+const n = {
   ...t,
   searchForms: {
     type: Array,
@@ -16,21 +16,15 @@ const a = {
     default: !0
   },
   opWidth: {
-    type: Number,
-    default: 160
+    type: String,
+    default: "160px"
   },
   hasPagination: {
     type: Boolean,
     default: !0
   },
-  sizeKey: {
-    type: String,
-    default: "pageSize"
-  },
-  pageKey: {
-    type: String,
-    default: "PageNo"
-  },
+  sizeKey: String,
+  pageKey: String,
   pagingAlign: {
     type: String,
     default: "flex-end"
@@ -59,6 +53,6 @@ const a = {
   onEdit: Function
 };
 export {
-  i as elTableProps,
-  a as tableProps
+  o as elTableProps,
+  n as tableProps
 };

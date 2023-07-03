@@ -5,4 +5,4 @@ export const UlTable = withInstall(table);
 
 export default UlTable;
 export * from "./src/type";
-export type TableInstance = InstanceType<typeof table>;
+export type UlTableInstance = InstanceType<typeof table>;
