@@ -3,12 +3,13 @@ import type { PropType } from "vue";
 export type Meta = {
   icon?: any;
 };
-export interface IMenuItem {
+
+export interface IMenuItem<TMata = any> {
   id: string;
   name: string;
   path: string;
-  meta: Meta;
-  children?: IMenuItem[];
+  meta: Meta & TMata;
+  children?: IMenuItem<TMata>[];
 }
 
 export default {

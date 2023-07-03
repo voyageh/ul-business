@@ -1,6 +1,6 @@
 declare const _sfc_main: import("vue").DefineComponent<{
     menus: {
-        type: import("vue").PropType<import("..").IMenuItem[]>;
+        type: import("vue").PropType<import("..").IMenuItem<any>[]>;
     };
     selectBgColor: StringConstructor;
     width: {
@@ -22,7 +22,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     popperEffect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark", unknown, "dark", boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     menus: {
-        type: import("vue").PropType<import("..").IMenuItem[]>;
+        type: import("vue").PropType<import("..").IMenuItem<any>[]>;
     };
     selectBgColor: StringConstructor;
     width: {

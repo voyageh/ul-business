@@ -17,6 +17,6 @@ computing gzip size...
 ../ul-business/utils/lib/vue/install.js  0.31 kB │ gzip: 0.24 kB
 
 [vite:dts] Start generate declaration files...
-✓ built in 615ms
-[vite:dts] Declaration files built in 546ms.
+✓ built in 614ms
+[vite:dts] Declaration files built in 549ms.
 

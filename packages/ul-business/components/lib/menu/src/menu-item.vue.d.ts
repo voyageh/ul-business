@@ -1,6 +1,6 @@
 declare const _sfc_main: import("vue").DefineComponent<{
     menu: {
-        type: import("vue").PropType<import("./types/menu-item").IMenuItem>;
+        type: import("vue").PropType<import("./types/menu-item").IMenuItem<any>>;
         required: boolean;
         default: () => {};
     };
@@ -10,7 +10,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     };
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     menu: {
-        type: import("vue").PropType<import("./types/menu-item").IMenuItem>;
+        type: import("vue").PropType<import("./types/menu-item").IMenuItem<any>>;
         required: boolean;
         default: () => {};
     };
@@ -19,7 +19,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
-    menu: import("./types/menu-item").IMenuItem;
+    menu: import("./types/menu-item").IMenuItem<any>;
     parent: string;
 }>;
 export default _sfc_main;

@@ -1,18 +1,17 @@
 import type { PropType } from "vue";
-export type IMeta = {
-    icon: any;
-    status?: boolean;
+export type Meta = {
+    icon?: any;
 };
-export interface IMenuItem {
+export interface IMenuItem<TMata = any> {
     id: string;
     name: string;
     path: string;
-    meta: IMeta;
-    children?: IMenuItem[];
+    meta: Meta & TMata;
+    children?: IMenuItem<TMata>[];
 }
 declare const _default: {
     menu: {
-        type: PropType<IMenuItem>;
+        type: PropType<IMenuItem<any>>;
         required: boolean;
         default: () => {};
     };

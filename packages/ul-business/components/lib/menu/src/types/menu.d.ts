@@ -2,7 +2,7 @@ import type { PropType } from "vue";
 import { IMenuItem } from "./menu-item";
 declare const _default: {
     menus: {
-        type: PropType<IMenuItem[]>;
+        type: PropType<IMenuItem<any>[]>;
     };
     selectBgColor: StringConstructor;
     width: {
