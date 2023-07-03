@@ -159,6 +159,9 @@ const config = reactive<UlTableProps>({
     console.log(data);
     return false; // false时候不关闭弹窗
   },
+  deleteSumbit() {
+    console.log(11111);
+  },
 });
 </script>
 

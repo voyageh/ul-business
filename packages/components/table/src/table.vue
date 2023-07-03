@@ -82,7 +82,7 @@
                 title="确定要删除该数据吗?"
                 confirm-button-type="danger"
                 confirm-button-text="删除"
-                @click="onDefaultDelete">
+                @confirm="onDefaultDelete">
                 <template #reference>
                   <el-button link type="danger">删除</el-button>
                 </template>
@@ -126,9 +126,15 @@ import { get as _get } from "lodash";
 
 defineOptions({ name: "UlTable" });
 const props = defineProps(tableProps);
-const global = inject<IGlobalTableProps>("table");
-const pageKey = props.pageKey ?? global?.sizeKey ?? "pageSize";
-const sizeKey = props.sizeKey ?? global?.pageKey ?? "PageNo";
+const global = inject<IGlobalTableProps>("table", {
+  sizeKey: "pageSize",
+  pageKey: "pageNo",
+  dataPath: "data",
+  totalPath: "total",
+});
+
+const pageKey = props.pageKey ?? global.pageKey!;
+const sizeKey = props.sizeKey ?? global.sizeKey!;
 
 // 搜索表单的实例
 const searchForm = ref<UlFormInstance>();
@@ -176,8 +182,8 @@ const onSearch = async () => {
       ...pagination,
       ...formValue,
     });
-    const dataPath = props.dataPath ?? global?.dataPath ?? "data";
-    const totalPath = props.totalPath ?? global?.totalPath ?? "total";
+    const dataPath = props.dataPath ?? global?.dataPath!;
+    const totalPath = props.totalPath ?? global?.totalPath!;
     list.value = _get(result, dataPath);
     total.value = _get(result, totalPath);
     loading.value = false;

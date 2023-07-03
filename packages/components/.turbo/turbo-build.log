@@ -5,7 +5,7 @@
 vite v4.3.9 building for production...
 "build.lib.formats" will be ignored because "build.rollupOptions.output" is already an array format.
 transforming...
-"resolveDirective" is imported from external module "vue" but never used in "menu/src/menu-item.vue?vue&type=script&setup=true&lang.ts", "upload/src/upload.vue?vue&type=script&setup=true&lang.ts", "table/src/table.vue?vue&type=script&setup=true&lang.ts", "menu/src/menu.vue?vue&type=script&setup=true&lang.ts" and "form/src/form.vue?vue&type=script&setup=true&lang.ts".
+"resolveDirective" is imported from external module "vue" but never used in "upload/src/upload.vue?vue&type=script&setup=true&lang.ts", "menu/src/menu-item.vue?vue&type=script&setup=true&lang.ts", "menu/src/menu.vue?vue&type=script&setup=true&lang.ts", "table/src/table.vue?vue&type=script&setup=true&lang.ts" and "form/src/form.vue?vue&type=script&setup=true&lang.ts".
 ✓ 28 modules transformed.
 
 (!) outDir /Users/zlf/person/ul-business/packages/ul-business/components/es is not inside project root and will not be emptied.
@@ -40,7 +40,7 @@ computing gzip size...
 ../ul-business/components/es/menu/src/menu-item.vue.mjs                                                      2.05 kB │ gzip: 0.73 kB
 ../ul-business/components/es/upload/src/upload.vue.mjs                                                       3.60 kB │ gzip: 1.51 kB
 ../ul-business/components/es/form/src/form.vue.mjs                                                           5.77 kB │ gzip: 1.76 kB
-../ul-business/components/es/table/src/table.vue.mjs                                                        12.60 kB │ gzip: 3.20 kB
+../ul-business/components/es/table/src/table.vue.mjs                                                        12.62 kB │ gzip: 3.20 kB
 ../ul-business/components/es/node_modules/.pnpm/tinycolor2@1.6.0/node_modules/tinycolor2/esm/tinycolor.mjs  20.56 kB │ gzip: 5.87 kB
 ../ul-business/components/lib/menu/src/menu.vue2.js                                                          0.14 kB │ gzip: 0.14 kB
 ../ul-business/components/lib/form/src/form.vue2.js                                                          0.14 kB │ gzip: 0.14 kB
@@ -68,7 +68,7 @@ computing gzip size...
 ../ul-business/components/lib/menu/src/menu-item.vue.js                                                      1.56 kB │ gzip: 0.63 kB
 ../ul-business/components/lib/upload/src/upload.vue.js                                                       2.50 kB │ gzip: 1.30 kB
 ../ul-business/components/lib/form/src/form.vue.js                                                           4.10 kB │ gzip: 1.44 kB
-../ul-business/components/lib/table/src/table.vue.js                                                         8.09 kB │ gzip: 2.59 kB
+../ul-business/components/lib/table/src/table.vue.js                                                         8.09 kB │ gzip: 2.60 kB
 ../ul-business/components/lib/node_modules/.pnpm/tinycolor2@1.6.0/node_modules/tinycolor2/esm/tinycolor.js  15.36 kB │ gzip: 5.35 kB
 
 [vite:dts] Start generate declaration files...
@@ -82,31 +82,31 @@ computing gzip size...
 
 [7m7[0m     app[INSTALLED_KEY] = true;
 [7m [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m64[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m70[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m64[0m     const formValue = searchForm.value?.getValue?.();
+[7m70[0m     const formValue = searchForm.value?.getValue?.();
 [7m  [0m [91m                                        ~~~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m85[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m91[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m85[0m   searchForm.value?.elFrom?.resetFields?.();
+[7m91[0m   searchForm.value?.elFrom?.resetFields?.();
 [7m  [0m [91m                    ~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m121[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m127[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m121[0m   dialogForm.value?.elFrom?.resetFields?.();
+[7m127[0m   dialogForm.value?.elFrom?.resetFields?.();
 [7m   [0m [91m                    ~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m148[0m:[93m23[0m - [91merror[0m[90m TS2339: [0mProperty 'setValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m154[0m:[93m23[0m - [91merror[0m[90m TS2339: [0mProperty 'setValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m148[0m     dialogForm.value?.setValue?.(detail);
+[7m154[0m     dialogForm.value?.setValue?.(detail);
 [7m   [0m [91m                      ~~~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m200[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m206[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'elFrom' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m200[0m   dialogForm.value?.elFrom?.validate?.(async (vaild: boolean) => {
+[7m206[0m   dialogForm.value?.elFrom?.validate?.(async (vaild: boolean) => {
 [7m   [0m [91m                    ~~~~~~[0m
-[96mtable/src/table.vue.ts[0m:[93m207[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
+[96mtable/src/table.vue.ts[0m:[93m213[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'getValue' does not exist on type '{ $: ComponentInternalInstance; $data: {}; $props: Partial<{ inline: boolean; labelWidth: string | number; inlineMessage: boolean; showMessage: EpPropMergeType<BooleanConstructor, unknown, unknown>; ... 8 more ...; disabled: boolean; }> & Omit<...>; ... 10 more ...; $watch<T extends string | ((...args: any) => any)>...'.
 
-[7m207[0m       const formValue = dialogForm.value?.getValue?.();
+[7m213[0m       const formValue = dialogForm.value?.getValue?.();
 [7m   [0m [91m                                          ~~~~~~~~[0m
 
-✓ built in 6.58s
-[vite:dts] Declaration files built in 6089ms.
+✓ built in 6.84s
+[vite:dts] Declaration files built in 6348ms.
 
