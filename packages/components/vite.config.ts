@@ -13,19 +13,17 @@ export default defineConfig({
       entry: "index.ts",
       formats: ["es", "cjs"],
     },
-    //打包文件目录
-    outDir: "ul-business",
     rollupOptions: {
       input: "index.ts",
       //忽略打包vue文件
-      external: ["vue", /element-plus/, "@iconify/vue", "ul-utils", "lodash"],
+      external: ["vue", /element-plus/, "@iconify/vue", "ul-utils", "lodash", "tinycolor2"],
       output: [
         {
           format: "es",
           entryFileNames: "[name].mjs",
           preserveModules: true,
           preserveModulesRoot: ".",
-          dir: "../ul-business/components/es",
+          dir: "dist/es",
         },
         {
           format: "cjs",
@@ -33,7 +31,7 @@ export default defineConfig({
           preserveModules: true,
           preserveModulesRoot: ".",
           exports: "named",
-          dir: "../ul-business/components/lib",
+          dir: "dist/lib",
         },
       ],
     },
@@ -45,7 +43,7 @@ export default defineConfig({
     Vue(),
     dts({
       entryRoot: ".",
-      outputDir: ["../ul-business/components/es", "../ul-business/components/lib"],
+      outputDir: ["dist/es", "dist/lib"],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: "../../tsconfig.web.json",
       include: ["./"],

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("ul-utils"),t=require("./src/form.vue.js");require("./src/form.vue2.js");const u=require("./src/type.js"),e=r.withInstall(t.default);exports.formProps=u.formProps;exports.UlForm=e;exports.default=e;

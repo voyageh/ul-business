@@ -82,7 +82,7 @@
                 title="确定要删除该数据吗?"
                 confirm-button-type="danger"
                 confirm-button-text="删除"
-                @confirm="onDefaultDelete">
+                @confirm="onDefaultDelete(row)">
                 <template #reference>
                   <el-button link type="danger">删除</el-button>
                 </template>
@@ -241,8 +241,8 @@ const dialogClose = () => {
  * 新增
  */
 const onDefaultNew = () => {
-  if (props.onNew) {
-    props.onNew();
+  if (props.onResetNew) {
+    props.onResetNew();
     return;
   }
   dialogState.title = "新增";
@@ -270,8 +270,10 @@ const getDetail = async (row: any) => {
  * @param row 当前行数据
  */
 const onDefaultDelete = async (row: any) => {
-  if (props.deleteSumbit) {
-    props.deleteSumbit(row);
+  if (props.confirmDel) {
+    if (await props.confirmDel(row)) {
+      onSearch();
+    }
   }
 };
 
@@ -280,8 +282,8 @@ const onDefaultDelete = async (row: any) => {
  * @param row 当前行数据
  */
 const onDefaultEdit = async (row: any) => {
-  if (props.onEdit) {
-    props.onEdit(row);
+  if (props.onResetEdit) {
+    props.onResetEdit(row);
     return;
   }
   dialogState.title = "编辑";
@@ -296,8 +298,8 @@ const onDefaultEdit = async (row: any) => {
  * @param row 当前行数据
  */
 const onDefaultView = async (row: any) => {
-  if (props.onView) {
-    props.onView(row);
+  if (props.onResetView) {
+    props.onResetView(row);
     return;
   }
   dialogState.title = "查看";
@@ -315,13 +317,9 @@ const onDefaultView = async (row: any) => {
 const onSave = async () => {
   dialogForm.value?.elFrom?.validate?.(async (vaild: boolean) => {
     if (!vaild) return;
-    let save = props.newSumbit;
-    if (dialogState.saveType === "edit") {
-      save = props.editSumbit;
-    }
-    if (save) {
+    if (props.confirmSave) {
       const formValue = dialogForm.value?.getValue?.();
-      const flag = await save(formValue);
+      const flag = await props.confirmSave(formValue, dialogState.saveType);
       if (flag !== false) {
         dialogState.visible = false;
         onSearch();

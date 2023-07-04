@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e={menu:{type:Object,required:!0,default:()=>({})},parent:{type:String,default:""}};exports.default=e;

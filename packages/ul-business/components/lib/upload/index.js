@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("ul-utils"),u=require("./src/upload.vue.js");require("./src/upload.vue2.js");const l=require("./src/type.js"),e=t.withInstall(u.default);exports.uploadProps=l.uploadProps;exports.UlUpload=e;exports.default=e;

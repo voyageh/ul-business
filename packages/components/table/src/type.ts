@@ -63,13 +63,12 @@ export const tableProps = {
     type: Boolean,
     default: true,
   },
-  onNew: Function,
-  newSumbit: Function,
-  deleteSumbit: Function,
   getDetail: Function,
-  onView: Function,
-  editSumbit: Function,
-  onEdit: Function,
+  onResetNew: Function,
+  onResetView: Function,
+  onResetEdit: Function,
+  confirmDel: Function,
+  confirmSave: Function,
 };
 
 export type UlTableProps = Partial<ExtractPropTypes<typeof tableProps>>;

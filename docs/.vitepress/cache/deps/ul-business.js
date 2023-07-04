@@ -20,7 +20,7 @@ import {
   menuProps,
   uploadProps,
   vLoading
-} from "./chunk-4BXD7XMT.js";
+} from "./chunk-C2HGQL3Q.js";
 import {
   Fragment,
   __commonJS,
@@ -35,6 +35,7 @@ import {
   createVNode,
   defineComponent,
   h,
+  inject,
   mergeProps,
   nextTick,
   normalizeClass,
@@ -52,7 +53,7 @@ import {
   watch,
   withCtx,
   withDirectives
-} from "./chunk-4XHLZSOK.js";
+} from "./chunk-V7EY6TRM.js";
 
 // node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js
 var require_lodash = __commonJS({
@@ -744,8 +745,8 @@ var require_lodash = __commonJS({
         return string.match(reUnicodeWord) || [];
       }
       var runInContext = function runInContext2(context) {
-        context = context == null ? root : _.defaults(root.Object(), context, _.pick(root, contextProps));
-        var Array2 = context.Array, Date2 = context.Date, Error = context.Error, Function2 = context.Function, Math2 = context.Math, Object2 = context.Object, RegExp2 = context.RegExp, String2 = context.String, TypeError = context.TypeError;
+        context = context == null ? root : _2.defaults(root.Object(), context, _2.pick(root, contextProps));
+        var Array2 = context.Array, Date2 = context.Date, Error2 = context.Error, Function2 = context.Function, Math2 = context.Math, Object2 = context.Object, RegExp2 = context.RegExp, String2 = context.String, TypeError = context.TypeError;
         var arrayProto = Array2.prototype, funcProto = Function2.prototype, objectProto = Object2.prototype;
         var coreJsData = context["__core-js_shared__"];
         var funcToString = funcProto.toString;
@@ -4188,7 +4189,7 @@ var require_lodash = __commonJS({
         }
         function isNative(value) {
           if (isMaskable(value)) {
-            throw new Error(CORE_ERROR_TEXT);
+            throw new Error2(CORE_ERROR_TEXT);
           }
           return baseIsNative(value);
         }
@@ -4729,7 +4730,7 @@ var require_lodash = __commonJS({
           if (!variable) {
             source = "with (obj) {\n" + source + "\n}\n";
           } else if (reForbiddenIdentifierChars.test(variable)) {
-            throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
+            throw new Error2(INVALID_TEMPL_VAR_ERROR_TEXT);
           }
           source = (isEvaluating ? source.replace(reEmptyStringLeading, "") : source).replace(reEmptyStringMiddle, "$1").replace(reEmptyStringTrailing, "$1;");
           source = "function(" + (variable || "obj") + ") {\n" + (variable ? "" : "obj || (obj = {});\n") + "var __t, __p = ''" + (isEscaping ? ", __e = _.escape" : "") + (isEvaluating ? ", __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n" : ";\n") + source + "return __p\n}";
@@ -4848,7 +4849,7 @@ var require_lodash = __commonJS({
           try {
             return apply(func, undefined, args);
           } catch (e4) {
-            return isError(e4) ? e4 : new Error(e4);
+            return isError(e4) ? e4 : new Error2(e4);
           }
         });
         var bindAll = flatRest(function(object, methodNames) {
@@ -5518,17 +5519,17 @@ var require_lodash = __commonJS({
         }
         return lodash;
       };
-      var _ = runInContext();
+      var _2 = runInContext();
       if (typeof define == "function" && typeof define.amd == "object" && define.amd) {
-        root._ = _;
+        root._ = _2;
         define(function() {
-          return _;
+          return _2;
         });
       } else if (freeModule) {
-        (freeModule.exports = _)._ = _;
-        freeExports._ = _;
+        (freeModule.exports = _2)._ = _2;
+        freeExports._ = _2;
       } else {
-        root._ = _;
+        root._ = _2;
       }
     }).call(exports);
   }
@@ -5536,13 +5537,13 @@ var require_lodash = __commonJS({
 
 // node_modules/.pnpm/ul-utils@1.0.0/node_modules/ul-utils/es/vue/install.mjs
 var n = Symbol("INSTALLED_KEY");
-var s = (o, c) => {
+var s = (o, c3) => {
   if (o.install = (e4) => {
-    for (const t2 of [o, ...Object.values(c ?? {})])
-      e4.component(t2.name, t2);
-  }, c)
-    for (const [e4, t2] of Object.entries(c))
-      o[e4] = t2;
+    for (const t3 of [o, ...Object.values(c3 ?? {})])
+      e4.component(t3.name, t3);
+  }, c3)
+    for (const [e4, t3] of Object.entries(c3))
+      o[e4] = t3;
   return o;
 };
 
@@ -5558,7 +5559,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/popper/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-popper.css";
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu.mjs
 var e = {
   ...menuProps,
   menus: {
@@ -5573,23 +5574,739 @@ var e = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
-var E = defineComponent({
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/node_modules/.pnpm/tinycolor2@1.6.0/node_modules/tinycolor2/esm/tinycolor.mjs
+function m(t3) {
+  "@babel/helpers - typeof";
+  return m = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(r2) {
+    return typeof r2;
+  } : function(r2) {
+    return r2 && typeof Symbol == "function" && r2.constructor === Symbol && r2 !== Symbol.prototype ? "symbol" : typeof r2;
+  }, m(t3);
+}
+var T = /^\s+/;
+var C = /\s+$/;
+function s2(t3, r2) {
+  if (t3 = t3 || "", r2 = r2 || {}, t3 instanceof s2)
+    return t3;
+  if (!(this instanceof s2))
+    return new s2(t3, r2);
+  var e4 = I(t3);
+  this._originalInput = t3, this._r = e4.r, this._g = e4.g, this._b = e4.b, this._a = e4.a, this._roundA = Math.round(100 * this._a) / 100, this._format = r2.format || e4.format, this._gradientType = r2.gradientType, this._r < 1 && (this._r = Math.round(this._r)), this._g < 1 && (this._g = Math.round(this._g)), this._b < 1 && (this._b = Math.round(this._b)), this._ok = e4.ok;
+}
+s2.prototype = {
+  isDark: function() {
+    return this.getBrightness() < 128;
+  },
+  isLight: function() {
+    return !this.isDark();
+  },
+  isValid: function() {
+    return this._ok;
+  },
+  getOriginalInput: function() {
+    return this._originalInput;
+  },
+  getFormat: function() {
+    return this._format;
+  },
+  getAlpha: function() {
+    return this._a;
+  },
+  getBrightness: function() {
+    var r2 = this.toRgb();
+    return (r2.r * 299 + r2.g * 587 + r2.b * 114) / 1e3;
+  },
+  getLuminance: function() {
+    var r2 = this.toRgb(), e4, a4, i, n3, h2, f;
+    return e4 = r2.r / 255, a4 = r2.g / 255, i = r2.b / 255, e4 <= 0.03928 ? n3 = e4 / 12.92 : n3 = Math.pow((e4 + 0.055) / 1.055, 2.4), a4 <= 0.03928 ? h2 = a4 / 12.92 : h2 = Math.pow((a4 + 0.055) / 1.055, 2.4), i <= 0.03928 ? f = i / 12.92 : f = Math.pow((i + 0.055) / 1.055, 2.4), 0.2126 * n3 + 0.7152 * h2 + 0.0722 * f;
+  },
+  setAlpha: function(r2) {
+    return this._a = w(r2), this._roundA = Math.round(100 * this._a) / 100, this;
+  },
+  toHsv: function() {
+    var r2 = A(this._r, this._g, this._b);
+    return {
+      h: r2.h * 360,
+      s: r2.s,
+      v: r2.v,
+      a: this._a
+    };
+  },
+  toHsvString: function() {
+    var r2 = A(this._r, this._g, this._b), e4 = Math.round(r2.h * 360), a4 = Math.round(r2.s * 100), i = Math.round(r2.v * 100);
+    return this._a == 1 ? "hsv(" + e4 + ", " + a4 + "%, " + i + "%)" : "hsva(" + e4 + ", " + a4 + "%, " + i + "%, " + this._roundA + ")";
+  },
+  toHsl: function() {
+    var r2 = x(this._r, this._g, this._b);
+    return {
+      h: r2.h * 360,
+      s: r2.s,
+      l: r2.l,
+      a: this._a
+    };
+  },
+  toHslString: function() {
+    var r2 = x(this._r, this._g, this._b), e4 = Math.round(r2.h * 360), a4 = Math.round(r2.s * 100), i = Math.round(r2.l * 100);
+    return this._a == 1 ? "hsl(" + e4 + ", " + a4 + "%, " + i + "%)" : "hsla(" + e4 + ", " + a4 + "%, " + i + "%, " + this._roundA + ")";
+  },
+  toHex: function(r2) {
+    return S(this._r, this._g, this._b, r2);
+  },
+  toHexString: function(r2) {
+    return "#" + this.toHex(r2);
+  },
+  toHex8: function(r2) {
+    return B(this._r, this._g, this._b, this._a, r2);
+  },
+  toHex8String: function(r2) {
+    return "#" + this.toHex8(r2);
+  },
+  toRgb: function() {
+    return {
+      r: Math.round(this._r),
+      g: Math.round(this._g),
+      b: Math.round(this._b),
+      a: this._a
+    };
+  },
+  toRgbString: function() {
+    return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
+  },
+  toPercentageRgb: function() {
+    return {
+      r: Math.round(u(this._r, 255) * 100) + "%",
+      g: Math.round(u(this._g, 255) * 100) + "%",
+      b: Math.round(u(this._b, 255) * 100) + "%",
+      a: this._a
+    };
+  },
+  toPercentageRgbString: function() {
+    return this._a == 1 ? "rgb(" + Math.round(u(this._r, 255) * 100) + "%, " + Math.round(u(this._g, 255) * 100) + "%, " + Math.round(u(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(u(this._r, 255) * 100) + "%, " + Math.round(u(this._g, 255) * 100) + "%, " + Math.round(u(this._b, 255) * 100) + "%, " + this._roundA + ")";
+  },
+  toName: function() {
+    return this._a === 0 ? "transparent" : this._a < 1 ? false : X[S(this._r, this._g, this._b, true)] || false;
+  },
+  toFilter: function(r2) {
+    var e4 = "#" + k(this._r, this._g, this._b, this._a), a4 = e4, i = this._gradientType ? "GradientType = 1, " : "";
+    if (r2) {
+      var n3 = s2(r2);
+      a4 = "#" + k(n3._r, n3._g, n3._b, n3._a);
+    }
+    return "progid:DXImageTransform.Microsoft.gradient(" + i + "startColorstr=" + e4 + ",endColorstr=" + a4 + ")";
+  },
+  toString: function(r2) {
+    var e4 = !!r2;
+    r2 = r2 || this._format;
+    var a4 = false, i = this._a < 1 && this._a >= 0, n3 = !e4 && i && (r2 === "hex" || r2 === "hex6" || r2 === "hex3" || r2 === "hex4" || r2 === "hex8" || r2 === "name");
+    return n3 ? r2 === "name" && this._a === 0 ? this.toName() : this.toRgbString() : (r2 === "rgb" && (a4 = this.toRgbString()), r2 === "prgb" && (a4 = this.toPercentageRgbString()), (r2 === "hex" || r2 === "hex6") && (a4 = this.toHexString()), r2 === "hex3" && (a4 = this.toHexString(true)), r2 === "hex4" && (a4 = this.toHex8String(true)), r2 === "hex8" && (a4 = this.toHex8String()), r2 === "name" && (a4 = this.toName()), r2 === "hsl" && (a4 = this.toHslString()), r2 === "hsv" && (a4 = this.toHsvString()), a4 || this.toHexString());
+  },
+  clone: function() {
+    return s2(this.toString());
+  },
+  _applyModification: function(r2, e4) {
+    var a4 = r2.apply(null, [this].concat([].slice.call(e4)));
+    return this._r = a4._r, this._g = a4._g, this._b = a4._b, this.setAlpha(a4._a), this;
+  },
+  lighten: function() {
+    return this._applyModification(O, arguments);
+  },
+  brighten: function() {
+    return this._applyModification(q, arguments);
+  },
+  darken: function() {
+    return this._applyModification(D, arguments);
+  },
+  desaturate: function() {
+    return this._applyModification(z, arguments);
+  },
+  saturate: function() {
+    return this._applyModification(G, arguments);
+  },
+  greyscale: function() {
+    return this._applyModification(L, arguments);
+  },
+  spin: function() {
+    return this._applyModification(U, arguments);
+  },
+  _applyCombination: function(r2, e4) {
+    return r2.apply(null, [this].concat([].slice.call(e4)));
+  },
+  analogous: function() {
+    return this._applyCombination(j, arguments);
+  },
+  complement: function() {
+    return this._applyCombination(V, arguments);
+  },
+  monochromatic: function() {
+    return this._applyCombination(W, arguments);
+  },
+  splitcomplement: function() {
+    return this._applyCombination($, arguments);
+  },
+  // Disabled until https://github.com/bgrins/TinyColor/issues/254
+  // polyad: function (number) {
+  //   return this._applyCombination(polyad, [number]);
+  // },
+  triad: function() {
+    return this._applyCombination(H, [3]);
+  },
+  tetrad: function() {
+    return this._applyCombination(H, [4]);
+  }
+};
+s2.fromRatio = function(t3, r2) {
+  if (m(t3) == "object") {
+    var e4 = {};
+    for (var a4 in t3)
+      t3.hasOwnProperty(a4) && (a4 === "a" ? e4[a4] = t3[a4] : e4[a4] = _(t3[a4]));
+    t3 = e4;
+  }
+  return s2(t3, r2);
+};
+function I(t3) {
+  var r2 = {
+    r: 0,
+    g: 0,
+    b: 0
+  }, e4 = 1, a4 = null, i = null, n3 = null, h2 = false, f = false;
+  return typeof t3 == "string" && (t3 = Q(t3)), m(t3) == "object" && (p(t3.r) && p(t3.g) && p(t3.b) ? (r2 = P(t3.r, t3.g, t3.b), h2 = true, f = String(t3.r).substr(-1) === "%" ? "prgb" : "rgb") : p(t3.h) && p(t3.s) && p(t3.v) ? (a4 = _(t3.s), i = _(t3.v), r2 = N(t3.h, a4, i), h2 = true, f = "hsv") : p(t3.h) && p(t3.s) && p(t3.l) && (a4 = _(t3.s), n3 = _(t3.l), r2 = E(t3.h, a4, n3), h2 = true, f = "hsl"), t3.hasOwnProperty("a") && (e4 = t3.a)), e4 = w(e4), {
+    ok: h2,
+    format: t3.format || f,
+    r: Math.min(255, Math.max(r2.r, 0)),
+    g: Math.min(255, Math.max(r2.g, 0)),
+    b: Math.min(255, Math.max(r2.b, 0)),
+    a: e4
+  };
+}
+function P(t3, r2, e4) {
+  return {
+    r: u(t3, 255) * 255,
+    g: u(r2, 255) * 255,
+    b: u(e4, 255) * 255
+  };
+}
+function x(t3, r2, e4) {
+  t3 = u(t3, 255), r2 = u(r2, 255), e4 = u(e4, 255);
+  var a4 = Math.max(t3, r2, e4), i = Math.min(t3, r2, e4), n3, h2, f = (a4 + i) / 2;
+  if (a4 == i)
+    n3 = h2 = 0;
+  else {
+    var o = a4 - i;
+    switch (h2 = f > 0.5 ? o / (2 - a4 - i) : o / (a4 + i), a4) {
+      case t3:
+        n3 = (r2 - e4) / o + (r2 < e4 ? 6 : 0);
+        break;
+      case r2:
+        n3 = (e4 - t3) / o + 2;
+        break;
+      case e4:
+        n3 = (t3 - r2) / o + 4;
+        break;
+    }
+    n3 /= 6;
+  }
+  return {
+    h: n3,
+    s: h2,
+    l: f
+  };
+}
+function E(t3, r2, e4) {
+  var a4, i, n3;
+  t3 = u(t3, 360), r2 = u(r2, 100), e4 = u(e4, 100);
+  function h2(g, v, d) {
+    return d < 0 && (d += 1), d > 1 && (d -= 1), d < 1 / 6 ? g + (v - g) * 6 * d : d < 1 / 2 ? v : d < 2 / 3 ? g + (v - g) * (2 / 3 - d) * 6 : g;
+  }
+  if (r2 === 0)
+    a4 = i = n3 = e4;
+  else {
+    var f = e4 < 0.5 ? e4 * (1 + r2) : e4 + r2 - e4 * r2, o = 2 * e4 - f;
+    a4 = h2(o, f, t3 + 1 / 3), i = h2(o, f, t3), n3 = h2(o, f, t3 - 1 / 3);
+  }
+  return {
+    r: a4 * 255,
+    g: i * 255,
+    b: n3 * 255
+  };
+}
+function A(t3, r2, e4) {
+  t3 = u(t3, 255), r2 = u(r2, 255), e4 = u(e4, 255);
+  var a4 = Math.max(t3, r2, e4), i = Math.min(t3, r2, e4), n3, h2, f = a4, o = a4 - i;
+  if (h2 = a4 === 0 ? 0 : o / a4, a4 == i)
+    n3 = 0;
+  else {
+    switch (a4) {
+      case t3:
+        n3 = (r2 - e4) / o + (r2 < e4 ? 6 : 0);
+        break;
+      case r2:
+        n3 = (e4 - t3) / o + 2;
+        break;
+      case e4:
+        n3 = (t3 - r2) / o + 4;
+        break;
+    }
+    n3 /= 6;
+  }
+  return {
+    h: n3,
+    s: h2,
+    v: f
+  };
+}
+function N(t3, r2, e4) {
+  t3 = u(t3, 360) * 6, r2 = u(r2, 100), e4 = u(e4, 100);
+  var a4 = Math.floor(t3), i = t3 - a4, n3 = e4 * (1 - r2), h2 = e4 * (1 - i * r2), f = e4 * (1 - (1 - i) * r2), o = a4 % 6, g = [e4, h2, n3, n3, f, e4][o], v = [f, e4, e4, h2, n3, n3][o], d = [n3, n3, f, e4, e4, h2][o];
+  return {
+    r: g * 255,
+    g: v * 255,
+    b: d * 255
+  };
+}
+function S(t3, r2, e4, a4) {
+  var i = [b(Math.round(t3).toString(16)), b(Math.round(r2).toString(16)), b(Math.round(e4).toString(16))];
+  return a4 && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join("");
+}
+function B(t3, r2, e4, a4, i) {
+  var n3 = [b(Math.round(t3).toString(16)), b(Math.round(r2).toString(16)), b(Math.round(e4).toString(16)), b(F(a4))];
+  return i && n3[0].charAt(0) == n3[0].charAt(1) && n3[1].charAt(0) == n3[1].charAt(1) && n3[2].charAt(0) == n3[2].charAt(1) && n3[3].charAt(0) == n3[3].charAt(1) ? n3[0].charAt(0) + n3[1].charAt(0) + n3[2].charAt(0) + n3[3].charAt(0) : n3.join("");
+}
+function k(t3, r2, e4, a4) {
+  var i = [b(F(a4)), b(Math.round(t3).toString(16)), b(Math.round(r2).toString(16)), b(Math.round(e4).toString(16))];
+  return i.join("");
+}
+s2.equals = function(t3, r2) {
+  return !t3 || !r2 ? false : s2(t3).toRgbString() == s2(r2).toRgbString();
+};
+s2.random = function() {
+  return s2.fromRatio({
+    r: Math.random(),
+    g: Math.random(),
+    b: Math.random()
+  });
+};
+function z(t3, r2) {
+  r2 = r2 === 0 ? 0 : r2 || 10;
+  var e4 = s2(t3).toHsl();
+  return e4.s -= r2 / 100, e4.s = y(e4.s), s2(e4);
+}
+function G(t3, r2) {
+  r2 = r2 === 0 ? 0 : r2 || 10;
+  var e4 = s2(t3).toHsl();
+  return e4.s += r2 / 100, e4.s = y(e4.s), s2(e4);
+}
+function L(t3) {
+  return s2(t3).desaturate(100);
+}
+function O(t3, r2) {
+  r2 = r2 === 0 ? 0 : r2 || 10;
+  var e4 = s2(t3).toHsl();
+  return e4.l += r2 / 100, e4.l = y(e4.l), s2(e4);
+}
+function q(t3, r2) {
+  r2 = r2 === 0 ? 0 : r2 || 10;
+  var e4 = s2(t3).toRgb();
+  return e4.r = Math.max(0, Math.min(255, e4.r - Math.round(255 * -(r2 / 100)))), e4.g = Math.max(0, Math.min(255, e4.g - Math.round(255 * -(r2 / 100)))), e4.b = Math.max(0, Math.min(255, e4.b - Math.round(255 * -(r2 / 100)))), s2(e4);
+}
+function D(t3, r2) {
+  r2 = r2 === 0 ? 0 : r2 || 10;
+  var e4 = s2(t3).toHsl();
+  return e4.l -= r2 / 100, e4.l = y(e4.l), s2(e4);
+}
+function U(t3, r2) {
+  var e4 = s2(t3).toHsl(), a4 = (e4.h + r2) % 360;
+  return e4.h = a4 < 0 ? 360 + a4 : a4, s2(e4);
+}
+function V(t3) {
+  var r2 = s2(t3).toHsl();
+  return r2.h = (r2.h + 180) % 360, s2(r2);
+}
+function H(t3, r2) {
+  if (isNaN(r2) || r2 <= 0)
+    throw new Error("Argument to polyad must be a positive number");
+  for (var e4 = s2(t3).toHsl(), a4 = [s2(t3)], i = 360 / r2, n3 = 1; n3 < r2; n3++)
+    a4.push(s2({
+      h: (e4.h + n3 * i) % 360,
+      s: e4.s,
+      l: e4.l
+    }));
+  return a4;
+}
+function $(t3) {
+  var r2 = s2(t3).toHsl(), e4 = r2.h;
+  return [s2(t3), s2({
+    h: (e4 + 72) % 360,
+    s: r2.s,
+    l: r2.l
+  }), s2({
+    h: (e4 + 216) % 360,
+    s: r2.s,
+    l: r2.l
+  })];
+}
+function j(t3, r2, e4) {
+  r2 = r2 || 6, e4 = e4 || 30;
+  var a4 = s2(t3).toHsl(), i = 360 / e4, n3 = [s2(t3)];
+  for (a4.h = (a4.h - (i * r2 >> 1) + 720) % 360; --r2; )
+    a4.h = (a4.h + i) % 360, n3.push(s2(a4));
+  return n3;
+}
+function W(t3, r2) {
+  r2 = r2 || 6;
+  for (var e4 = s2(t3).toHsv(), a4 = e4.h, i = e4.s, n3 = e4.v, h2 = [], f = 1 / r2; r2--; )
+    h2.push(s2({
+      h: a4,
+      s: i,
+      v: n3
+    })), n3 = (n3 + f) % 1;
+  return h2;
+}
+s2.mix = function(t3, r2, e4) {
+  e4 = e4 === 0 ? 0 : e4 || 50;
+  var a4 = s2(t3).toRgb(), i = s2(r2).toRgb(), n3 = e4 / 100, h2 = {
+    r: (i.r - a4.r) * n3 + a4.r,
+    g: (i.g - a4.g) * n3 + a4.g,
+    b: (i.b - a4.b) * n3 + a4.b,
+    a: (i.a - a4.a) * n3 + a4.a
+  };
+  return s2(h2);
+};
+s2.readability = function(t3, r2) {
+  var e4 = s2(t3), a4 = s2(r2);
+  return (Math.max(e4.getLuminance(), a4.getLuminance()) + 0.05) / (Math.min(e4.getLuminance(), a4.getLuminance()) + 0.05);
+};
+s2.isReadable = function(t3, r2, e4) {
+  var a4 = s2.readability(t3, r2), i, n3;
+  switch (n3 = false, i = Y(e4), i.level + i.size) {
+    case "AAsmall":
+    case "AAAlarge":
+      n3 = a4 >= 4.5;
+      break;
+    case "AAlarge":
+      n3 = a4 >= 3;
+      break;
+    case "AAAsmall":
+      n3 = a4 >= 7;
+      break;
+  }
+  return n3;
+};
+s2.mostReadable = function(t3, r2, e4) {
+  var a4 = null, i = 0, n3, h2, f, o;
+  e4 = e4 || {}, h2 = e4.includeFallbackColors, f = e4.level, o = e4.size;
+  for (var g = 0; g < r2.length; g++)
+    n3 = s2.readability(t3, r2[g]), n3 > i && (i = n3, a4 = s2(r2[g]));
+  return s2.isReadable(t3, a4, {
+    level: f,
+    size: o
+  }) || !h2 ? a4 : (e4.includeFallbackColors = false, s2.mostReadable(t3, ["#fff", "#000"], e4));
+};
+var M = s2.names = {
+  aliceblue: "f0f8ff",
+  antiquewhite: "faebd7",
+  aqua: "0ff",
+  aquamarine: "7fffd4",
+  azure: "f0ffff",
+  beige: "f5f5dc",
+  bisque: "ffe4c4",
+  black: "000",
+  blanchedalmond: "ffebcd",
+  blue: "00f",
+  blueviolet: "8a2be2",
+  brown: "a52a2a",
+  burlywood: "deb887",
+  burntsienna: "ea7e5d",
+  cadetblue: "5f9ea0",
+  chartreuse: "7fff00",
+  chocolate: "d2691e",
+  coral: "ff7f50",
+  cornflowerblue: "6495ed",
+  cornsilk: "fff8dc",
+  crimson: "dc143c",
+  cyan: "0ff",
+  darkblue: "00008b",
+  darkcyan: "008b8b",
+  darkgoldenrod: "b8860b",
+  darkgray: "a9a9a9",
+  darkgreen: "006400",
+  darkgrey: "a9a9a9",
+  darkkhaki: "bdb76b",
+  darkmagenta: "8b008b",
+  darkolivegreen: "556b2f",
+  darkorange: "ff8c00",
+  darkorchid: "9932cc",
+  darkred: "8b0000",
+  darksalmon: "e9967a",
+  darkseagreen: "8fbc8f",
+  darkslateblue: "483d8b",
+  darkslategray: "2f4f4f",
+  darkslategrey: "2f4f4f",
+  darkturquoise: "00ced1",
+  darkviolet: "9400d3",
+  deeppink: "ff1493",
+  deepskyblue: "00bfff",
+  dimgray: "696969",
+  dimgrey: "696969",
+  dodgerblue: "1e90ff",
+  firebrick: "b22222",
+  floralwhite: "fffaf0",
+  forestgreen: "228b22",
+  fuchsia: "f0f",
+  gainsboro: "dcdcdc",
+  ghostwhite: "f8f8ff",
+  gold: "ffd700",
+  goldenrod: "daa520",
+  gray: "808080",
+  green: "008000",
+  greenyellow: "adff2f",
+  grey: "808080",
+  honeydew: "f0fff0",
+  hotpink: "ff69b4",
+  indianred: "cd5c5c",
+  indigo: "4b0082",
+  ivory: "fffff0",
+  khaki: "f0e68c",
+  lavender: "e6e6fa",
+  lavenderblush: "fff0f5",
+  lawngreen: "7cfc00",
+  lemonchiffon: "fffacd",
+  lightblue: "add8e6",
+  lightcoral: "f08080",
+  lightcyan: "e0ffff",
+  lightgoldenrodyellow: "fafad2",
+  lightgray: "d3d3d3",
+  lightgreen: "90ee90",
+  lightgrey: "d3d3d3",
+  lightpink: "ffb6c1",
+  lightsalmon: "ffa07a",
+  lightseagreen: "20b2aa",
+  lightskyblue: "87cefa",
+  lightslategray: "789",
+  lightslategrey: "789",
+  lightsteelblue: "b0c4de",
+  lightyellow: "ffffe0",
+  lime: "0f0",
+  limegreen: "32cd32",
+  linen: "faf0e6",
+  magenta: "f0f",
+  maroon: "800000",
+  mediumaquamarine: "66cdaa",
+  mediumblue: "0000cd",
+  mediumorchid: "ba55d3",
+  mediumpurple: "9370db",
+  mediumseagreen: "3cb371",
+  mediumslateblue: "7b68ee",
+  mediumspringgreen: "00fa9a",
+  mediumturquoise: "48d1cc",
+  mediumvioletred: "c71585",
+  midnightblue: "191970",
+  mintcream: "f5fffa",
+  mistyrose: "ffe4e1",
+  moccasin: "ffe4b5",
+  navajowhite: "ffdead",
+  navy: "000080",
+  oldlace: "fdf5e6",
+  olive: "808000",
+  olivedrab: "6b8e23",
+  orange: "ffa500",
+  orangered: "ff4500",
+  orchid: "da70d6",
+  palegoldenrod: "eee8aa",
+  palegreen: "98fb98",
+  paleturquoise: "afeeee",
+  palevioletred: "db7093",
+  papayawhip: "ffefd5",
+  peachpuff: "ffdab9",
+  peru: "cd853f",
+  pink: "ffc0cb",
+  plum: "dda0dd",
+  powderblue: "b0e0e6",
+  purple: "800080",
+  rebeccapurple: "663399",
+  red: "f00",
+  rosybrown: "bc8f8f",
+  royalblue: "4169e1",
+  saddlebrown: "8b4513",
+  salmon: "fa8072",
+  sandybrown: "f4a460",
+  seagreen: "2e8b57",
+  seashell: "fff5ee",
+  sienna: "a0522d",
+  silver: "c0c0c0",
+  skyblue: "87ceeb",
+  slateblue: "6a5acd",
+  slategray: "708090",
+  slategrey: "708090",
+  snow: "fffafa",
+  springgreen: "00ff7f",
+  steelblue: "4682b4",
+  tan: "d2b48c",
+  teal: "008080",
+  thistle: "d8bfd8",
+  tomato: "ff6347",
+  turquoise: "40e0d0",
+  violet: "ee82ee",
+  wheat: "f5deb3",
+  white: "fff",
+  whitesmoke: "f5f5f5",
+  yellow: "ff0",
+  yellowgreen: "9acd32"
+};
+var X = s2.hexNames = Z(M);
+function Z(t3) {
+  var r2 = {};
+  for (var e4 in t3)
+    t3.hasOwnProperty(e4) && (r2[t3[e4]] = e4);
+  return r2;
+}
+function w(t3) {
+  return t3 = parseFloat(t3), (isNaN(t3) || t3 < 0 || t3 > 1) && (t3 = 1), t3;
+}
+function u(t3, r2) {
+  J(t3) && (t3 = "100%");
+  var e4 = K(t3);
+  return t3 = Math.min(r2, Math.max(0, parseFloat(t3))), e4 && (t3 = parseInt(t3 * r2, 10) / 100), Math.abs(t3 - r2) < 1e-6 ? 1 : t3 % r2 / parseFloat(r2);
+}
+function y(t3) {
+  return Math.min(1, Math.max(0, t3));
+}
+function l(t3) {
+  return parseInt(t3, 16);
+}
+function J(t3) {
+  return typeof t3 == "string" && t3.indexOf(".") != -1 && parseFloat(t3) === 1;
+}
+function K(t3) {
+  return typeof t3 == "string" && t3.indexOf("%") != -1;
+}
+function b(t3) {
+  return t3.length == 1 ? "0" + t3 : "" + t3;
+}
+function _(t3) {
+  return t3 <= 1 && (t3 = t3 * 100 + "%"), t3;
+}
+function F(t3) {
+  return Math.round(parseFloat(t3) * 255).toString(16);
+}
+function R(t3) {
+  return l(t3) / 255;
+}
+var c = function() {
+  var t3 = "[-\\+]?\\d+%?", r2 = "[-\\+]?\\d*\\.\\d+%?", e4 = "(?:" + r2 + ")|(?:" + t3 + ")", a4 = "[\\s|\\(]+(" + e4 + ")[,|\\s]+(" + e4 + ")[,|\\s]+(" + e4 + ")\\s*\\)?", i = "[\\s|\\(]+(" + e4 + ")[,|\\s]+(" + e4 + ")[,|\\s]+(" + e4 + ")[,|\\s]+(" + e4 + ")\\s*\\)?";
+  return {
+    CSS_UNIT: new RegExp(e4),
+    rgb: new RegExp("rgb" + a4),
+    rgba: new RegExp("rgba" + i),
+    hsl: new RegExp("hsl" + a4),
+    hsla: new RegExp("hsla" + i),
+    hsv: new RegExp("hsv" + a4),
+    hsva: new RegExp("hsva" + i),
+    hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+    hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+    hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+    hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+  };
+}();
+function p(t3) {
+  return !!c.CSS_UNIT.exec(t3);
+}
+function Q(t3) {
+  t3 = t3.replace(T, "").replace(C, "").toLowerCase();
+  var r2 = false;
+  if (M[t3])
+    t3 = M[t3], r2 = true;
+  else if (t3 == "transparent")
+    return {
+      r: 0,
+      g: 0,
+      b: 0,
+      a: 0,
+      format: "name"
+    };
+  var e4;
+  return (e4 = c.rgb.exec(t3)) ? {
+    r: e4[1],
+    g: e4[2],
+    b: e4[3]
+  } : (e4 = c.rgba.exec(t3)) ? {
+    r: e4[1],
+    g: e4[2],
+    b: e4[3],
+    a: e4[4]
+  } : (e4 = c.hsl.exec(t3)) ? {
+    h: e4[1],
+    s: e4[2],
+    l: e4[3]
+  } : (e4 = c.hsla.exec(t3)) ? {
+    h: e4[1],
+    s: e4[2],
+    l: e4[3],
+    a: e4[4]
+  } : (e4 = c.hsv.exec(t3)) ? {
+    h: e4[1],
+    s: e4[2],
+    v: e4[3]
+  } : (e4 = c.hsva.exec(t3)) ? {
+    h: e4[1],
+    s: e4[2],
+    v: e4[3],
+    a: e4[4]
+  } : (e4 = c.hex8.exec(t3)) ? {
+    r: l(e4[1]),
+    g: l(e4[2]),
+    b: l(e4[3]),
+    a: R(e4[4]),
+    format: r2 ? "name" : "hex8"
+  } : (e4 = c.hex6.exec(t3)) ? {
+    r: l(e4[1]),
+    g: l(e4[2]),
+    b: l(e4[3]),
+    format: r2 ? "name" : "hex"
+  } : (e4 = c.hex4.exec(t3)) ? {
+    r: l(e4[1] + "" + e4[1]),
+    g: l(e4[2] + "" + e4[2]),
+    b: l(e4[3] + "" + e4[3]),
+    a: R(e4[4] + "" + e4[4]),
+    format: r2 ? "name" : "hex8"
+  } : (e4 = c.hex3.exec(t3)) ? {
+    r: l(e4[1] + "" + e4[1]),
+    g: l(e4[2] + "" + e4[2]),
+    b: l(e4[3] + "" + e4[3]),
+    format: r2 ? "name" : "hex"
+  } : false;
+}
+function Y(t3) {
+  var r2, e4;
+  return t3 = t3 || {
+    level: "AA",
+    size: "small"
+  }, r2 = (t3.level || "AA").toUpperCase(), e4 = (t3.size || "small").toLowerCase(), r2 !== "AA" && r2 !== "AAA" && (r2 = "AA"), e4 !== "small" && e4 !== "large" && (e4 = "small"), {
+    level: r2,
+    size: e4
+  };
+}
+
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/menu/src/menu.vue.mjs
+var P2 = defineComponent({
   name: "ul-menu",
   __name: "menu",
   props: e,
-  setup(r2) {
-    const e4 = r2, m2 = computed(() => ({
-      "--selected-bg-color": e4.selectBgColor,
-      "--menu-item-width": e4.width
-    }));
-    return (l2, B) => {
-      const u = resolveComponent("ul-menu-item"), s3 = ElMenu;
-      return openBlock(), createBlock(s3, mergeProps({ class: "ul-menu" }, e4, { style: m2.value }), {
+  setup(m2) {
+    const e4 = m2, l3 = computed(() => {
+      var o = s2(e4.selectBgColor).setAlpha(0.8).toString();
+      return {
+        "--hover-bg-color": o,
+        "--selected-bg-color": e4.selectBgColor,
+        "--menu-item-width": e4.width
+      };
+    });
+    return (o, k2) => {
+      const c3 = resolveComponent("ul-menu-item"), s4 = ElMenu;
+      return openBlock(), createBlock(s4, mergeProps({ class: "ul-menu" }, e4, { style: l3.value }), {
         default: withCtx(() => [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(l2.menus, (n3) => (openBlock(), createBlock(u, {
-            key: n3.id,
-            menu: n3
+          (openBlock(true), createElementBlock(Fragment, null, renderList(o.menus, (r2) => (openBlock(), createBlock(c3, {
+            key: r2.id,
+            menu: r2
           }, null, 8, ["menu"]))), 128))
         ]),
         _: 1
@@ -5607,7 +6324,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/icon/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-icon.css";
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/menu/src/types/menu-item.mjs
 var e2 = {
   menu: {
     type: Object,
@@ -6297,14 +7014,14 @@ function sortIcons(icons) {
     pending: []
   };
   const storage2 = /* @__PURE__ */ Object.create(null);
-  icons.sort((a3, b) => {
-    if (a3.provider !== b.provider) {
-      return a3.provider.localeCompare(b.provider);
+  icons.sort((a4, b2) => {
+    if (a4.provider !== b2.provider) {
+      return a4.provider.localeCompare(b2.provider);
     }
-    if (a3.prefix !== b.prefix) {
-      return a3.prefix.localeCompare(b.prefix);
+    if (a4.prefix !== b2.prefix) {
+      return a4.prefix.localeCompare(b2.prefix);
     }
-    return a3.name.localeCompare(b.name);
+    return a4.name.localeCompare(b2.name);
   });
   let lastIcon = {
     provider: "",
@@ -6742,8 +7459,8 @@ function iterateBrowserStorage(key, callback) {
   if (version !== browserCacheVersion) {
     if (version) {
       const total2 = getBrowserStorageItemsCount(func);
-      for (let i3 = 0; i3 < total2; i3++) {
-        removeStoredItem(func, browserCachePrefix + i3.toString());
+      for (let i = 0; i < total2; i++) {
+        removeStoredItem(func, browserCachePrefix + i.toString());
       }
     }
     setStoredItem(func, browserCacheVersionKey, browserCacheVersion);
@@ -6768,13 +7485,13 @@ function iterateBrowserStorage(key, callback) {
     removeStoredItem(func, name);
   };
   let total = getBrowserStorageItemsCount(func);
-  for (let i3 = total - 1; i3 >= 0; i3--) {
-    if (!parseItem(i3)) {
-      if (i3 === total - 1) {
+  for (let i = total - 1; i >= 0; i--) {
+    if (!parseItem(i)) {
+      if (i === total - 1) {
         total--;
         setBrowserStorageItemsCount(func, total);
       } else {
-        browserStorageEmptyItems[key].add(i3);
+        browserStorageEmptyItems[key].add(i);
       }
     }
   }
@@ -7341,24 +8058,24 @@ var Icon = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
-var q = defineComponent({
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/menu/src/menu-item.vue.mjs
+var q2 = defineComponent({
   name: "ul-menu-item",
   __name: "menu-item",
   props: e2,
-  setup(c) {
-    const l2 = c, t2 = computed(() => l2.parent + l2.menu.path);
-    return (e4, S) => {
-      const r2 = ElIcon, d = resolveComponent("menu-item", true), s3 = ElSubMenu, _ = ElMenuItem;
-      return e4.menu.children && e4.menu.children.length > 0 ? (openBlock(), createBlock(s3, {
+  setup(c3) {
+    const l3 = c3, t3 = computed(() => l3.parent + l3.menu.path);
+    return (e4, S2) => {
+      const r2 = ElIcon, d = resolveComponent("menu-item", true), s4 = ElSubMenu, _2 = ElMenuItem;
+      return e4.menu.children && e4.menu.children.length > 0 ? (openBlock(), createBlock(s4, {
         key: 0,
-        index: t2.value
+        index: t3.value
       }, {
         title: withCtx(() => [
           createVNode(r2, null, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
-                icon: e4.menu.meta.icon
+                icon: e4.menu.meta.icon ?? "ep:menu"
               }, null, 8, ["icon"])
             ]),
             _: 1
@@ -7369,20 +8086,20 @@ var q = defineComponent({
           (openBlock(true), createElementBlock(Fragment, null, renderList(e4.menu.children, (f, h2) => (openBlock(), createBlock(d, {
             key: h2,
             menu: f,
-            parent: t2.value
+            parent: t3.value
           }, null, 8, ["menu", "parent"]))), 128))
         ]),
         _: 1
-      }, 8, ["index"])) : (openBlock(), createBlock(_, {
+      }, 8, ["index"])) : (openBlock(), createBlock(_2, {
         key: 1,
-        index: t2.value,
-        id: t2.value
+        index: t3.value,
+        id: t3.value
       }, {
         default: withCtx(() => [
           createVNode(r2, null, {
             default: withCtx(() => [
               createVNode(unref(Icon), {
-                icon: e4.menu.meta.icon
+                icon: e4.menu.meta.icon ?? "ep:menu"
               }, null, 8, ["icon"])
             ]),
             _: 1
@@ -7395,9 +8112,9 @@ var q = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
-var s2 = s(E);
-var a = s(q);
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/menu/index.mjs
+var s3 = s(P2);
+var a = s(q2);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/form/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-form.css";
@@ -7411,7 +8128,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/form-item/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-form-item.css";
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/form/src/type.mjs
 var t = {
   ...formProps,
   labelWidth: {
@@ -7425,94 +8142,94 @@ var t = {
   modelValue: Object
 };
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/form/src/handleConetnt.mjs
 var r = (d) => {
-  const t2 = {}, a3 = {}, u = (n3) => {
+  const t3 = {}, a4 = {}, u2 = (n3) => {
     n3.forEach((o) => {
-      o.items && o.items.length > 0 && u(o.items), o.id && (o.inputFormat && (!t2[o.id] && (t2[o.id] = {}), t2[o.id].inputFormat = o.inputFormat), o.outputFormat && (!t2[o.id] && (t2[o.id] = {}), t2[o.id].outputFormat = o.outputFormat), o.default && (a3[o.id] = o.default));
+      o.items && o.items.length > 0 && u2(o.items), o.id && (o.inputFormat && (!t3[o.id] && (t3[o.id] = {}), t3[o.id].inputFormat = o.inputFormat), o.outputFormat && (!t3[o.id] && (t3[o.id] = {}), t3[o.id].outputFormat = o.outputFormat), o.default && (a4[o.id] = o.default));
     });
   };
-  return u(d), {
-    formatObj: t2,
-    defaulValue: a3
+  return u2(d), {
+    formatObj: t3,
+    defaulValue: a4
   };
 };
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/form/src/form.vue.mjs
 var import_lodash = __toESM(require_lodash(), 1);
-var M = { key: 1 };
-var Q = { key: 0 };
-var T = { key: 1 };
-var W = { key: 0 };
+var M2 = { key: 1 };
+var Q2 = { key: 0 };
+var T2 = { key: 1 };
+var W2 = { key: 0 };
 var me = defineComponent({
   name: "UlForm",
   __name: "form",
   props: t,
   emits: ["update:modelValue"],
-  setup(P, { expose: B, emit: I }) {
-    const _ = P, g = ref(), a3 = ref({});
+  setup(P3, { expose: B2, emit: I2 }) {
+    const _2 = P3, g = ref(), a4 = ref({});
     let f = {};
     watch(
-      () => _.content,
+      () => _2.content,
       (e4) => {
-        const { formatObj: l2, defaulValue: r2 } = r(e4);
-        f = l2, a3.value = Object.assign(r2, a3.value);
+        const { formatObj: l3, defaulValue: r2 } = r(e4);
+        f = l3, a4.value = Object.assign(r2, a4.value);
       },
       {
         immediate: true,
         deep: true
       }
     );
-    const R = () => {
-      const { content: e4, modelValue: l2, ...r2 } = _;
+    const R2 = () => {
+      const { content: e4, modelValue: l3, ...r2 } = _2;
       return r2;
-    }, k = (e4) => {
+    }, k2 = (e4) => {
       const {
-        id: l2,
+        id: l3,
         type: r2,
-        component: s3,
-        default: u,
-        str: c,
+        component: s4,
+        default: u2,
+        str: c3,
         forceDisabled: o,
-        inputFormat: t2,
-        outputFormat: O,
-        el: X,
-        hide: Y,
-        span: Z,
+        inputFormat: t3,
+        outputFormat: O2,
+        el: X2,
+        hide: Y2,
+        span: Z2,
         label: h2,
-        ...S
+        ...S2
       } = e4;
-      return S;
-    }, w = (e4) => {
-      let l2 = !e4;
-      return typeof e4 == "function" && (l2 = !e4(a3.value)), l2;
+      return S2;
+    }, w2 = (e4) => {
+      let l3 = !e4;
+      return typeof e4 == "function" && (l3 = !e4(a4.value)), l3;
     }, E2 = () => {
-      let e4 = (0, import_lodash.cloneDeep)(a3.value) || {};
-      return Object.keys(e4).forEach((l2) => {
-        var r2, s3, u;
-        if (e4[l2] && ((r2 = f[l2]) != null && r2.outputFormat)) {
-          const c = (u = (s3 = f[l2]).outputFormat) == null ? void 0 : u.call(s3, e4);
-          Object.assign(e4, c);
+      let e4 = (0, import_lodash.cloneDeep)(a4.value) || {};
+      return Object.keys(e4).forEach((l3) => {
+        var r2, s4, u2;
+        if (e4[l3] && ((r2 = f[l3]) != null && r2.outputFormat)) {
+          const c3 = (u2 = (s4 = f[l3]).outputFormat) == null ? void 0 : u2.call(s4, e4);
+          Object.assign(e4, c3);
         }
       }), e4;
     }, j2 = (e4) => {
-      let l2 = (0, import_lodash.cloneDeep)(e4) || {};
-      return Object.keys(l2).forEach((r2) => {
-        var s3, u, c;
-        if (l2[r2] && ((s3 = f[r2]) != null && s3.inputFormat)) {
-          const o = f[r2] && ((c = (u = f[r2]).inputFormat) == null ? void 0 : c.call(u, l2));
-          Object.assign(l2, o);
+      let l3 = (0, import_lodash.cloneDeep)(e4) || {};
+      return Object.keys(l3).forEach((r2) => {
+        var s4, u2, c3;
+        if (l3[r2] && ((s4 = f[r2]) != null && s4.inputFormat)) {
+          const o = f[r2] && ((c3 = (u2 = f[r2]).inputFormat) == null ? void 0 : c3.call(u2, l3));
+          Object.assign(l3, o);
         }
-      }), l2;
-    }, N = (e4) => {
-      a3.value = j2(e4);
+      }), l3;
+    }, N2 = (e4) => {
+      a4.value = j2(e4);
     };
-    return _.modelValue && (watch(
-      () => _.modelValue,
+    return _2.modelValue && (watch(
+      () => _2.modelValue,
       (e4) => {
-        if (e4 && !(0, import_lodash.isEqual)(e4, a3.value)) {
-          const l2 = j2(e4);
-          a3.value = Object.assign({}, a3.value, l2);
+        if (e4 && !(0, import_lodash.isEqual)(e4, a4.value)) {
+          const l3 = j2(e4);
+          a4.value = Object.assign({}, a4.value, l3);
         }
       },
       {
@@ -7520,54 +8237,54 @@ var me = defineComponent({
         deep: true
       }
     ), watch(
-      () => a3.value,
+      () => a4.value,
       async () => {
         const e4 = await E2();
-        I("update:modelValue", e4);
+        I2("update:modelValue", e4);
       },
       {
         deep: true,
         immediate: true
       }
-    )), B({
+    )), B2({
       getValue: E2,
-      setValue: N,
+      setValue: N2,
       elFrom: g
-    }), (e4, l2) => {
-      const r2 = ElFormItem, s3 = ElCol, u = ElRow, c = ElForm;
-      return openBlock(), createBlock(c, mergeProps({
+    }), (e4, l3) => {
+      const r2 = ElFormItem, s4 = ElCol, u2 = ElRow, c3 = ElForm;
+      return openBlock(), createBlock(c3, mergeProps({
         ref_key: "formRef",
         ref: g,
         class: "ul-form"
-      }, R(), { model: a3.value }), {
+      }, R2(), { model: a4.value }), {
         default: withCtx(() => [
           (openBlock(true), createElementBlock(Fragment, null, renderList(e4.content, (o) => (openBlock(), createElementBlock(Fragment, null, [
-            o.type === "row" && o.items ? (openBlock(), createBlock(u, {
+            o.type === "row" && o.items ? (openBlock(), createBlock(u2, {
               key: 0,
               gutter: 20
             }, {
               default: withCtx(() => [
-                (openBlock(true), createElementBlock(Fragment, null, renderList(o.items || [], (t2) => (openBlock(), createElementBlock(Fragment, {
-                  key: t2.id
+                (openBlock(true), createElementBlock(Fragment, null, renderList(o.items || [], (t3) => (openBlock(), createElementBlock(Fragment, {
+                  key: t3.id
                 }, [
-                  w(t2.hide) ? (openBlock(), createBlock(s3, {
+                  w2(t3.hide) ? (openBlock(), createBlock(s4, {
                     key: 0,
                     xs: { span: 24 },
                     sm: { span: 12 },
                     md: { span: 8 },
-                    lg: { span: t2.span || 6 }
+                    lg: { span: t3.span || 6 }
                   }, {
                     default: withCtx(() => [
                       createVNode(r2, mergeProps({
-                        prop: t2.id
-                      }, k(t2)), {
+                        prop: t3.id
+                      }, k2(t3)), {
                         label: withCtx(() => [
-                          t2.label && typeof t2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(t2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", M, toDisplayString(t2.label), 1))
+                          t3.label && typeof t3.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(t3.label()), { key: 0 })) : (openBlock(), createElementBlock("span", M2, toDisplayString(t3.label), 1))
                         ]),
                         default: withCtx(() => [
-                          e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", Q, toDisplayString(t2.str ? a3.value[t2.str] : a3.value[t2.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t2.type || t2.component), mergeProps({ key: 1 }, t2.el, {
-                            modelValue: a3.value[t2.id],
-                            "onUpdate:modelValue": (O) => a3.value[t2.id] = O
+                          e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", Q2, toDisplayString(t3.str ? a4.value[t3.str] : a4.value[t3.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(t3.type || t3.component), mergeProps({ key: 1 }, t3.el, {
+                            modelValue: a4.value[t3.id],
+                            "onUpdate:modelValue": (O2) => a4.value[t3.id] = O2
                           }), null, 16, ["modelValue", "onUpdate:modelValue"]))
                         ]),
                         _: 2
@@ -7579,17 +8296,17 @@ var me = defineComponent({
               ]),
               _: 2
             }, 1024)) : createCommentVNode("", true),
-            w(o.hide) ? (openBlock(), createBlock(r2, mergeProps({
+            w2(o.hide) ? (openBlock(), createBlock(r2, mergeProps({
               key: 1,
               prop: o.id
-            }, k(o)), {
+            }, k2(o)), {
               label: withCtx(() => [
-                o.label && typeof o.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(o.label()), { key: 0 })) : (openBlock(), createElementBlock("span", T, toDisplayString(o.label), 1))
+                o.label && typeof o.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(o.label()), { key: 0 })) : (openBlock(), createElementBlock("span", T2, toDisplayString(o.label), 1))
               ]),
               default: withCtx(() => [
-                e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", W, toDisplayString(o.str ? a3.value[o.str] : a3.value[o.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(o.type || o.component), mergeProps({ key: 1 }, o.el, {
-                  modelValue: a3.value[o.id],
-                  "onUpdate:modelValue": (t2) => a3.value[o.id] = t2
+                e4.disabled && !o.forceDisabled ? (openBlock(), createElementBlock("span", W2, toDisplayString(o.str ? a4.value[o.str] : a4.value[o.id]), 1)) : (openBlock(), createBlock(resolveDynamicComponent(o.type || o.component), mergeProps({ key: 1 }, o.el, {
+                  modelValue: a4.value[o.id],
+                  "onUpdate:modelValue": (t3) => a4.value[o.id] = t3
                 }), null, 16, ["modelValue", "onUpdate:modelValue"]))
               ]),
               _: 2
@@ -7603,8 +8320,8 @@ var me = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
-var p = s(me);
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/form/index.mjs
+var p2 = s(me);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/loading/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-loading.css";
@@ -7654,7 +8371,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/table-column/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-table-column.css";
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/table/src/type.mjs
 var a2 = {
   ...defaultProps,
   searchForms: {
@@ -7678,14 +8395,8 @@ var a2 = {
     type: Boolean,
     default: true
   },
-  sizeKey: {
-    type: String,
-    default: "pageSize"
-  },
-  pageKey: {
-    type: String,
-    default: "PageNo"
-  },
+  sizeKey: String,
+  pageKey: String,
   pagingAlign: {
     type: String,
     default: "flex-end"
@@ -7705,133 +8416,136 @@ var a2 = {
     type: Boolean,
     default: true
   },
-  onNew: Function,
-  newSumbit: Function,
-  deleteSumbit: Function,
   getDetail: Function,
-  onView: Function,
-  editSumbit: Function,
-  onEdit: Function
+  onResetNew: Function,
+  onResetView: Function,
+  onResetEdit: Function,
+  confirmDel: Function,
+  confirmSave: Function
 };
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/table/src/table.vue.mjs
 var import_lodash2 = __toESM(require_lodash(), 1);
-var he = { class: "ul-table" };
-var Ce = {
+var De = { class: "ul-table" };
+var Ee = {
   key: 0,
   class: "ul-table__search"
 };
-var Ve = { class: "ul-table__content" };
-var Ee = { class: "table-head" };
-var De = { key: 1 };
-var Fe = { key: 1 };
-var Pe = { key: 1 };
-var Se = { class: "operate-box" };
-var Te = { class: "dialog-footer" };
-var Ge = defineComponent({
+var Fe = { class: "ul-table__content" };
+var ze = { class: "table-head" };
+var Se = { key: 1 };
+var Te = { key: 1 };
+var Ke = { key: 1 };
+var Ne = { class: "operate-box" };
+var $e = { class: "dialog-footer" };
+var Qe = defineComponent({
   name: "UlTable",
   __name: "table",
   props: a2,
-  setup(R) {
-    const a3 = R;
+  setup(x2) {
+    const s4 = x2;
     useCssVars((e4) => ({
-      "6dea391e": e4.pagingAlign
+      "636b59a6": e4.opWidth,
+      "26f4839a": e4.pagingAlign
     }));
-    const P = ref(), W2 = ref(false), K2 = ref([]), S = ref(0), v = reactive({
-      [a3.pageKey]: 1,
-      [a3.sizeKey]: 10
-    }), q3 = (e4) => {
-      const t2 = {};
-      return Object.keys(defaultProps).forEach((n3) => {
-        e4[n3] && (t2[n3] = e4[n3]);
-      }), t2;
-    }, T2 = (e4) => {
-      const { label: t2, component: n3, el: u, children: _, ...c } = e4;
-      return c;
-    }, y = async () => {
-      var e4, t2;
-      if (a3.getList) {
-        const n3 = (t2 = (e4 = P.value) == null ? void 0 : e4.getValue) == null ? void 0 : t2.call(e4), u = await a3.getList({
-          ...v,
-          ...n3
-        }), _ = a3.dataPath || "data", c = a3.totalPath || "total";
-        K2.value = (0, import_lodash2.get)(u, _), S.value = (0, import_lodash2.get)(u, c);
+    const g = inject("table", {
+      sizeKey: "pageSize",
+      pageKey: "pageNo",
+      dataPath: "data",
+      totalPath: "total"
+    }), S2 = s4.pageKey ?? g.pageKey, T3 = s4.sizeKey ?? g.sizeKey, K3 = ref(), N2 = ref(false), B2 = ref([]), $2 = ref(0), k2 = reactive({
+      [S2]: 1,
+      [T3]: 10
+    }), G3 = (e4) => {
+      const t3 = {};
+      return Object.keys(defaultProps).forEach((l3) => {
+        e4[l3] && (t3[l3] = e4[l3]);
+      }), t3;
+    }, R2 = (e4) => {
+      const { label: t3, component: l3, el: p3, children: m2, ..._2 } = e4;
+      return _2;
+    }, y2 = async () => {
+      var e4, t3;
+      if (s4.getList) {
+        N2.value = true;
+        const l3 = (t3 = (e4 = K3.value) == null ? void 0 : e4.getValue) == null ? void 0 : t3.call(e4), p3 = await s4.getList({
+          ...k2,
+          ...l3
+        }), m2 = s4.dataPath ?? (g == null ? void 0 : g.dataPath), _2 = s4.totalPath ?? (g == null ? void 0 : g.totalPath);
+        B2.value = (0, import_lodash2.get)(p3, m2), $2.value = (0, import_lodash2.get)(p3, _2), N2.value = false;
       }
     };
-    a3.immediate && y();
-    const x = () => {
-      var e4, t2, n3;
-      (n3 = (t2 = (e4 = P.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.resetFields) == null || n3.call(t2), y();
-    }, G2 = (e4) => {
-      v[a3.sizeKey] = e4, y();
-    }, H = (e4) => {
-      v[a3.pageKey] = e4, y();
-    }, i3 = reactive({
+    s4.immediate && y2();
+    const H2 = () => {
+      var e4, t3, l3;
+      (l3 = (t3 = (e4 = K3.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t3.resetFields) == null || l3.call(t3), y2();
+    }, J2 = (e4) => {
+      k2[T3] = e4, y2();
+    }, M3 = (e4) => {
+      k2[S2] = e4, y2();
+    }, r2 = reactive({
       visible: false,
       title: "",
       disabled: false,
       saveType: ""
-    }), k = ref(), J = () => {
-      var e4, t2, n3;
-      (n3 = (t2 = (e4 = k.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.resetFields) == null || n3.call(t2);
-    }, M2 = () => {
-      if (a3.onNew) {
-        a3.onNew();
+    }), h2 = ref(), Q3 = () => {
+      var e4, t3, l3;
+      (l3 = (t3 = (e4 = h2.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t3.resetFields) == null || l3.call(t3);
+    }, X2 = () => {
+      if (s4.onResetNew) {
+        s4.onResetNew();
         return;
       }
-      i3.title = "新增", i3.visible = true, i3.disabled = false, i3.saveType = "new";
-    }, U2 = async (e4) => {
-      let t2 = e4;
-      a3.getDetail && (t2 = await a3.getDetail(e4)), nextTick(() => {
-        var n3, u;
-        (u = (n3 = k.value) == null ? void 0 : n3.setValue) == null || u.call(n3, t2);
+      r2.title = "新增", r2.visible = true, r2.disabled = false, r2.saveType = "new";
+    }, L2 = async (e4) => {
+      let t3 = e4;
+      s4.getDetail && (t3 = await s4.getDetail(e4)), nextTick(() => {
+        var l3, p3;
+        (p3 = (l3 = h2.value) == null ? void 0 : l3.setValue) == null || p3.call(l3, t3);
       });
-    }, Q2 = async (e4) => {
-      a3.deleteSumbit && a3.deleteSumbit(e4);
-    }, X = async (e4) => {
-      if (a3.onEdit) {
-        a3.onEdit(e4);
+    }, Y2 = async (e4) => {
+      s4.confirmDel && await s4.confirmDel(e4) && y2();
+    }, Z2 = async (e4) => {
+      if (s4.onResetEdit) {
+        s4.onResetEdit(e4);
         return;
       }
-      i3.title = "编辑", i3.visible = true, i3.disabled = false, i3.saveType = "edit", U2(e4);
-    }, Y = async (e4) => {
-      if (a3.onView) {
-        a3.onView(e4);
+      r2.title = "编辑", r2.visible = true, r2.disabled = false, r2.saveType = "edit", L2(e4);
+    }, ee = async (e4) => {
+      if (s4.onResetView) {
+        s4.onResetView(e4);
         return;
       }
-      i3.title = "查看", i3.visible = true, i3.disabled = true, U2(e4);
-    }, Z = async () => {
-      var e4, t2, n3;
-      (n3 = (t2 = (e4 = k.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t2.validate) == null || n3.call(t2, async (u) => {
-        var c, g;
-        if (!u)
-          return;
-        let _ = a3.newSumbit;
-        if (i3.saveType === "edit" && (_ = a3.editSumbit), _) {
-          const z = (g = (c = k.value) == null ? void 0 : c.getValue) == null ? void 0 : g.call(c);
-          await _(z) !== false && (i3.visible = false, y());
+      r2.title = "查看", r2.visible = true, r2.disabled = true, L2(e4);
+    }, te2 = async () => {
+      var e4, t3, l3;
+      (l3 = (t3 = (e4 = h2.value) == null ? void 0 : e4.elFrom) == null ? void 0 : t3.validate) == null || l3.call(t3, async (p3) => {
+        var m2, _2;
+        if (p3 && s4.confirmSave) {
+          const v = (_2 = (m2 = h2.value) == null ? void 0 : m2.getValue) == null ? void 0 : _2.call(m2);
+          await s4.confirmSave(v, r2.saveType) !== false && (r2.visible = false, y2());
         }
       });
     };
-    return (e4, t2) => {
-      const n3 = ElIcon, u = ElButton, _ = ElFormItem, c = resolveComponent("ul-form"), g = ElTableColumn, z = ElPopconfirm, B = ElTable, ee = ElPagination, te2 = ElDialog, oe = vLoading;
-      return openBlock(), createElementBlock("div", he, [
-        e4.searchForms.length > 0 ? (openBlock(), createElementBlock("div", Ce, [
-          createVNode(c, {
+    return (e4, t3) => {
+      const l3 = ElIcon, p3 = ElButton, m2 = ElFormItem, _2 = resolveComponent("ul-form"), v = ElTableColumn, I2 = ElPopconfirm, oe = ElTable, ne = ElPagination, le = ElDialog, ae = vLoading;
+      return openBlock(), createElementBlock("div", De, [
+        e4.searchForms.length > 0 ? (openBlock(), createElementBlock("div", Ee, [
+          createVNode(_2, {
             ref_key: "searchForm",
-            ref: P,
+            ref: K3,
             content: e4.searchForms,
             inline: ""
           }, {
             final: withCtx(() => [
-              createVNode(_, null, {
+              createVNode(m2, null, {
                 default: withCtx(() => [
-                  createVNode(u, {
+                  createVNode(p3, {
                     type: "primary",
-                    onClick: y
+                    onClick: y2
                   }, {
                     icon: withCtx(() => [
-                      createVNode(n3, null, {
+                      createVNode(l3, null, {
                         default: withCtx(() => [
                           createVNode(unref(Icon), { icon: "ep:search" })
                         ]),
@@ -7843,9 +8557,9 @@ var Ge = defineComponent({
                     ]),
                     _: 1
                   }),
-                  createVNode(u, { onClick: x }, {
+                  createVNode(p3, { onClick: H2 }, {
                     icon: withCtx(() => [
-                      createVNode(n3, null, {
+                      createVNode(l3, null, {
                         default: withCtx(() => [
                           createVNode(unref(Icon), { icon: "ep:refresh" })
                         ]),
@@ -7864,14 +8578,14 @@ var Ge = defineComponent({
             _: 1
           }, 8, ["content"])
         ])) : createCommentVNode("", true),
-        createBaseVNode("div", Ve, [
-          createBaseVNode("div", Ee, [
-            createVNode(u, {
+        createBaseVNode("div", Fe, [
+          createBaseVNode("div", ze, [
+            createVNode(p3, {
               type: "primary",
-              onClick: M2
+              onClick: X2
             }, {
               icon: withCtx(() => [
-                createVNode(n3, null, {
+                createVNode(l3, null, {
                   default: withCtx(() => [
                     createVNode(unref(Icon), { icon: "ep:plus" })
                   ]),
@@ -7885,89 +8599,88 @@ var Ge = defineComponent({
             }),
             renderSlot(e4.$slots, "head")
           ]),
-          withDirectives((openBlock(), createBlock(B, mergeProps({ border: "" }, q3(e4.$props), {
-            data: K2.value,
+          withDirectives((openBlock(), createBlock(oe, mergeProps({ border: "" }, G3(e4.$props), {
+            data: B2.value,
             "element-loading-text": "正在努力加载..."
           }), {
             default: withCtx(() => [
-              (openBlock(true), createElementBlock(Fragment, null, renderList(e4.columns, (l2) => (openBlock(), createElementBlock(Fragment, null, [
-                l2.children ? (openBlock(), createBlock(g, normalizeProps(mergeProps({ key: 0 }, T2(l2))), {
+              (openBlock(true), createElementBlock(Fragment, null, renderList(e4.columns, (n3) => (openBlock(), createElementBlock(Fragment, null, [
+                n3.children ? (openBlock(), createBlock(v, normalizeProps(mergeProps({ key: 0 }, R2(n3))), {
                   header: withCtx(() => [
-                    l2.label && typeof l2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(l2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", De, toDisplayString(l2.label), 1))
+                    n3.label && typeof n3.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(n3.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Se, toDisplayString(n3.label), 1))
                   ]),
                   default: withCtx(() => [
-                    (openBlock(true), createElementBlock(Fragment, null, renderList(l2.children, (p2) => (openBlock(), createBlock(g, mergeProps({
-                      key: p2.prop
-                    }, T2(p2)), {
+                    (openBlock(true), createElementBlock(Fragment, null, renderList(n3.children, (i) => (openBlock(), createBlock(v, mergeProps({
+                      key: i.prop
+                    }, R2(i)), {
                       header: withCtx(() => [
-                        p2.label && typeof p2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(p2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Fe, toDisplayString(p2.label), 1))
+                        i.label && typeof i.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(i.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Te, toDisplayString(i.label), 1))
                       ]),
-                      default: withCtx(({ row: h2 }) => [
-                        p2.component ? (openBlock(), createBlock(resolveDynamicComponent(p2.component), mergeProps({
+                      default: withCtx(({ row: C2 }) => [
+                        i.component ? (openBlock(), createBlock(resolveDynamicComponent(i.component), mergeProps({
                           key: 0,
-                          modelValue: h2[p2.prop],
-                          "onUpdate:modelValue": (le) => h2[p2.prop] = le
-                        }, p2.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-                          createTextVNode(toDisplayString(h2[p2.prop]), 1)
+                          modelValue: C2[i.prop],
+                          "onUpdate:modelValue": (se) => C2[i.prop] = se
+                        }, i.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                          createTextVNode(toDisplayString(C2[i.prop]), 1)
                         ], 64))
                       ]),
                       _: 2
                     }, 1040))), 128))
                   ]),
                   _: 2
-                }, 1040)) : (openBlock(), createBlock(g, normalizeProps(mergeProps({ key: 1 }, T2(l2))), {
+                }, 1040)) : (openBlock(), createBlock(v, normalizeProps(mergeProps({ key: 1 }, R2(n3))), {
                   header: withCtx(() => [
-                    l2.label && typeof l2.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(l2.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Pe, toDisplayString(l2.label), 1))
+                    n3.label && typeof n3.label == "function" ? (openBlock(), createBlock(resolveDynamicComponent(n3.label()), { key: 0 })) : (openBlock(), createElementBlock("span", Ke, toDisplayString(n3.label), 1))
                   ]),
-                  default: withCtx(({ row: p2 }) => [
-                    l2.component ? (openBlock(), createBlock(resolveDynamicComponent(l2.component), mergeProps({
+                  default: withCtx(({ row: i }) => [
+                    n3.component ? (openBlock(), createBlock(resolveDynamicComponent(n3.component), mergeProps({
                       key: 0,
-                      modelValue: p2[l2.prop],
-                      "onUpdate:modelValue": (h2) => p2[l2.prop] = h2
-                    }, l2.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-                      createTextVNode(toDisplayString(p2[l2.prop]), 1)
+                      modelValue: i[n3.prop],
+                      "onUpdate:modelValue": (C2) => i[n3.prop] = C2
+                    }, n3.el), null, 16, ["modelValue", "onUpdate:modelValue"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                      createTextVNode(toDisplayString(i[n3.prop]), 1)
                     ], 64))
                   ]),
                   _: 2
                 }, 1040))
               ], 64))), 256)),
-              e4.hasOperateColumn && e4.columns.length > 0 ? (openBlock(), createBlock(g, {
+              e4.hasOperateColumn && e4.columns.length > 0 ? (openBlock(), createBlock(v, {
                 key: 0,
                 label: "操作",
                 align: "center",
-                width: e4.opWidth,
                 fixed: "right"
               }, {
-                default: withCtx(({ row: l2 }) => [
-                  createBaseVNode("div", Se, [
-                    createVNode(u, {
+                default: withCtx(({ row: n3 }) => [
+                  createBaseVNode("div", Ne, [
+                    createVNode(p3, {
                       link: "",
                       type: "primary",
-                      onClick: (p2) => Y(l2)
+                      onClick: (i) => ee(n3)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("查看")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    createVNode(u, {
+                    createVNode(p3, {
                       link: "",
                       type: "primary",
-                      onClick: (p2) => X(l2)
+                      onClick: (i) => Z2(n3)
                     }, {
                       default: withCtx(() => [
                         createTextVNode("编辑")
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    createVNode(z, {
+                    createVNode(I2, {
                       title: "确定要删除该数据吗?",
                       "confirm-button-type": "danger",
                       "confirm-button-text": "删除",
-                      onClick: Q2
+                      onConfirm: (i) => Y2(n3)
                     }, {
                       reference: withCtx(() => [
-                        createVNode(u, {
+                        createVNode(p3, {
                           link: "",
                           type: "danger"
                         }, {
@@ -7977,63 +8690,63 @@ var Ge = defineComponent({
                           _: 1
                         })
                       ]),
-                      _: 1
-                    }),
+                      _: 2
+                    }, 1032, ["onConfirm"]),
                     renderSlot(e4.$slots, "extraOp")
                   ])
                 ]),
                 _: 3
-              }, 8, ["width"])) : createCommentVNode("", true)
+              })) : createCommentVNode("", true)
             ]),
             _: 3
           }, 16, ["data"])), [
-            [oe, W2.value]
+            [ae, N2.value]
           ]),
-          e4.hasPagination && S.value > 0 ? (openBlock(), createBlock(ee, mergeProps({
+          e4.hasPagination && $2.value > 0 ? (openBlock(), createBlock(ne, mergeProps({
             key: 0,
             class: "paging-box",
             layout: "total, sizes, prev, pager, next, jumper",
             background: "",
             small: ""
           }, e4.pagingAttr, {
-            "current-page": v[a3.pageKey],
-            "page-size": v[a3.sizeKey],
-            total: S.value,
-            onSizeChange: G2,
-            onCurrentChange: H
+            "current-page": k2[unref(S2)],
+            "page-size": k2[unref(T3)],
+            total: $2.value,
+            onSizeChange: J2,
+            onCurrentChange: M3
           }), null, 16, ["current-page", "page-size", "total"])) : createCommentVNode("", true)
         ]),
-        createVNode(te2, {
-          modelValue: i3.visible,
-          "onUpdate:modelValue": t2[2] || (t2[2] = (l2) => i3.visible = l2),
-          title: i3.title,
-          onClose: J
+        createVNode(le, {
+          modelValue: r2.visible,
+          "onUpdate:modelValue": t3[2] || (t3[2] = (n3) => r2.visible = n3),
+          title: r2.title,
+          onClose: Q3
         }, createSlots({
           default: withCtx(() => [
-            createVNode(c, {
+            createVNode(_2, {
               ref_key: "dialogForm",
-              ref: k,
-              disabled: i3.disabled,
+              ref: h2,
+              disabled: r2.disabled,
               content: e4.forms
             }, null, 8, ["disabled", "content"])
           ]),
           _: 2
         }, [
-          i3.disabled ? void 0 : {
+          r2.disabled ? void 0 : {
             name: "footer",
             fn: withCtx(() => [
-              createBaseVNode("span", Te, [
-                createVNode(u, {
-                  onClick: t2[0] || (t2[0] = (l2) => i3.visible = false)
+              createBaseVNode("span", $e, [
+                createVNode(p3, {
+                  onClick: t3[0] || (t3[0] = (n3) => r2.visible = false)
                 }, {
                   default: withCtx(() => [
                     createTextVNode("取消")
                   ]),
                   _: 1
                 }),
-                createVNode(u, {
+                createVNode(p3, {
                   type: "primary",
-                  onClick: t2[1] || (t2[1] = (l2) => Z())
+                  onClick: t3[1] || (t3[1] = (n3) => te2())
                 }, {
                   default: withCtx(() => [
                     createTextVNode(" 保存 ")
@@ -8050,8 +8763,8 @@ var Ge = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
-var l = s(Ge);
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/table/index.mjs
+var l2 = s(Qe);
 
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/upload/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-upload.css";
@@ -8059,7 +8772,7 @@ import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@
 // node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/components/progress/style/css.mjs
 import "/Users/zlf/person/ul-business/node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/theme-chalk/el-progress.css";
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/upload/src/type.mjs
 var e3 = {
   ...uploadProps,
   tip: String,
@@ -8077,16 +8790,16 @@ var e3 = {
   }
 };
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/upload/src/upload.vue.mjs
 var import_lodash3 = __toESM(require_lodash(), 1);
-var A = { class: "el-upload__tip" };
-var G = ["src"];
+var A2 = { class: "el-upload__tip" };
+var G2 = ["src"];
 var te = defineComponent({
   name: "UlUpload",
   __name: "upload",
   props: e3,
-  setup(w) {
-    const t2 = w, r2 = {
+  setup(w2) {
+    const t3 = w2, r2 = {
       image: ["png", "jpg", "jpeg", "ico", "gif"],
       video: ["mp4", "avi", "wmv", "rmvb", "mov", "mkv"],
       pdf: ["pdf"],
@@ -8094,44 +8807,44 @@ var te = defineComponent({
       excel: ["xls", "xlsx"],
       compress: ["zip", "rar"]
     }, E2 = computed(() => {
-      if (t2.accept) {
-        const e4 = t2.accept.split(",").map((o) => r2[o]);
+      if (t3.accept) {
+        const e4 = t3.accept.split(",").map((o) => r2[o]);
         return (0, import_lodash3.flatMapDeep)(e4).map((o) => `.${o}`).join(",");
       }
       return "";
-    }), d = ref(""), i3 = ref(false), $ = (e4) => {
-      var p2;
+    }), d = ref(""), i = ref(false), $2 = (e4) => {
+      var p3;
       let o = [];
-      t2.accept ? t2.accept.split(",").forEach((n3) => {
+      t3.accept ? t3.accept.split(",").forEach((n3) => {
         r2[n3] && o.push(...r2[n3]);
       }) : o = Object.values(r2).flat();
-      const a3 = (p2 = e4.name.split(".").pop()) == null ? void 0 : p2.toLowerCase();
-      return a3 && o.indexOf(a3) === -1 ? (ElMessage.warning(`文件类型只能是${o.join("，")}！`), false) : (e4.size / 1024 / 1024 > t2.limitSize && ElMessage.warning(`文件大小不能超过${t2.limitSize}MB！`), false);
+      const a4 = (p3 = e4.name.split(".").pop()) == null ? void 0 : p3.toLowerCase();
+      return a4 && o.indexOf(a4) === -1 ? (ElMessage.warning(`文件类型只能是${o.join("，")}！`), false) : (e4.size / 1024 / 1024 > t3.limitSize && ElMessage.warning(`文件大小不能超过${t3.limitSize}MB！`), false);
     }, h2 = (e4) => {
-      d.value = e4.url, i3.value = true;
-    }, y = () => {
-    }, z = () => {
-      ElMessage.warning(`文件上传数量不得超过${t2.limit}个`);
+      d.value = e4.url, i.value = true;
+    }, y2 = () => {
+    }, z2 = () => {
+      ElMessage.warning(`文件上传数量不得超过${t3.limit}个`);
     };
     return (e4, o) => {
-      const a3 = ElIcon, p2 = ElButton, n3 = ElUpload, V = ElDialog;
+      const a4 = ElIcon, p3 = ElButton, n3 = ElUpload, V2 = ElDialog;
       return openBlock(), createElementBlock("div", {
         class: normalizeClass(["ul-upload", [e4.size && `ul-upload__${e4.size}`]])
       }, [
         createVNode(n3, mergeProps(e4.$props, {
           accept: E2.value,
-          "before-upload": $,
+          "before-upload": $2,
           "on-preview": h2,
-          "on-remove": y,
-          "on-exceed": z
+          "on-remove": y2,
+          "on-exceed": z2
         }), createSlots({
           default: withCtx(() => [
-            e4.$props.listType === "picture-card" ? (openBlock(), createBlock(a3, { key: 0 }, {
+            e4.$props.listType === "picture-card" ? (openBlock(), createBlock(a4, { key: 0 }, {
               default: withCtx(() => [
                 createVNode(unref(Icon), { icon: "mdi:plus" })
               ]),
               _: 1
-            })) : (openBlock(), createBlock(p2, {
+            })) : (openBlock(), createBlock(p3, {
               key: 1,
               type: "primary"
             }, {
@@ -8146,27 +8859,27 @@ var te = defineComponent({
           e4.tip ? {
             name: "tip",
             fn: withCtx(() => [
-              createBaseVNode("div", A, toDisplayString(e4.tip), 1)
+              createBaseVNode("div", A2, toDisplayString(e4.tip), 1)
             ]),
             key: "0"
           } : void 0,
-          renderList(e4.$slots, (u, f) => ({
+          renderList(e4.$slots, (u2, f) => ({
             name: f,
             fn: withCtx(() => [
               renderSlot(e4.$slots, f)
             ])
           }))
         ]), 1040, ["accept"]),
-        createVNode(V, {
-          modelValue: i3.value,
-          "onUpdate:modelValue": o[0] || (o[0] = (u) => i3.value = u)
+        createVNode(V2, {
+          modelValue: i.value,
+          "onUpdate:modelValue": o[0] || (o[0] = (u2) => i.value = u2)
         }, {
           default: withCtx(() => [
             createBaseVNode("img", {
               "w-full": "",
               src: d.value,
               alt: "Preview Image"
-            }, null, 8, G)
+            }, null, 8, G2)
           ]),
           _: 1
         }, 8, ["modelValue"])
@@ -8175,31 +8888,32 @@ var te = defineComponent({
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
-var i = s(te);
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/upload/index.mjs
+var a3 = s(te);
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/installer.mjs
-var i2 = (n3 = []) => ({
-  install: (t2, s3) => {
-    t2[n] || (t2[n] = true, n3.forEach((o) => t2.use(o)));
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/installer.mjs
+var c2 = (t3 = []) => ({
+  install: (e4, r2) => {
+    e4[n] || (e4[n] = true, r2 != null && r2.table && e4.provide("table", r2.table), t3.forEach((a4) => e4.use(a4)));
   }
 });
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/component.mjs
-var n2 = [s2, a, p, l, i];
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/component.mjs
+var n2 = [s3, a, p2, l2, a3];
 
-// node_modules/.pnpm/ul-business@1.0.11_vue@3.3.4/node_modules/ul-business/es/index.mjs
-var m = i2(n2);
+// node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/index.mjs
+var t2 = c2(n2);
 export {
-  p as UlForm,
-  s2 as UlMenu,
+  p2 as UlForm,
+  s3 as UlMenu,
   a as UlMenuItem,
-  l as UlTable,
-  i as UlUpload,
-  m as default,
+  l2 as UlTable,
+  a3 as UlUpload,
+  t2 as default,
   defaultProps as elTableProps,
   t as formProps,
-  a2 as tableProps
+  a2 as tableProps,
+  e3 as uploadProps
 };
 /*! Bundled license information:
 

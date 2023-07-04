@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("element-plus"),t={...e.menuProps,menus:{type:Array},selectBgColor:String,width:{type:String,default:"200px"}};exports.default=t;

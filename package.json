@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "turbo run build --filter=\"./packages/*\"",
+    "build": "pnpm --filter './packages/**' build",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
     "play:dev": "pnpm run -C play dev",
     "docs:dev": "vitepress dev docs",

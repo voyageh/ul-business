@@ -13,7 +13,7 @@ importers:
         version: link:packages/components
       ul-business:
         specifier: npm:ul-business@latest
-        version: 1.0.11(vue@3.3.4)
+        version: 1.0.22(vue@3.3.4)
       ul-utils:
         specifier: ^1.0.0
         version: 1.0.0
@@ -2988,7 +2988,6 @@ packages:
 
   /tinycolor2@1.6.0:
     resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
-    dev: true
 
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
@@ -3094,11 +3093,12 @@ packages:
     resolution: {integrity: sha512-TrY6DsjTQQgyS3E3dBaOXf0TpPD8u9FVrVYmKVegJuFw51n/YB9XPt+U6ydzFG5ZIN7+DIjPbNmXoBj9esYhgQ==}
     dev: true
 
-  /ul-business@1.0.11(vue@3.3.4):
-    resolution: {integrity: sha512-d398NhtHEq5ekXUU9Aw33Zqj7QkaJFzUqgF2HXxxsyVomcU98rIbn3T9VhoW9ZgbRE/h3xiMzwK/n5ClBrArFg==}
+  /ul-business@1.0.22(vue@3.3.4):
+    resolution: {integrity: sha512-AZrMvcGTGlnI+ZBHn7oxfWsbeum6DkOu63vAGChgOW2NlrIHdQ6OFC9cFYDZY4IKomj1xkmuW5oCuBI3pEu6mg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
+      tinycolor2: 1.6.0
       ul-utils: 1.0.0
       vue: 3.3.4
     dev: false

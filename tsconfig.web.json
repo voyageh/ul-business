@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "preserveSymlinks": true
   },
-  "include": ["typings/env.d.ts", "typings/vue-shim.d.ts", "packages"],
+  "include": ["packages", "typings/**/*.d.ts"],
   "exclude": [
     "node_modules",
     "**/dist",
