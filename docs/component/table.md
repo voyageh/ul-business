@@ -2,9 +2,7 @@
 
 ## 基础用法
 
-:::demo ul-table 会自动根据 columns 生成表格的列 <br/> searchForms 会自动生成筛选表单 <br/> forms 会自动生成弹窗表单
-
-```vue
+```vue preview
 <template>
   <ul-table v-bind="config">
     <template #head>
@@ -135,23 +133,15 @@ const config = reactive<UlTableProps>({
       },
     },
   ],
-  newSumbit(data: any) {
-    console.log(data);
-    return false; // false时候不关闭弹窗
-  },
 });
 </script>
 
 <style scoped></style>
 ```
 
-:::
-
 ## 多级表头和展开行
 
-:::demo ul-table 会自动根据 columns 生成表格的列 <br/> searchForms 会自动生成筛选表单 <br/> forms 会自动生成弹窗表单
-
-```vue
+```vue preview
 <template>
   <ul-table v-bind="config" />
 </template>
@@ -266,8 +256,6 @@ const config = reactive<UlTableProps>({
 
 <style scoped></style>
 ```
-
-:::
 
 ## table 属性
 

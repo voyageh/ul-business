@@ -2,9 +2,7 @@
 
 ## 基础用法
 
-:::demo 使用 `size`、`style` 属性来定义 Card 的样式。
-
-```vue
+```vue preview
 <template>
   <ul-menu
     :menus="menus"
@@ -12,7 +10,7 @@
     background-color="#2b303b"
     text-color="#bfcbd9"
     active-text-color="#ffffff"
-    select-bg-color="#597ef7" />
+    select-bg-color="#646cff" />
 </template>
 
 <script setup lang="ts">
@@ -58,8 +56,6 @@ const menus = ref([
 ]);
 </script>
 ```
-
-:::
 
 ## menu 属性
 

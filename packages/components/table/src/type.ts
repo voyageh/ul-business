@@ -19,6 +19,14 @@ export interface IGlobalTableProps {
   totalPath?: string;
 }
 
+export type ConfirmSave = (data: any, type: string) => Promise<boolean | void>;
+
+export type ConfirmDel = (row: any) => Promise<boolean | void>;
+
+export type GetList = (row: any) => Promise<any>;
+
+export type GetDetail = (row: any) => Promise<any>;
+
 export const tableProps = {
   ...elTableProps,
   searchForms: {
@@ -56,19 +64,19 @@ export const tableProps = {
     type: Array as PropType<IFormItem[]>,
     default: () => [],
   },
-  getList: Function,
+  getList: Function as PropType<GetList>,
   dataPath: String,
   totalPath: String,
   immediate: {
     type: Boolean,
     default: true,
   },
-  getDetail: Function,
+  getDetail: Function as PropType<GetDetail>,
   onResetNew: Function,
   onResetView: Function,
   onResetEdit: Function,
-  confirmDel: Function,
-  confirmSave: Function,
+  confirmDel: Function as PropType<ConfirmDel>,
+  confirmSave: Function as PropType<ConfirmSave>,
 };
 
 export type UlTableProps = Partial<ExtractPropTypes<typeof tableProps>>;

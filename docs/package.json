@@ -1,16 +1,11 @@
 {
-  "name": "@ultra-ui/docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@ul-business/docs",
+  "private": true,
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vitepress-theme-demoblock": "^2.0.2",
-    "vue": "3.2.44"
-  }
+  "license": "ISC"
 }

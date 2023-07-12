@@ -2,6 +2,7 @@
   <ul-table v-bind="config">
     <template #head>
       <el-button type="success"> 导出 </el-button>
+      <el-button type="primary" @click="onClick" style="z-index: 99999999"> 导入 </el-button>
     </template>
   </ul-table>
 </template>
@@ -155,14 +156,15 @@ const config = reactive<UlTableProps>({
       },
     },
   ],
-  newSumbit(data: any) {
-    console.log(data);
-    return false; // false时候不关闭弹窗
-  },
-  deleteSumbit() {
-    console.log(11111);
-  },
 });
+
+const onClick = () => {
+  config.searchForms!.push({
+    id: "kk",
+    label: "操作",
+    type: "el-input",
+  });
+};
 </script>
 
 <style scoped></style>

@@ -2,14 +2,7 @@ import { PropType, ExtractPropTypes, VNode } from "vue";
 import type { FormItemProps } from "element-plus";
 import { formProps as elFormProps } from "element-plus";
 
-export interface IFormat {
-  // 输入格式化
-  inputFormat?(row: any): object;
-  // 输出格式化
-  outputFormat?(row: any): object;
-}
-
-export interface IFormItem extends Partial<Omit<FormItemProps, "label">>, IFormat {
+export interface IFormItem extends Partial<Omit<FormItemProps, "label">> {
   id?: string;
   label?: string | (() => object | VNode);
   type?: string;

@@ -73,7 +73,12 @@
             </template>
           </el-table-column>
         </template>
-        <el-table-column v-if="hasOperateColumn && columns.length > 0" label="操作" align="center" fixed="right">
+        <el-table-column
+          v-if="hasOperateColumn && columns.length > 0"
+          label="操作"
+          align="center"
+          fixed="right"
+          :width="opWidth">
           <template #default="{ row }">
             <div class="operate-box">
               <el-button link type="primary" @click="onDefaultView(row)">查看</el-button>
@@ -133,8 +138,8 @@ const global = inject<IGlobalTableProps>("table", {
   totalPath: "total",
 });
 
-const pageKey = props.pageKey ?? global.pageKey!;
-const sizeKey = props.sizeKey ?? global.sizeKey!;
+const sizeKey = props.sizeKey ?? global.sizeKey ?? "pageSize";
+const pageKey = props.pageKey ?? global.pageKey ?? "pageNo";
 
 // 搜索表单的实例
 const searchForm = ref<UlFormInstance>();
@@ -182,8 +187,8 @@ const onSearch = async () => {
       ...pagination,
       ...formValue,
     });
-    const dataPath = props.dataPath ?? global?.dataPath!;
-    const totalPath = props.totalPath ?? global?.totalPath!;
+    const dataPath = props.dataPath ?? global?.dataPath ?? "data";
+    const totalPath = props.totalPath ?? global?.totalPath ?? "total";
     list.value = _get(result, dataPath);
     total.value = _get(result, totalPath);
     loading.value = false;
@@ -255,7 +260,7 @@ const onDefaultNew = () => {
  * 查看明细，如果有fetchDetail就去请求，否则返回当前行数据
  * @param row 当前行数据
  */
-const getDetail = async (row: any) => {
+const setFormValue = async (row: any) => {
   let detail = row;
   if (props.getDetail) {
     detail = await props.getDetail(row);
@@ -290,7 +295,7 @@ const onDefaultEdit = async (row: any) => {
   dialogState.visible = true;
   dialogState.disabled = false;
   dialogState.saveType = "edit";
-  getDetail(row);
+  setFormValue(row);
 };
 
 /**
@@ -305,7 +310,7 @@ const onDefaultView = async (row: any) => {
   dialogState.title = "查看";
   dialogState.visible = true;
   dialogState.disabled = true;
-  getDetail(row);
+  setFormValue(row);
 };
 
 /**
@@ -327,6 +332,9 @@ const onSave = async () => {
     }
   });
 };
+defineExpose({
+  onSearch,
+});
 </script>
 
 <style lang="scss">
@@ -374,10 +382,6 @@ const onSave = async () => {
       .el-table__cell.is-center > .cell > *:first-child {
         justify-content: center;
       }
-    }
-
-    colgroup > col[name^="el-table_"]:last-child {
-      width: v-bind(opWidth);
     }
 
     .paging-box {

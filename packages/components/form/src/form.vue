@@ -40,7 +40,7 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { FormInstance } from "element-plus";
-import { formProps, IFormItem, IFormat } from "./type";
+import { formProps, IFormItem } from "./type";
 import handleContent from "./handleConetnt";
 import { isEqual, cloneDeep } from "lodash";
 
@@ -51,18 +51,13 @@ const props = defineProps(formProps);
 const formRef = ref<FormInstance>();
 // 定义表单的值
 const form = ref<Record<string, any>>({});
-let formatFc: Record<string, IFormat> = {};
-/**
- * 1. 当content发生变化，获取格式化方法和默认值
- * 2. 用表单值去覆盖默认值，可以保证不会影响之前被人为修改的值
- * 3. 后面监听modelValue，这样modelValue > default
- */
+
 watch(
   () => props.content,
   (v) => {
-    const { formatObj, defaulValue } = handleContent(v);
-    formatFc = formatObj;
-    form.value = Object.assign(defaulValue, form.value);
+    const t = handleContent(v);
+    // 有一些已经存在的数据值，默认值不应该覆盖掉
+    form.value = Object.assign({}, t, form.value);
   },
   {
     immediate: true,
@@ -80,21 +75,7 @@ const getFormProps = () => {
  * @param obj
  */
 const getFromItemprops = (obj: IFormItem) => {
-  const {
-    id,
-    type,
-    component,
-    default: v,
-    str,
-    forceDisabled,
-    inputFormat,
-    outputFormat,
-    el,
-    hide,
-    span,
-    label,
-    ...rest
-  } = obj;
+  const { id, type, component, default: v, str, forceDisabled, el, hide, span, label, ...rest } = obj;
   return rest;
 };
 
@@ -114,29 +95,7 @@ const show = (hide?: boolean | ((row: Record<string, any>) => boolean)) => {
  * 获取表单的值，如果存在outputFormat也会执行
  */
 const getValue = () => {
-  let cloneValue = cloneDeep(form.value) || {};
-  Object.keys(cloneValue).forEach((key) => {
-    if (cloneValue[key] && formatFc[key]?.outputFormat) {
-      const t = formatFc[key].outputFormat?.(cloneValue);
-      Object.assign(cloneValue, t);
-    }
-  });
-  return cloneValue;
-};
-
-/**
- * 格式化值
- * @param value
- */
-const formatInput = (value: Record<string, any>) => {
-  let cloneValue = cloneDeep(value) || {};
-  Object.keys(cloneValue).forEach((key) => {
-    if (cloneValue[key] && formatFc[key]?.inputFormat) {
-      const t = formatFc[key] && formatFc[key].inputFormat?.(cloneValue);
-      Object.assign(cloneValue, t);
-    }
-  });
-  return cloneValue;
+  return cloneDeep(form.value) || {};
 };
 
 /**
@@ -144,24 +103,33 @@ const formatInput = (value: Record<string, any>) => {
  * @param value
  */
 const setValue = (value: Record<string, any>) => {
-  form.value = formatInput(value);
+  form.value = cloneDeep(value) || {};
+  // 有一些组件赋值会触发validate，所以需要清除
+  formRef.value?.clearValidate();
+};
+
+/**
+ * 修改表单的值得
+ * @param value
+ */
+const updateValue = (value: object) => {
+  setValue({ ...form.value, ...value });
 };
 
 // 如果传入modelValue默认开启v-model,监听表单值发送过去
 const emits = defineEmits(["update:modelValue"]);
+
 if (props.modelValue) {
-  // 监听外部的值
   watch(
     () => props.modelValue,
     (v) => {
       if (v && !isEqual(v, form.value)) {
-        const t = formatInput(v);
-        form.value = Object.assign({}, form.value, t);
+        setValue(v);
       }
     },
     {
-      immediate: true,
       deep: true,
+      immediate: true,
     }
   );
 
@@ -181,6 +149,7 @@ if (props.modelValue) {
 defineExpose({
   getValue,
   setValue,
+  updateValue,
   elFrom: formRef,
 });
 </script>

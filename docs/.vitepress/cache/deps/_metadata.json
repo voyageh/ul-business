@@ -1,32 +1,38 @@
 {
-  "hash": "a22010d4",
-  "browserHash": "3d10f42c",
+  "hash": "1866985a",
+  "browserHash": "08fb02fc",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.2.44/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "999d95fd",
+      "fileHash": "356c790f",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/.pnpm/element-plus@2.3.7_vue@3.3.4/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "7d347d88",
+      "fileHash": "4a4742ad",
       "needsInterop": false
     },
     "ul-business": {
-      "src": "../../../../node_modules/.pnpm/ul-business@1.0.22_vue@3.3.4/node_modules/ul-business/es/index.mjs",
+      "src": "../../../../node_modules/.pnpm/ul-business@1.0.33_vue@3.3.4/node_modules/ul-business/es/index.mjs",
       "file": "ul-business.js",
-      "fileHash": "6d5413fe",
+      "fileHash": "3d83c225",
+      "needsInterop": false
+    },
+    "vite-plugin-markdown-preview/component": {
+      "src": "../../../../node_modules/.pnpm/vite-plugin-markdown-preview@1.0.4/node_modules/vite-plugin-markdown-preview/component/index.js",
+      "file": "vite-plugin-markdown-preview_component.js",
+      "fileHash": "09a08a4e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-C2HGQL3Q": {
-      "file": "chunk-C2HGQL3Q.js"
+    "chunk-BMEVQCZV": {
+      "file": "chunk-BMEVQCZV.js"
     },
-    "chunk-V7EY6TRM": {
-      "file": "chunk-V7EY6TRM.js"
+    "chunk-SJ4LJHAM": {
+      "file": "chunk-SJ4LJHAM.js"
     }
   }
 }

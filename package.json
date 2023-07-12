@@ -44,6 +44,7 @@
   "dependencies": {
     "@ul-business/components": "workspace:^",
     "ul-business": "npm:ul-business@latest",
-    "ul-utils": "^1.0.0"
+    "ul-utils": "^1.0.0",
+    "vite-plugin-markdown-preview": "^1.0.4"
   }
 }

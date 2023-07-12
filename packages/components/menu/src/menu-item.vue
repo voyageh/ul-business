@@ -12,7 +12,7 @@
     <el-icon>
       <Icon :icon="menu.meta.icon ?? 'ep:menu'" />
     </el-icon>
-    {{ menu.name }}
+    <template #title>{{ menu.name }}</template>
   </el-menu-item>
 </template>
 

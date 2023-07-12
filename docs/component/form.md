@@ -2,9 +2,7 @@
 
 ## 基础用法
 
-:::demo 使用 `size`、`style` 属性来定义 Card 的样式。
-
-```vue
+```vue preview
 <template>
   <ul-form :content="content"></ul-form>
 </template>
@@ -35,8 +33,6 @@ const content = ref<IFormItem[]>([
 ]);
 </script>
 ```
-
-:::
 
 ## Form 属性
 
