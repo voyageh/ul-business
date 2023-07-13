@@ -9,6 +9,9 @@ export default defineConfig({
   vite: {
     publicDir: "public",
     plugins: [vueJsx(), MarkdownPreview()],
+    ssr: {
+      noExternal: ["ul-business", "element-plus", "lodash", "vite-plugin-markdown-preview"],
+    },
   },
   base: "/ul-business/",
   themeConfig: {
